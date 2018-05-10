@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+  <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.mule.tooling.popup.deploy?before=org.mule.tooling.ui.separator.deployStart">
+         <command
+               commandId="org.mule.tooling.amc.command.openDeployToAMC"
+               style="push"
+               label="Deploy to Cloud">
+         </command>
+         <dynamic
+               class="org.mule.tooling.amc.InstanceListMenuProvider"
+               id="org.mule.tooling.amc.dynamic.instanceList">
+         </dynamic>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="org.mule.tooling.amc.command.openDeployToAMC"
+            name="Deploy to Cloud">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.mule.tooling.amc.command.OpenDeployToAMC"
+            commandId="org.mule.tooling.amc.command.openDeployToAMC">
+      </handler>
+   </extension>
+</plugin>

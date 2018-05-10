@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.mule.tooling.core.contribution">
+      <externalContribution
+            contributionJar="mule-module-apikit-1.5.3.jar"
+            contributionLibPathInMule="/plugins"
+            contributionLibs="mule-module-apikit-plugin-1.5.3.zip"
+            contributionNamespace="http://www.mulesoft.org/schema/mule/apikit"
+            contributionNamespaceFile="http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd"
+            contributionNamespacePrefix="apikit"
+            contributionType="cloud-connector"
+            icon="icons/small/flow-24x16.png"
+            minimumVersion="3.4.0"
+            maximumVersion="3.6.0"
+            name="APIkit"
+            path="apikit.xml"
+            version="1.5.3">
+      </externalContribution>
+   </extension>
+</plugin>

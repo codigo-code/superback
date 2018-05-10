@@ -1,0 +1,77 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Built-By: ubuntu
+Bundle-Name: Mule Welcome plugin
+Created-By: Apache Maven 3.2.3
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui
+ .intro
+Bundle-Vendor: MuleSoft Inc.
+Build-Jdk: 1.7.0_80
+Bundle-Version: 6.3.0.201707282110
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.mule.tooling.welcome.Activator
+Bundle-SymbolicName: org.mule.tooling.welcome; singleton:=true
+Archiver-Version: Plexus Archiver
+
+Name: intro/content/studio-splash-screen.xhtml
+SHA-256-Digest: /S3pRvkpH2prQGq0gHhBcgzeOZ5oRDG49DPvnRr0BsQ=
+
+Name: intro/content/css/images/welcomeIcon-16x16.png
+SHA-256-Digest: h0Y1U/PGKw6MyhO6I6RjwIo71Lwb6+fhogK5fOcgUxA=
+
+Name: intro/content/css/images/header-bg.png
+SHA-256-Digest: zpD17r7J0P/IN0wdkaRuAy/D2wMkIbKqIKeqvDKLVxY=
+
+Name: intro/content/css/images/anypoint-studio-logo.png
+SHA-256-Digest: P8vwvL+ekoZ9oKUfoxC/IsioI3eiU2T+DOpvZIHl464=
+
+Name: intro/content/css/images/icon-get-started.png
+SHA-256-Digest: cg0t+ZbrzIm1fpjv9ZpTcTCfjqqmVQAsp+ly7Nhcj3Y=
+
+Name: intro/content/muleWelcome.xml
+SHA-256-Digest: /n4mWuQmsJL/qhMEj9uPmmIWIgAdbFdB922RrX2JTLs=
+
+Name: intro/content/css/images/screenshot.png
+SHA-256-Digest: tBWq4jZSBaFm6H4OIzSNW7+iM7S6FfBInkqlcJ8Kyqw=
+
+Name: intro/content/css/images/icon-documentation.png
+SHA-256-Digest: Drq2Y6qgv+enhLrkpnlSUidDLgEXdoCZuiaYKFgXkgo=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.welcome/pom.pro
+ perties
+SHA-256-Digest: rA1EpbufNfQViEUzEX76AytHBrClMkak6OU22AI7HWg=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.welcome/pom.xml
+SHA-256-Digest: OeSd/RMv7dLv2KUoZVLbvDwTqhCN1D76xAL7JRtDIww=
+
+Name: intro/content/css/images/background-arrow.png
+SHA-256-Digest: Q8KYKIUzxIA+mDcomAxHwCB4oy66tY/kGvx1hc9pz6U=
+
+Name: intro/content/css/ubuntu-400.woff
+SHA-256-Digest: ZLVLXnnSypTqiY2iU8PT3aJ2AM9khrLO5+42HMLXf+c=
+
+Name: intro/content/css/images/community-runtime-bg.png
+SHA-256-Digest: Bs1V+R1dGXmYCB41zhRn30IaYTjjUYrEVx4HVMD7TKM=
+
+Name: plugin.xml
+SHA-256-Digest: FmhJH8a+9z13tVR/SPmY1CbpL3FzQ5U5bSK9JqvsQ7o=
+
+Name: org/mule/tooling/welcome/Activator.class
+SHA-256-Digest: UQz87SZKqrY96oJj9IOMqtFihSbmBZpCo+fWj8ftRhU=
+
+Name: intro/content/css/images/icon-open-a-project.png
+SHA-256-Digest: OuXkE1z5eMICtqQp12f1I4rSetveIEUxeDQ56MoNfAI=
+
+Name: intro/content/css/images/mulesoft-logo.png
+SHA-256-Digest: 3cswFkvgSn3XRnIuWmg9f8lLfUVsQ77ig0F5IAI59b4=
+
+Name: intro/content/css/images/icon-create-new-project.png
+SHA-256-Digest: ywEM4FDbNMYZIG+ZuWxNCBoodO3S9VxHc9AswOaWu9A=
+
+Name: intro/content/css/welcome.css
+SHA-256-Digest: siTL9hrvvVYGtuvIowhCUrwOPj8W0FyckG8OJDynctU=
+
+Name: intro/content/css/images/icon-community-runtime.png
+SHA-256-Digest: EZKMevx1IGg69WUmn11a9PRknSTbgmMxv4iK4HCUcUo=
+

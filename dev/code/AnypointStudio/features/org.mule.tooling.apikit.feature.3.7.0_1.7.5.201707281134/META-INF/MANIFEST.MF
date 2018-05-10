@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_80
+Built-By: ubuntu
+Created-By: Apache Maven
+Archiver-Version: Plexus Archiver
+
+Name: META-INF/maven/org.mule.tools/org.mule.tooling.apikit.feature.3.
+ 7.0/pom.properties
+SHA-256-Digest: yboQFtL3OHdzcKXiPL0VZhHscYj4sM5+aGCIy0pXgws=
+
+Name: feature.xml
+SHA-256-Digest: wrKZ/Os3mk38p7dxn5CxoYY59r9VI3nqC3kYsV0/dfA=
+
+Name: META-INF/maven/org.mule.tools/org.mule.tooling.apikit.feature.3.
+ 7.0/pom.xml
+SHA-256-Digest: c2T+2B10rPMCkJKfo9KCi/TV7Bg5FcFK4cg4ylwDMj8=
+

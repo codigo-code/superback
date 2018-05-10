@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: 25.102-b14 (Oracle Corporation)
+
+Name: feature.xml
+SHA-256-Digest: hNtb+g//wU0P++ArCevoJ9xUJnm7uZwZ4Mwht1GZ1D0=
+

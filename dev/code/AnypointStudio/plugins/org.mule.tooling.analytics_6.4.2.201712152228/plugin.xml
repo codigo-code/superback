@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	 <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            category="org.mule.tooling.ui.messageflowpage"
+            class="org.mule.tooling.analytics.preferences.AnalyticsPreferencePage"
+            id="org.mule.tooling.errors.errorsensepage"
+            name="Analytics">
+      </page>
+   </extension>
+   <extension point="org.eclipse.core.runtime.preferences">
+      <initializer class="org.mule.tooling.analytics.preferences.AnalyticsPreferencesInitializer"/>
+   </extension>
+   <extension 
+ 		point="org.eclipse.ui.menus">
+		 <menuContribution
+ 		 		allPopups="false"
+ 				locationURI="popup:org.eclipse.pde.runtime.LogView">
+ 				<command
+ 					commandId="org.mule.tooling.errors.reportError"
+ 					label="Report to Mulesoft"
+ 					icon="icons/send_error.png"
+ 					style="push">
+ 				</command>
+ 		</menuContribution>      
+ 	</extension>
+	 <extension
+	 		point="org.eclipse.ui.commands">
+	 		<command
+          defaultHandler="org.mule.tooling.analytics.errorsense.handlers.ErrorLogReportHandler"
+          description="send an error report based on the logged error to mulesoft"
+          id="org.mule.tooling.errors.reportError"
+          name="Send Report To Mulesoft">
+	 		</command>
+	 </extension>
+	 <extension
+	       point="org.eclipse.ui.startup">
+	    <startup
+	          class="org.mule.tooling.analytics.AnalyticsStartup">
+	    </startup>
+	 </extension>
+</plugin>

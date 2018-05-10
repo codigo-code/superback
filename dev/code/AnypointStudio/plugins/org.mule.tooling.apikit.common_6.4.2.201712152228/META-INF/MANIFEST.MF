@@ -1,0 +1,1283 @@
+Manifest-Version: 1.0
+Export-Package: org.mule.tooling.apikit.common,org.mule.tooling.apikit
+ .common.apidefinition,org.mule.tooling.apikit.common.scaffolder,org.m
+ ule.tooling.apikit.common.util
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,lib/zip4j.jar,lib/api-platform-cli.jar
+Built-By: ubuntu
+Eclipse-BundleShape: dir
+Bundle-Name: APIkit API
+Created-By: Apache Maven 3.2.3
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.eclipse.ui,org.eclipse.jdt.core,org.eclipse.core.r
+ untime,org.mule.tooling.apikit.deps;bundle-version="[6.4.2,6.4.3)",or
+ g.mule.tooling.ui.modules.core;bundle-version="[6.4.2,6.4.3)",org.mul
+ e.tooling.core;bundle-version="[6.4.2,6.4.3)",org.mule.tooling.ui;bun
+ dle-version="[6.4.2,6.4.3)",org.mule.tooling.messageflow;bundle-versi
+ on="[6.4.2,6.4.3)",org.mule.tooling.maven;bundle-version="[6.4.2,6.4.
+ 3)",org.mule.tooling.utils;bundle-version="[6.4.2,6.4.3)",org.mule.to
+ oling.metadata;bundle-version="[6.4.2,6.4.3)",org.mule.tooling.runtim
+ e;bundle-version="[6.4.2,6.4.3)",org.mule.tooling.maven.ui;bundle-ver
+ sion="[6.4.2,6.4.3)",com.google.guava;bundle-version="[14.0.0,16.0.0)
+ ",org.eclipse.debug.core,org.eclipse.gef,org.eclipse.ui.forms,org.dom
+ 4j,org.eclipse.jface,org.raml.editor;bundle-version="[0.13.0,0.13.1)"
+ ,org.eclipse.ui.editors,org.eclipse.ui.workbench,org.eclipse.ui.ide,o
+ rg.mule.tooling.ui.widgets,org.mule.tooling.ui.authentication,org.mul
+ e.apiplatform.api-platform-j-client;bundle-version="2.0.0",org.eclips
+ e.compare,com.sun.jersey,com.sun.jersey.jersey-core,javax.ws.rs;bundl
+ e-version="1.1.1"
+Bundle-Vendor: MuleSoft Inc.
+Build-Jdk: 1.7.0_80
+Bundle-Version: 6.4.2.201712152228
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.mule.tooling.apikit.common.ApikitPlugin
+Bundle-SymbolicName: org.mule.tooling.apikit.common;singleton:=true
+Import-Package: org.apache.commons.collections,org.apache.commons.io,o
+ rg.apache.commons.lang,org.apache.commons.lang.builder,org.apache.vel
+ ocity.exception,com.google.common.base,com.google.gson
+Archiver-Version: Plexus Archiver
+
+Name: org/mule/tooling/apikit/common/launch/APIkitWithConsoleLaunchCon
+ figPart$1.class
+SHA-256-Digest: 4c03ZC993yeWLJDcZGHaKKqbmSZ8zHJtfwyIo7y2C0Y=
+
+Name: icons/decorators/question_ov.gif
+SHA-256-Digest: MS3SYRRZmCBAsVLfIAr0aF1DRMb4CwYoxa5nAnY4mPw=
+
+Name: icons/large/sub-flow-48x32.png
+SHA-256-Digest: 4Buyb5/zmrsudhMCTRcnDGBP0A1OCNR9XW80WUwFTU4=
+
+Name: org/mule/tooling/apikit/common/action/DownloadNodeAction$1.class
+SHA-256-Digest: G3k2vlJGx/xFez+Jtn5JLGg02nFc/yRST/tNn6VLPwY=
+
+Name: org/mule/tooling/apikit/common/VCSClient$2.class
+SHA-256-Digest: pEZbvekZQ+97JPSXxHuzo3bF1+Or4CKWVNr6WaP1OLc=
+
+Name: org/mule/tooling/apikit/common/dialog/NewConnectionApiDialog.cla
+ ss
+SHA-256-Digest: 8vqxPWdIGxBIwTOxHKni6JWmMEfqdc2bT7mZWvcbH54=
+
+Name: org/mule/tooling/apikit/common/handlers/GenerateFlowsHandlerFrom
+ RamlEditor.class
+SHA-256-Digest: fvcsFudagWfq+GRL20nFLRe2rteQpWVDn7l/iiHPU+k=
+
+Name: org/mule/tooling/apikit/common/util/DummyActionWrapper.class
+SHA-256-Digest: zSEZbS836Px5Bl2fsIXRWuodCeE3BcC6lIi+7qOp4Yk=
+
+Name: org/mule/tooling/apikit/common/widgets/MappingEditingSupport.cla
+ ss
+SHA-256-Digest: B4qhI77t3/PptbOAR6mR7rGftfRjxSpTZP8O3hgSKco=
+
+Name: lib/jackson-core-asl.jar
+SHA-256-Digest: zh5kdu+ZVm+QcGBFvl4ZB2n8YNi6L9LDtUyQV3UkAUg=
+
+Name: org/mule/tooling/apikit/common/handlers/ApiActionHandler.class
+SHA-256-Digest: F65HNlyD/zVrpbOr8z7quc1YIUkqrdz5g4/9qS6Xn34=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$2$1.class
+SHA-256-Digest: JQqF37Cjre/lfGr1lWHpSI5hrJzsrfT2E7N2rhooQRI=
+
+Name: lib/stax-api.jar
+SHA-256-Digest: 6McOvXb5gslYKoLvgs9s4Up9WKSk3KXLe3/JiMgAibc=
+
+Name: org/mule/tooling/apikit/common/handlers/GenerateFlowsHandlerFrom
+ Selection.class
+SHA-256-Digest: N/oeXoET6pIlrrsLA+Sq4kkYjwZztB/ZugHRo41SeSA=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiChooserComponent$OpenAp
+ iDiscoveryDialogAction.class
+SHA-256-Digest: eTQw6pdgHSywImft3UoP+9z9RIUkOB8ZcCCmhs1bdbo=
+
+Name: org/mule/tooling/apikit/common/action/SyncAllNodesJob$3.class
+SHA-256-Digest: uZttDY9qgX9MZ3MUdlaEzoj/VEG8I47E8Q8ekE6oqI4=
+
+Name: icons/small/scaffolder.png
+SHA-256-Digest: URnFpeUASj0v2jHTncSN5MYyNiPlbhjYvCF+oyGYh+A=
+
+Name: resources/META-INF/maven/archetype-metadata.xml
+SHA-256-Digest: 95StiH6Q2ufzmaMGlWF59oD1o/vEKjnJCNQ5LtJc9qo=
+
+Name: icons/small/CatchExceptionStrategy-24x16-1.png
+SHA-256-Digest: I8RTWXpNfCCFcc0bcm6blGdPA1INVZnC9BsOzViFZt8=
+
+Name: org/mule/tooling/apikit/common/handlers/OpenAPIkitNavigationPopu
+ pHandler.class
+SHA-256-Digest: lnaPomInTKQyenmbDJgc4ZZDHoKK1RokRa0avLQL1rA=
+
+Name: org/mule/tooling/apikit/common/launch/APIkitWithConsoleLaunchCon
+ figPart$PopulateConsoleOperation.class
+SHA-256-Digest: qjVCalyyeHmCp3PyMWPMc+cPULcfqppDsPCXdMZkF+A=
+
+Name: org/mule/tooling/apikit/common/scaffolder/FlowGenerator.class
+SHA-256-Digest: GyCYcSzkAj+/CK88ybPhDh6ev7uyPi9i/fsQBhBoAGA=
+
+Name: org/mule/tooling/apikit/common/action/ApiSyncDeltaVisitor.class
+SHA-256-Digest: 6DRwhjo7V6nz6GMhpXLbNXG+BgFLY7qebBYA8SRLmyk=
+
+Name: resources/archetype-resources/pom.xml
+SHA-256-Digest: ycS5/b6dQivBEX/aLnITijRVLRkwV/vC4PZQT3eIx4s=
+
+Name: org/mule/tooling/apikit/common/navigation/MediatypeColumnLabelPr
+ ovider$1.class
+SHA-256-Digest: ivBRrX/vu9lFIDb+GRcicHV/Bq1Po9TFN92+38N/RXs=
+
+Name: org/mule/tooling/apikit/common/metadata/resolver/APIkitRouterSee
+ ker$APIkitRouterFinder.class
+SHA-256-Digest: WEzyNbCrnGcVH3I6EeD081otyxL98oHQdZakFpfagjE=
+
+Name: lib/jackson-xc.jar
+SHA-256-Digest: l93RZGeMJwXaeyLp2zEQxBaznN/FDzhdI7WGVR12oZU=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$1.class
+SHA-256-Digest: +unQ51NYSmfqVnDOIcyx5yNFXQXxkE6y01ANmVh2ACQ=
+
+Name: org/mule/tooling/apikit/common/dialog/NewConnectionApiDialog$1.c
+ lass
+SHA-256-Digest: O+Ukq8jeodzFMxI4HNeduuQiJ/ow7js1jdLPCxnNMgk=
+
+Name: org/mule/tooling/apikit/common/dialog/VCSDiscoveryDialog$3.class
+SHA-256-Digest: v9ZLyad/RO8zZCxhdoAeKfAjanRUCiI/1rNbhAXlkYU=
+
+Name: lib/jersey-client.jar
+SHA-256-Digest: pcBuA8qdKTuBrMgoJbrDeXinxdAdRa9ErHw+VXTquVM=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$1.class
+SHA-256-Digest: FI+G4YmqXGNM9iXcu4NgVTpVcUMf5qTJ4x3ixFp8Xq0=
+
+Name: org/mule/tooling/apikit/common/navigation/ResourceColumnLabelPro
+ vider$1.class
+SHA-256-Digest: +grRQR8awJb7sPMh8WHoCz51rO+yAuj1Ul2f2t6xxxA=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiDefinitionPartExtension
+ $5.class
+SHA-256-Digest: Uk9ehG4SPWt67BNwOIRk4ss6HnWrpzVTbxIAPGCxYR0=
+
+Name: org/mule/tooling/apikit/common/util/APIkitProjectMavenizeExtensi
+ on.class
+SHA-256-Digest: xQj7HFHjtzfMXaqWPiLMlxYcULRoOT+s+f1CUBYBb38=
+
+Name: org/mule/tooling/apikit/common/dialog/VCSDiscoveryDialog$Project
+ ResourceProvider.class
+SHA-256-Digest: hA5NDSIrFTEwONugAJK/hKlxwFLMJmrl6ZPfQrio6nM=
+
+Name: org/mule/tooling/apikit/common/dialog/NewConnectionApiDialog$1$1
+ .class
+SHA-256-Digest: T11cOSBQqEJI++q+Id0Hkq9wac7rgipuTObORH3TSKo=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$5.class
+SHA-256-Digest: qvwDS/kupiorOoXP05hfn4AtPLJTtaR9rj833FR0e+o=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$4.class
+SHA-256-Digest: aCh34xjPYCbCeeF0iUVtErdPr6NEVj+elI1PWpqjwlI=
+
+Name: org/mule/tooling/apikit/common/dialog/VCSDiscoveryDialog$VCSComp
+ arator.class
+SHA-256-Digest: bC0tcQOj9aP60Gv1yGo7kV2Xiyltpoc6fGt7z4aSf4w=
+
+Name: org/mule/tooling/apikit/common/action/RemoveConnectionFromApiMan
+ ager.class
+SHA-256-Digest: v5sSKBkEiNhLea2+peLgYwXJXTPvUU4WwseHI15NdM8=
+
+Name: org/mule/tooling/apikit/common/model/Project.class
+SHA-256-Digest: U69O6KyyFXeSdZrORGrsPrJ6X4ml51LVNi8MhC8MbV8=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$6.class
+SHA-256-Digest: kUrsNnqQb6Pzub8UGw2h0uOF5+Tz4wgosW2mYSGEoA8=
+
+Name: archetype-resources/src/main/app/mule-deploy.properties
+SHA-256-Digest: brpLQhwAzMGvs68VujtkS1IPSYTCfAUGjM6kTuJOf08=
+
+Name: org/mule/tooling/apikit/common/navigation/APIkitNavigationPopupD
+ ialog$2.class
+SHA-256-Digest: VJLyDcVh52RYA94XPRP9GJFkOlIMsKbcHksQ95xIUHM=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLFileProvider$RetrieveR
+ amlFileJob$1.class
+SHA-256-Digest: GUi0HAtjHkBKTUO2fZetktt3wh7rBi39mzMQsgXpKCw=
+
+Name: org/mule/tooling/apikit/common/VCSServiceImpl$2.class
+SHA-256-Digest: nPsCJqmTu0ILIDRlbEZZgYu8YAGao3Ip9BaQnF/1oRU=
+
+Name: lib/guava.jar
+SHA-256-Digest: 1mT7/APS5c6cqypE+wHx0L+d/r7MwaRzsfnqMfefb5k=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$2.class
+SHA-256-Digest: ySXDBHtc37YT8tAStoFMuRq8lSm4IWAShWDlxhx3TOk=
+
+Name: org/mule/tooling/apikit/common/ApiSyncValidationFileFilter.class
+SHA-256-Digest: s3N0yUecN6FoPtDQhuXdkIufKj6r+TqcoT9neQV5X14=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiChooserComponent$OpenAp
+ iDiscoveryDialogAction$1.class
+SHA-256-Digest: guiHDbKfXCCCISVHtwcmkw2Z1FPBrGMFPdrtRJ3ikyE=
+
+Name: org/mule/tooling/apikit/common/dialog/ProgressBarMonitor$3.class
+SHA-256-Digest: W4sIqJx/udrNzzu+hnSSH4jX2W8D/09/wCM0iLnN9j4=
+
+Name: org/mule/tooling/apikit/common/dialog/VCSDiscoveryDialog$4.class
+SHA-256-Digest: YMWoqA0FgTJOPY/2CqpamIhgiqegszrZjNCKmRKanis=
+
+Name: icons/large/apikit.png
+SHA-256-Digest: 0a9VOlGnmr5D31vKiBLqr4U0/+/UFQf3gig/29Edsmo=
+
+Name: org/mule/tooling/apikit/common/VCSServiceImpl.class
+SHA-256-Digest: Gy9kTBoAhVKOEwmcwbbAuGpCGQHw2PzSZEmVYcRy1c0=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$4.class
+SHA-256-Digest: syaGbOIc0idgusuRF+IKmqV50cdUf3iRPwWi47RnQsw=
+
+Name: org/mule/tooling/apikit/common/action/VCSManagerAction$1.class
+SHA-256-Digest: 6W8UliJwDA9teK/qHvEubnD4gbzOZfEyXEDazAoJ/ew=
+
+Name: org/mule/tooling/apikit/common/widgets/APIKitMappingCustomEditor
+ $MappingAccesor.class
+SHA-256-Digest: fy0EeyHzSAzR0DsrKMD1abQAUU+jqeCF52ZqsfWg4kE=
+
+Name: org/mule/tooling/apikit/common/ApiList.class
+SHA-256-Digest: HdunvzsErxarRJEg2pcbIFolQIyDJpzVnZC9Q9m1gqo=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$8.class
+SHA-256-Digest: cS2F9ad1n+wwBL/XW27JZX7NS45r82Rr0EnT2vLJeKs=
+
+Name: org/mule/tooling/apikit/common/metadata/resolver/APIkitRouterInv
+ okerMetadataResolver$2$1.class
+SHA-256-Digest: 6qVFIB3s2VCW7KZtkS7FMV996WRzu4+Gvri+u8KbN8c=
+
+Name: org/mule/tooling/apikit/common/dialog/VCSDiscoveryDialog$2.class
+SHA-256-Digest: gzvrpS363vFGW4NkxS9O16Z9C2pPzDMnXZK/P9gNVf8=
+
+Name: archetype-resources/src/main/resources/api.properties
+SHA-256-Digest: KUhmcFEb63Jk3yjE0KonVhorwjYSoR+AoYn185YXo3s=
+
+Name: org/mule/tooling/apikit/common/navigation/APIkitNavigationPopupD
+ ialog.class
+SHA-256-Digest: cD/ojmYalK/m0MTg2qUcQuEttAmW2xLMezVndsweQZU=
+
+Name: org/mule/tooling/apikit/common/action/GenerateFlowsAction.class
+SHA-256-Digest: mxbPmQ/X7Vu941h4b0faF7IJeZBL61V/1sce6y2nkIs=
+
+Name: icons/small/apikit-menu-16x16.jpg
+SHA-256-Digest: 7nobvngo+ogeCNgaMc3h6xvlA9w+OkGCQCgOKTVEF7o=
+
+Name: org/mule/tooling/apikit/common/decorators/ApiViewerDecoratingLab
+ elProvider.class
+SHA-256-Digest: 0M87a0OGGLt4auZ5al7weKfyJXJzB6w6Sg5PisLTaag=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiDefinitionPartExtension
+ $2.class
+SHA-256-Digest: 9TKMnXBU/VwxoQrZrM0PzTsF2jrKYlw11UZ1tSyYPMg=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLFolderProvider.class
+SHA-256-Digest: 5P+1ZbrVckWYI13YUNhCeoeFCUB+txJPA0DzaheXd2U=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$11.class
+SHA-256-Digest: k+pnimPHTb5AGgdDwzoLn6H2TgtsOl5nP/Op2r9MYcc=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.apikit.common/p
+ om.xml
+SHA-256-Digest: 3v5aZ2exuwExdjS3246gySLoNSag6GDwv3YXrxlrEvY=
+
+Name: icons/small/flow-24x16.png
+SHA-256-Digest: Hd1xS+pp00zNWVKfwnOnlSMiFKJ/AZkBH0vIzMp9dHw=
+
+Name: org/mule/tooling/apikit/common/handlers/GenerateFlowsHandlerFrom
+ Selection$1.class
+SHA-256-Digest: +BRVTk+gxjz7jt+7F3tH0dHoYn7EJwljQDD1ziPlyrU=
+
+Name: org/mule/tooling/apikit/common/action/SyncNodeJob$1.class
+SHA-256-Digest: 3/VmvkKjV0eh1t3PpMYhJrBlIf0iAZhg32+ej5hcvaM=
+
+Name: org/mule/tooling/apikit/common/util/RamlBasicDetailsParser$1.cla
+ ss
+SHA-256-Digest: FRjBRa5UtkLqIAsYVq+zQs4spJFd41bQdPq5odmaWNM=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$10.class
+SHA-256-Digest: aOVVrVYYQbtLULSfiqEXUVXEY0ySr1Md2mbtrz8cqC4=
+
+Name: org/mule/tooling/apikit/common/dialog/AddApiDialog.class
+SHA-256-Digest: +72ea1qmEG2cmFR3OTH7qI9Azctgakh1t1J8VcVlpWI=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$1.class
+SHA-256-Digest: BTj8r4QBFx5HusxU2K03Mws4oHH1y5vUjAckk086xt0=
+
+Name: org/mule/tooling/apikit/common/util/RelativeUrlResourceLoader.cl
+ ass
+SHA-256-Digest: MwcFNFbNoPtEfLRZ+qQYjf9DivwsDX86FSGkJLGytEI=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution$6.class
+SHA-256-Digest: dLNVFEZxYsuEawYMn5nEzX6uP58CrQEyikDDWo6lofs=
+
+Name: org/mule/tooling/apikit/common/dialog/VCSDiscoveryDialog$Project
+ NameProvider.class
+SHA-256-Digest: A84HNC017xh3V0+aVhhfXtEsC2Dt+6KItBbfK+yhfVM=
+
+Name: org/mule/tooling/apikit/common/navigation/MediatypeColumnLabelPr
+ ovider.class
+SHA-256-Digest: aAVyVdK6zntesuJ9Sx1VHOIXrtcREGjlRN9wa5zOgII=
+
+Name: lib/jackson-jaxrs.jar
+SHA-256-Digest: mcPLaHwtHEWMNLxYLyK7NOjuEuulMt9HuElFSqL9cJI=
+
+Name: org/mule/tooling/apikit/common/views/ApiNodesContentProvider.cla
+ ss
+SHA-256-Digest: FO23l8olaGvkW6DZcSqJuGjfX4TA84dQHjN4seuDJac=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$4.class
+SHA-256-Digest: ez9Foq+ANdVcUlFJMnApWj8DVdUfBISE8OBje6qMiRU=
+
+Name: org/mule/tooling/apikit/common/views/StringInput.class
+SHA-256-Digest: MVyNfqSi3fp6h54upIDUW8K7MZZVOGx5K5zaFoP0e8A=
+
+Name: org/mule/tooling/apikit/common/preferences/ApikitSyncPrefManager
+ $2.class
+SHA-256-Digest: VBE5/Q6gIszEdcgd0qqniE9I6nY3au5Cb+GDfkTavSM=
+
+Name: org/mule/tooling/apikit/common/action/CompareInput.class
+SHA-256-Digest: /y72SZ1PVPpBXwfODrAMxwL9fAwFVrp7rtJ2j6nMrnw=
+
+Name: org/mule/tooling/apikit/common/handlers/AbstractGenerateFlowsHan
+ dler.class
+SHA-256-Digest: J3j9lGWKh2FyHZn36beiyAR8ZypfUeqbLAGDmhyuTp8=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$7.class
+SHA-256-Digest: UKCy/UGsaVjfwmQ1xOytaEoGTPB28FOmdPzMwgTk8cc=
+
+Name: org/mule/tooling/apikit/common/apidefinition/StatusHandler.class
+SHA-256-Digest: ihIy33MrjIzlVsFVNaDRz9pyuGQuYHqPFAGgjK7x15A=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$10.clas
+ s
+SHA-256-Digest: MMnSry0MamYJInksQ11RtSQvHS9rgIISkokDTZ+eeTY=
+
+Name: org/mule/tooling/apikit/common/launch/ConsolesViewPopulator$1.cl
+ ass
+SHA-256-Digest: UAQmJ3RdnIeU4ZvcePjssP7emKjuzNjA0o+AV2GYQFE=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$5.class
+SHA-256-Digest: WlPSQBR19EI3+0udcDmXXp7MngUYOLc6YJVip2dqN3Q=
+
+Name: org/mule/tooling/apikit/common/views/APIkitConsolesView$1.class
+SHA-256-Digest: GbHfWgtKqrQyG+hvxXIj2dx9DnN6yxTQQeyhjPwfL64=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution$1.class
+SHA-256-Digest: gUY7/W7V5VZBicggHKdHDl9mAURmWLRc+7TPB9JIiKE=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$13.class
+SHA-256-Digest: itCFT3TuDXqRrRhlhMRN5DxBnltODUlVV5vt9hYn160=
+
+Name: org/mule/tooling/apikit/common/navigation/APIkitFlowFinder.class
+SHA-256-Digest: HiJ8CXe37Lb8Q1nghYBtDlD8NKJOiLtlLoUPKebcDF8=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLFileProvider$RetrieveR
+ amlFileJob.class
+SHA-256-Digest: r8jBEu2KVXky+jqnk0SEH9rqp0yRp/KHIAs/+aJI5Z8=
+
+Name: org/mule/tooling/apikit/common/widgets/APIKitMappingCustomEditor
+ $1.class
+SHA-256-Digest: DxicHDhhUrwceArOtiWysUNy33w8KoBUgRe1SsU94DY=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$3.class
+SHA-256-Digest: kBb1B0tnpbPuxSXn7vHW1AEyN7l8QS68267PLoUvGkk=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$3.class
+SHA-256-Digest: 7+f1gayRmSAAURv9RSBSWRfASoPRfbDUZ8VgxNJ5+B0=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$12.class
+SHA-256-Digest: M+4WM5w73A+mQINaHnTURseTc4fwQjLqWU3C6sPqx4U=
+
+Name: org/mule/tooling/apikit/common/widgets/FlowNameEditingSupport.cl
+ ass
+SHA-256-Digest: Z7iAJdZy0VC3/s5zqzTcPiASG2iRq3jt4+GV8W+YUGE=
+
+Name: org/mule/tooling/apikit/common/util/IAPIkitConstants.class
+SHA-256-Digest: RjAM57jDjMwQqkBYA5ZkDZqzHim2npmkGxyFp5wLtsY=
+
+Name: org/mule/tooling/apikit/common/navigation/FlowMappingReferenceRe
+ solver.class
+SHA-256-Digest: bKAImyOeVwqxsfhpSVu5uRqm0dgA+Ku4lcGGJ7SblRE=
+
+Name: org/mule/tooling/apikit/common/dialog/ProgressBarMonitor$3$1.cla
+ ss
+SHA-256-Digest: AcApIlZKnMH1asDgx6XWQbSKAz7sMKzWuF+6K9aXAe4=
+
+Name: org/mule/tooling/apikit/common/VCSClient$1.class
+SHA-256-Digest: yPDUTNybMPb3lFt4g3x5I5x7WDX/FtrVo/CKA/AbMTE=
+
+Name: lib/zip4j.jar
+SHA-256-Digest: xnCY1DDFdDEUMnKOvUx8RWcvnM9cZHAutq+4gWwirQg=
+
+Name: org/mule/tooling/apikit/common/VCSService.class
+SHA-256-Digest: yN4dlhUS5Zk/s79JVeQHw+vXXzpXooTtWPgSUTJNN0A=
+
+Name: org/mule/tooling/apikit/common/action/CompareNodeAction.class
+SHA-256-Digest: tFuSwD1wO6AIsUNtNsXzlBl7u9+mPHPSfQy00Zspuvw=
+
+Name: org/mule/tooling/apikit/common/action/SyncAllNodesJob$2.class
+SHA-256-Digest: WVEOibF5sgM+WDXbZKzznq8LAtyhZhCO/jXzwWaX3jQ=
+
+Name: org/mule/tooling/apikit/common/navigation/MediatypeColumnLabelPr
+ ovider$1$1.class
+SHA-256-Digest: wdBDSkpQmxMH1/6x5AFwWVhOCDC8junpo3IcSllNLxo=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLLocalFileProvider$Cert
+ ainFuture.class
+SHA-256-Digest: QLtpUy1OvxL76wB3Rc/lP2aVuzfsLcZw6M9tAdZ9XCA=
+
+Name: org/mule/tooling/apikit/common/widgets/ActionEditingSupport.clas
+ s
+SHA-256-Digest: VNk8V+MvZe07Q4YoGESFza/yOjuFBEH4TZULOIKpL5M=
+
+Name: org/mule/tooling/apikit/common/dialog/VCSDiscoveryDialog.class
+SHA-256-Digest: lTFaKI7wNCrR9jLBMUhyp12vdSsAn7710YNhcjvBHhk=
+
+Name: org/mule/tooling/apikit/common/action/DownloadNodeAction.class
+SHA-256-Digest: O1sbpZpMZwUXmMaIWmCC9PTG9zJhxaZcoJ09Ft3vmdE=
+
+Name: org/mule/tooling/apikit/common/action/SyncWithApiPlatformAction$
+ 1$1.class
+SHA-256-Digest: dLztXIebJqys0HqZNg4z/PzMqeQzpwtzrqanXkL+4hU=
+
+Name: org/mule/tooling/apikit/common/navigation/APIkitNavigationPopupD
+ ialog$1.class
+SHA-256-Digest: dl5/S66qyste0MnGh+CdlrP3x+Qbdb7PicTURZ5n+Dg=
+
+Name: archetype-resources/src/main/api/api.raml
+SHA-256-Digest: 01YMSj8RIRyzyI6aG84lFM6A/gQZ0zHhP7MOmCo8ZTA=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLFileProvider$1$1.class
+SHA-256-Digest: HXny93UjRuI9AG+9P5MQDV+Q0cyjPZn0FpueTzXPwSg=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLUrlCompressedFileProvi
+ der.class
+SHA-256-Digest: IFfSKAx+5m0u5cdJY1KrlJEOjZkZFNx5oCeJ82Mkfow=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiChooserComponent$OpenVC
+ SDiscoveryDialogAction$1.class
+SHA-256-Digest: hqCt08d75ORj/cksBe8FLfmpoopeaxFzkKR6q3Tb2Gg=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$3$1.class
+SHA-256-Digest: afMb97ZgU+YiJ5O2hSLpMge7Xpjo46iY2bOzq0ZEljY=
+
+Name: org/mule/tooling/apikit/common/dialog/AddApiDialog$3.class
+SHA-256-Digest: 0rAXMgm1AuWVuZvavUoLvbGBnCDOn4j41IfEuNL9CPE=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper.class
+SHA-256-Digest: elw1/L36G1ARmDpeFJ2E9YrrMdzzTPlDqxyI73EibwI=
+
+Name: org/mule/tooling/apikit/common/action/ConnectProjectToApiManager
+ Action$2.class
+SHA-256-Digest: 6GmHPqLUyoOedoudMEc0B4mz2OfMwIlZMJaN9dR6PwE=
+
+Name: org/mule/tooling/apikit/common/dialog/ProgressBarMonitor$2.class
+SHA-256-Digest: hGn+P6/oMiA3gVQfIBM3/OVQ9DvqxBb49zMORM9kKME=
+
+Name: META-INF/maven/archetype-metadata.xml
+SHA-256-Digest: 95StiH6Q2ufzmaMGlWF59oD1o/vEKjnJCNQ5LtJc9qo=
+
+Name: org/mule/tooling/apikit/common/launch/APIkitWithConsoleLaunchCon
+ figPart.class
+SHA-256-Digest: lfw1yTY6H7MJ5hvSWGM64VTDJaIs5Mn0PpLFg7T3tuc=
+
+Name: org/mule/tooling/apikit/common/action/UploadNodeAction$3.class
+SHA-256-Digest: pnx2V4vufqjdOouVjAX1rOWlnsx8H3ieW/FmYOlBdwQ=
+
+Name: icons/decorators/dirty_ov.gif
+SHA-256-Digest: kcNa/vIisH4A0yxo6t7WLyfsMNiUPGjlmDBsuFiineY=
+
+Name: org/mule/tooling/apikit/common/util/UpdateReporter$1.class
+SHA-256-Digest: CDx4x9c4E6YH4VQM418wAtRuVgTyN+dLNHatMA14g2M=
+
+Name: org/mule/tooling/apikit/common/error/ConnectVCSManagerHandler.cl
+ ass
+SHA-256-Digest: aB5j7kxKXD9B6BDdk4J6HJ1rOQsD7/2QiGSYKdpIY9s=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$2.class
+SHA-256-Digest: EptowvOpB85onmUGw4oirXo0XOcsyesijcP/jdYfGl8=
+
+Name: icons/large/api_console.png
+SHA-256-Digest: Ga3TVUSdu6SwIz52Cgl8dJu4VpK1PwsdwRUKYEeAv7k=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$4.class
+SHA-256-Digest: rwo0lSyG8B2Yx5Z8VjgS8ybgpXUe1ZG3S+MqrGmTyQk=
+
+Name: org/mule/tooling/apikit/common/views/StringStorage.class
+SHA-256-Digest: 1AyAkRIumIqgC8tIwWmNBsn4MmZYB3BZXqa3eGOOokY=
+
+Name: lib/api-platform-j-client.jar
+SHA-256-Digest: gpwPM9YhdPmGrrQmrHpHxG9bf90utbL1csQHxEEB8zc=
+
+Name: org/mule/tooling/apikit/common/action/RefreshNodeAction.class
+SHA-256-Digest: HCNrkZklfuEuS5WIhWZTBxGFMPts5tX9hsTwUiLWRUw=
+
+Name: org/mule/tooling/apikit/common/action/ApiNodeAction.class
+SHA-256-Digest: XtjG78TsKOvYxvzy0mNOwY9ArhFlNKvnLGOs7bfeYLI=
+
+Name: resources/archetype-resources/src/main/app/mule-config.xml
+SHA-256-Digest: MZ6RsRUFqFg3Gj8cferSa7CYWE+GhDK7pkxH3e04mNQ=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLResourceProvider.class
+SHA-256-Digest: rMJNlUAgP009oXefuILSuvxDOvmjhmLoKGWKkDkyDyQ=
+
+Name: org/mule/tooling/apikit/common/launch/ConsolesViewPopulator.clas
+ s
+SHA-256-Digest: ulxXFw1PysFOmMKSuBGzwcELqNzu11r57cYnX5Oxz0A=
+
+Name: org/mule/tooling/apikit/common/action/AddMappingAction.class
+SHA-256-Digest: ytXypx2Xvp2znHsiXj/WcbTKpE5inG1HEMU1iBPX6hA=
+
+Name: archetype-resources/src/main/app/mule-config.xml
+SHA-256-Digest: MZ6RsRUFqFg3Gj8cferSa7CYWE+GhDK7pkxH3e04mNQ=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$7.class
+SHA-256-Digest: HGlVndf9AE2M9xBdMqCRz6tdm4ift6PveZ8gCDZeaXU=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution$3.class
+SHA-256-Digest: ohSpbyZ6wlvYurnEX7H/n+QpRhJ0X6LJNQRWw7HR/3c=
+
+Name: org/mule/tooling/apikit/common/dialog/NewConnectionApiDialog$2.c
+ lass
+SHA-256-Digest: PqlVjB7XW4WzmqtFHj4C1udRkkursn84Mq03rP31L6E=
+
+Name: org/mule/tooling/apikit/common/error/ConnectProjectToApiManagerH
+ andler$2.class
+SHA-256-Digest: vsbAarv9SPBym7vwlC81C46ltrWEWtB7zY0oQjNdzCI=
+
+Name: org/mule/tooling/apikit/common/widgets/APIKitMappingCustomEditor
+ .class
+SHA-256-Digest: 1/brrUirC7KuUm1AO5Spiv24rKjM6xJ5cVOf2/KOWtc=
+
+Name: org/mule/tooling/apikit/common/util/RamlBasicDetailsParser.class
+SHA-256-Digest: Seh7JqbYNH4Pyfy1Uqd487ckJ7FEcCNb49jk/pXA0Y4=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$3$1$1.clas
+ s
+SHA-256-Digest: Kx+KFPgPTpYyr77sY+up7qbDYJqmDYOmgHFFE8/75+M=
+
+Name: icons/decorators/arrow_up.png
+SHA-256-Digest: mxwDJseV/4npUqvqC8+aqnUi0z/LniFfzhSU/rLZ9No=
+
+Name: org/mule/tooling/apikit/common/util/APIKitProjectHelper$1.class
+SHA-256-Digest: PlWGZg1nS6HeQG4f9o+GSfV2XsmgPLe959C39Sv3J6w=
+
+Name: icons/small/api_console_view.png
+SHA-256-Digest: k5pbMJ95dAiFZfXWZDaDfPOm9qRqeVpCb9Nu33Z/pvo=
+
+Name: icons/decorators/checkedout_ov.gif
+SHA-256-Digest: 9Tmc35luZ46OWz3bYQvH916J9RLFzTzifsD8F8nOLKg=
+
+Name: org/mule/tooling/apikit/common/action/SyncAllNodesJob$1.class
+SHA-256-Digest: aTsKZdgx1SBug0QgE5LfIJLZToratJwYflIKeKHszAk=
+
+Name: org/mule/tooling/apikit/common/dialog/AddApiDialog$4.class
+SHA-256-Digest: u2yDO/CRKoaX/bnKGeJKP88r7U+chpcaWDjBcSWB7s4=
+
+Name: org/mule/tooling/apikit/common/model/VCSResource.class
+SHA-256-Digest: sH5uzvfEtBTP7kcm+33F7JlHrCXJkRCG7Vi44/58JqY=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$3.class
+SHA-256-Digest: OGcX2X0qTaYdPj0UBvigcp8K5RbDtaG18wM/0zMj7ZU=
+
+Name: org/mule/tooling/apikit/common/action/ApiSyncDeltaVisitor$2.clas
+ s
+SHA-256-Digest: k6e7GyjtuN+wp6nJUcrlI024c+AMH7WFuI9SO0m5DzU=
+
+Name: org/mule/tooling/apikit/common/navigation/APIkitNavigationPopupD
+ ialog$3.class
+SHA-256-Digest: NCEWTlQ0373fy4C84Hbc0yctA+67C1DWsKVF+EhAyQE=
+
+Name: org/mule/tooling/apikit/common/action/ApiNodeAction$1.class
+SHA-256-Digest: R4bRHC9GG1WS39QSqW3KXldm38nwzbWjzNE5CgLohIo=
+
+Name: org/mule/tooling/apikit/common/widgets/ResourceEditingSupport.cl
+ ass
+SHA-256-Digest: 2RulQj8hx4KM5TeNjcJ77wbbzrmRe/l9lZWcpQPXDmI=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$2.class
+SHA-256-Digest: fXUPRCKZkyghc5soOEFd+GN2RqJsv8zEE7BYFw4xLwg=
+
+Name: org/mule/tooling/apikit/common/ApiList$1.class
+SHA-256-Digest: 3xXzkE8pxD681WBn0L4fciBnPBv4atXtDIz56EQLX04=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLFileProvider$2.class
+SHA-256-Digest: EtLwLak95QCEzCzPuvKbbix2QyQqHKrJylcn+SauKwk=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLResourceProvider$RamlE
+ rrorDescription.class
+SHA-256-Digest: VOdhb1joII/qehbUiaBiFdqo+mhqqlmyEMs8cbxwEaY=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$2$1$1$1.cl
+ ass
+SHA-256-Digest: MoKsp02vDjIaUTZdVt7F9d7s0bVm1cyO8Yn69hsvZds=
+
+Name: org/mule/tooling/apikit/common/dialog/ProgressBarMonitor$1.class
+SHA-256-Digest: /Kw5xjTDE/zlAQnh1cO+Hb1FQalCbJpnl3WlOryGlC4=
+
+Name: org/mule/tooling/apikit/common/error/ApiSyncErrorCalculator.clas
+ s
+SHA-256-Digest: yw3xn+ZU2dirqtxLqyvM2zipalkHOUmHRtPNKtgWI+U=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$2.class
+SHA-256-Digest: Eb3SoDONojLKx6Sg1+SAlrh7BtYTt3oGvrUYpMfHKEo=
+
+Name: icons/small/apikit16x16.png
+SHA-256-Digest: Xtbps95Mok81FjMlDaujjlkjn874zbqEgrC2eM2VoDE=
+
+Name: icons/small/exception-strategy.png
+SHA-256-Digest: M8kqf5Z5/cOIv5SoSXNGpmp6GHNRk9sRiII4qkP6ZRI=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog.class
+SHA-256-Digest: +uWkG9DCuLnmGfYRJmN41+eqwUDY2xIfeyebBCEiN3I=
+
+Name: org/mule/tooling/apikit/common/error/ApiSyncErrorDisplay.class
+SHA-256-Digest: iLKEloYgLLddlNHQMv3NdNA/x5WRMnucrt7awrPm0Vo=
+
+Name: org/mule/tooling/apikit/common/scaffolder/ApikitScaffolder.class
+SHA-256-Digest: HDY3JbqM4tQIb8XOvLCX2wXW/mZAtwUqhL67gTYHmF0=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$8.class
+SHA-256-Digest: ag0Jx3g6116p7HKuHw687H7+98W7uuqTmRsMmTYxB2w=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$7.class
+SHA-256-Digest: 5ySiIYI4EdI3mYSBbt73KZM87SAh39gHhdVG9AdmZ0M=
+
+Name: org/mule/tooling/apikit/common/wizard/GenericRAMLZipExtractor.cl
+ ass
+SHA-256-Digest: A2EaxdS2Y9wFtfYG03l5HNsYZQ8JZIeqXWe4TEIQhbI=
+
+Name: org/mule/tooling/apikit/common/scaffolder/FlowGenerator$1.class
+SHA-256-Digest: Wc80K8i6sPkgowLlGBagdUmVLEUUMaMl0lDC+d5TLS4=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLLocalFileProvider.clas
+ s
+SHA-256-Digest: UkIrFJdJ1yla7ORRqiNzGFvd6EBYVpWR6c1wQ6Zvyr4=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$8.class
+SHA-256-Digest: oUs0vsGiVMe4OnrwY7of8STcmYiKbKGIoR0/pPyA4ak=
+
+Name: org/mule/tooling/apikit/common/dialog/AddApiDialog$2.class
+SHA-256-Digest: I99yLzwcmEYWjby2VRMUCI9TmUcBrZ+aI6aymKr6IyM=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution$7.class
+SHA-256-Digest: ZMZau3zGc3qc97ahnR5TFfj5GBkI83Z33POSIo4GvEU=
+
+Name: org/mule/tooling/apikit/common/error/ApikitErrorManager.class
+SHA-256-Digest: OnUgOKwXEBOerwEoTFPzpsFaNkT2iX2fA3+2TM9cYGM=
+
+Name: org/mule/tooling/apikit/common/widgets/MediaTypeEditingSupport.c
+ lass
+SHA-256-Digest: Kk66xru8fmhEqFxRu3vZAXBJYmrIPwUX8hU9Ip9m9Ls=
+
+Name: archetype-resources/pom.xml
+SHA-256-Digest: ycS5/b6dQivBEX/aLnITijRVLRkwV/vC4PZQT3eIx4s=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$10$1.cl
+ ass
+SHA-256-Digest: 9i32KC87pvHxy7Y+GjZP0+hCXkpuFiHXkA8cMrggWDI=
+
+Name: lib/jackson-mapper-asl.jar
+SHA-256-Digest: Q4yDG86/3qozYCp4L+Q6gnIqymKHGRw7jeSzCKuCxYU=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiDefinitionPartExtension
+ $1.class
+SHA-256-Digest: 2DmYvhcVElD9E5xEfP5Sz3zK6TH/2PnGA3Qgbfb8w/k=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiDefinitionPartExtension
+ $3.class
+SHA-256-Digest: 7yHBx4RUy+x0FRQJoQ1OnfIDgGSZ99HCy73Oanr8koE=
+
+Name: org/mule/tooling/apikit/common/action/ApiSyncDeltaVisitor$1.clas
+ s
+SHA-256-Digest: W83vwOIlGQfPVtRnxGFabk1zTXOKyM735Az0rrEES0M=
+
+Name: org/mule/tooling/apikit/common/action/UploadNodeAction$2.class
+SHA-256-Digest: DsoNODBTg4PRDBYSjxmTAIwg4hc78c6RQGiRWp2/ssc=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiChooserComponent$OpenFi
+ leDialogAction.class
+SHA-256-Digest: ivYas0OII36kzUuws3iN3ftK5tvRfvcf9ondcDWf+x8=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$GetChildrenAndF
+ latten.class
+SHA-256-Digest: vjEtSceB2pSHpdgBRxVdLzJOC4aIA3vy59zFJuBHlns=
+
+Name: icons/decorators/version_controlled.gif
+SHA-256-Digest: gCbr2xbqUp/f9/DNh6bc3Mri044kwHf0uxUeiWUU0Lk=
+
+Name: org/mule/tooling/apikit/common/action/RefreshAllAction.class
+SHA-256-Digest: /Qn7dN69qYQvQvfF9FRZLkfagumPVJt/BUoOw0Pb15Y=
+
+Name: org/mule/tooling/apikit/common/action/RemoveMappingAction.class
+SHA-256-Digest: wguzbrIHwddAJv8AlWUcWw0KPV3Zok16vLT5MwDF/FQ=
+
+Name: org/mule/tooling/apikit/common/wizard/VCSRAMLZipExtractor.class
+SHA-256-Digest: c0vvEDzvQHqbiCCNN+RmBCJMn8dqBwR4GnJZd16Q6Wg=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$9.class
+SHA-256-Digest: XohD8GACqyGG9Z2Ld4h/McYpEPfjJVc4vQ3BtI4e95o=
+
+Name: org/mule/tooling/apikit/common/navigation/APIkitNavigationPopupC
+ ontentProvider.class
+SHA-256-Digest: /505SKj4FZIOf6pUavez7E80XvjeEp10oypDYMkrnAQ=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$3.class
+SHA-256-Digest: UrCEQjrap9kXuJ9yqp51ddCGvNdN2doEzk4aira2gDM=
+
+Name: org/mule/tooling/apikit/common/action/CompareItem.class
+SHA-256-Digest: a0/qZLOONqqtlDsTUxUF6Fm5OT3g9d2h69slAm1LFws=
+
+Name: icons/small/exception-mapping.png
+SHA-256-Digest: MOGOn5u5k2BGZnpGffwDHbgI2Ard97V6gVY+W2vd5YI=
+
+Name: org/mule/tooling/apikit/common/action/SyncWithApiPlatformAction$
+ 1.class
+SHA-256-Digest: FlCmYJL3Uz4hkUfZgj33+Hx4smcuPmblZ8xZmPmJ1KM=
+
+Name: org/mule/tooling/apikit/common/wizard/LoginAwareFileDownload.cla
+ ss
+SHA-256-Digest: sewNHPIB5c5ySX7o+uM0KGIgExYgJ5Ulx1rHMfryMc0=
+
+Name: org/mule/tooling/apikit/common/navigation/MethodColumnLabelProvi
+ der$1.class
+SHA-256-Digest: 0X72ILixo9fXa7oQb4SL4K2J47iXpKWI6VMRiL1zeMI=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiDefinitionPartExtension
+ $4.class
+SHA-256-Digest: MiS8gkol/OcgXPp9RJ8hW96jdsuexJfnihxIApeWHFk=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiDiscoveryContentProvide
+ r.class
+SHA-256-Digest: 27c4koMh9llFXkg12jdilwZzVwZUCO+jAMaxODR6+fI=
+
+Name: org/mule/tooling/apikit/common/util/IdleSelectionEventListener.c
+ lass
+SHA-256-Digest: UjIst7/u5mGZCS9wqL05FPIzO9XIi+WglYlD6H47HMc=
+
+Name: org/mule/tooling/apikit/common/VCSClient.class
+SHA-256-Digest: kxMF/08XzOMNvoBUjIA6byEm3MIaapSp0r8Cahwatf8=
+
+Name: org/mule/tooling/apikit/common/util/MappingManager$1.class
+SHA-256-Digest: AjxF1CP9AuNMYx5h0TSgC6s0J72IwIrJRlmn8aca/9Y=
+
+Name: org/mule/tooling/apikit/common/action/ConnectProjectToApiManager
+ Action$3$1.class
+SHA-256-Digest: CDKx/ectEu7NSdrBupxEfaDLzyU8TVbldUvIpPcB/dM=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView.class
+SHA-256-Digest: SABlwRcs0awIFci4biBJV652BqEm1tgjaxCcnJNyyQ0=
+
+Name: org/mule/tooling/apikit/common/dialog/VCSDiscoveryDialog$1.class
+SHA-256-Digest: AsJjIkq7iA43v1Av3LjNM2wWcOqMkIA9ZiPk0o/6+yo=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$ApiVers
+ ionProvider.class
+SHA-256-Digest: Wtsgp8XcDenyaKUrElv1L/niA41R3HXzgx18jdH91do=
+
+Name: org/mule/tooling/apikit/common/error/ApiSyncErrorCalculator$2$1.
+ class
+SHA-256-Digest: O6GgFtLDuLqo9IAu7m8lkIiMTpVaV2ZlolAPbgq6OAw=
+
+Name: org/mule/tooling/apikit/common/widgets/MappingEditingSupport$1.c
+ lass
+SHA-256-Digest: cv4RN7oedyjxxWjTYUjCvyG7S6PTtIywU0U9jhMYB9w=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.apikit.common/p
+ om.properties
+SHA-256-Digest: DsdLThtsT2o77iQY7FY4N8uz27XN+YM0vVxZcSviXdw=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$ApiVers
+ ionComparator.class
+SHA-256-Digest: 0FE2A62Imxwk65+jsEbEHm2/aZbv/QBU7kW6wgHDY6k=
+
+Name: org/mule/tooling/apikit/common/wizard/VCSDiscoveryContentPovider
+ .class
+SHA-256-Digest: 41futStVRDFN4D+WRtVzM+zbn/qU2LCoctTGY8jPxfo=
+
+Name: org/mule/tooling/apikit/common/action/EmptyRootStatusNode$1.clas
+ s
+SHA-256-Digest: so/rpFFGVo1OTqJI+yAEazlhg4aHO+EDKzPhlH+n8NU=
+
+Name: org/mule/tooling/apikit/common/metadata/resolver/APIkitRouterInv
+ okerMetadataResolver.class
+SHA-256-Digest: vlIP91CgpSMFLqUneBd3omIEKnggVY5UqJUDIdOvhpk=
+
+Name: org/mule/tooling/apikit/common/model/Tag.class
+SHA-256-Digest: aCw1pm1YMRXKP1FquQZvtmXVjFMQtMN/EkUPlKiqN80=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$2$1$1.clas
+ s
+SHA-256-Digest: TpiYbIXaiU5sO3dVY+8YmAXzWU3aL4E0UAFEvtbYxbo=
+
+Name: icons/decorators/arrow_down.png
+SHA-256-Digest: 4sXL80ECWmQ9vhtU3yRlLcLEpYmKAyFm5MBRk/56qJk=
+
+Name: org/mule/tooling/apikit/common/action/ApiRootNode.class
+SHA-256-Digest: 45JxBCICi+eC3YyvzOD1XHaQ7ohQh5TAPhUus8PIWMk=
+
+Name: resources/archetype-resources/src/main/app/mule-deploy.propertie
+ s
+SHA-256-Digest: brpLQhwAzMGvs68VujtkS1IPSYTCfAUGjM6kTuJOf08=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncViewerLabelProvider.
+ class
+SHA-256-Digest: v4y6tFlb8nkOAyp9zFUClX06mvBv3+MB/90EaUBcsfo=
+
+Name: lib/cliche-shell.jar
+SHA-256-Digest: 2XhGu0D36KQOsjOlRZt1TPsc0V6OTeg3a8jL+X6jxxM=
+
+Name: org/mule/tooling/apikit/common/launch/APIkitWithConsoleLaunchCon
+ figPart$3.class
+SHA-256-Digest: DoDE3feIJ+b1/DJQic0OylLKJc0LrqlhzaWJAwEAByQ=
+
+Name: org/mule/tooling/apikit/common/util/CurrentClassloaderRunner.cla
+ ss
+SHA-256-Digest: tazee2pUe6Q1UxWJ8ilSvg91KGcBwUyOTv50GVxMt3E=
+
+Name: archetype-resources/README.md
+SHA-256-Digest: VqOp3sBpMoV8ME7CqU77DYzYYC1d+xvluNTCTqeI5Qc=
+
+Name: org/mule/tooling/apikit/common/ApikitPlugin.class
+SHA-256-Digest: PuhnsLvd2PcxxA2mcE1bwo4DFxP2nfHubBOc+iyoe6Y=
+
+Name: org/mule/tooling/apikit/common/navigation/VisibleMuleTreeBuilder
+ Visitor.class
+SHA-256-Digest: Lvqe6B0Lo2RIp4xswxcHrdlNvtPOEQ1Uio8jrLjUqFA=
+
+Name: org/mule/tooling/apikit/common/action/SyncNodeJob.class
+SHA-256-Digest: rrCr+zv+j5nT1SaPEDqJ32etPiY6hAHA1ECm7r0KX94=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$3.class
+SHA-256-Digest: JFe+L/wGQ7vY48QcSo3+oIOx9hxwliZmhOaxU3GNH6c=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$7.class
+SHA-256-Digest: PwO6bsWYijT2zkdToeQyyUNYHSETi9Ag/klUujenEZA=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution$4.class
+SHA-256-Digest: 3gkMwNkhBTk1sj7jky475xbiLWLTp4kZXYpSkZR6Ihc=
+
+Name: org/mule/tooling/apikit/common/error/ConnectProjectToApiManagerH
+ andler.class
+SHA-256-Digest: AAtlcmxrxRfBRhT7eYkZ3pEkIQEq8/X9Asb4bU+4RS4=
+
+Name: org/mule/tooling/apikit/common/model/Branch.class
+SHA-256-Digest: yr8jIJno5FYot7dcTGTqOkdAyfGgR128N+hIxxoRTZE=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution$RamlErrorDialog.class
+SHA-256-Digest: tEVP2O6mjLbSn3rdCCEJyqB63Ad6lIm8od7AiQ7mOzI=
+
+Name: lib/commons-lang.jar
+SHA-256-Digest: LHO5QMkSULyYNGkmJw8TpqELtuKdLJMWpw0TTjgshz4=
+
+Name: org/mule/tooling/apikit/common/action/ConnectProjectToApiManager
+ Action$3.class
+SHA-256-Digest: wV4REI7te1/5ZYi9B+uVBX1pbpeSUE65Rah9GD14YP4=
+
+Name: icons/decorators/confchg_ov.gif
+SHA-256-Digest: ruYt23Ds66ortCyJYPHFyo87sBzFAX51ofEJeJtdWV4=
+
+Name: org/mule/tooling/apikit/common/decorators/DecoratorManager$1.cla
+ ss
+SHA-256-Digest: ZPWwQr1oJAXry46CiRIrov3eKdNb2Hbc18d6hYneEIw=
+
+Name: icons/small/api_console_endpoint.png
+SHA-256-Digest: L826vd3n+XflVJ24NB7Fu5UaIFwByU2BF5wV1pX2ezo=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$5.class
+SHA-256-Digest: +q0f8dSIGma9iW9d0Iso0V8JIKQIuyxBn/7bNRSvVGE=
+
+Name: org/mule/tooling/apikit/common/decorators/DecoratorManager.class
+SHA-256-Digest: +yxVz8/qR7212Yv/ToWlydRCQ2IkTXLvFa/1ftl5bzo=
+
+Name: lib/jaxb-api.jar
+SHA-256-Digest: MCM99iFfuYLYeE3pHTB1lnSM6pjW1QIpPHw+hcFpcTc=
+
+Name: org/mule/tooling/apikit/common/util/APIKitProjectHelper$2.class
+SHA-256-Digest: Z1NEnt4POX/z9jKFyYnuq6DlYF+fcV1+SZdowLZqouU=
+
+Name: org/mule/tooling/apikit/common/widgets/APIKitMappingCustomEditor
+ $2.class
+SHA-256-Digest: ytJoTquRWSxu8Jk9DH364OcXKdHOjAcqTllOLeCKi3g=
+
+Name: lib/jersey-json.jar
+SHA-256-Digest: l7nV1aNy70pG4q3A0Ukeh6edD95Q7iGXJbfGA8iBVDE=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$8.class
+SHA-256-Digest: xTNyRfsgiI51flJ5Yh03C0hGq2YGkaCUqzhH90ZVOd4=
+
+Name: org/mule/tooling/apikit/common/ApiList$2.class
+SHA-256-Digest: XaOsHYCPdPdyiJLnXN1fYpJaVqCOTKJSSBn4rGpt5XA=
+
+Name: org/mule/tooling/apikit/common/metadata/resolver/APIkitRouterSee
+ ker.class
+SHA-256-Digest: ZAGp7tHaGlb1zqyi2Rcsw5DvEl4DZVhuWKvWReMjJsw=
+
+Name: org/mule/tooling/apikit/common/action/ConnectProjectToApiManager
+ Action.class
+SHA-256-Digest: DWqrWBV7L2PO5J2laf3KFcb6WE8gCG/kQT21ugDXKJI=
+
+Name: org/mule/tooling/apikit/common/action/UploadNodeAction$1.class
+SHA-256-Digest: 0iyhRYa5f2vVU4m1acMKg0aKi+0M3knpXzQk3kvIdrQ=
+
+Name: org/mule/tooling/apikit/common/dialog/AddApiDialog$5.class
+SHA-256-Digest: dXzGZrEcGd2ZW7Jy9zdOpAF8Pe8bJEpRFhWyA1YWTKg=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution$2.class
+SHA-256-Digest: kYA05yROQuXdUvtSRYEUcIzhV6xHmDSn1pe+KO48XuM=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog.class
+SHA-256-Digest: GAqQASisAlVQW+CvsO1ZgZjiM0LJgbNqB+flIZTYClk=
+
+Name: org/mule/tooling/apikit/common/decorators/ApiViewerDecoratingLab
+ elProvider$1.class
+SHA-256-Digest: xT9To8xMvnLbviOfbmcfJEGHqh/Afo2feqRPRqa6gVU=
+
+Name: org/mule/tooling/apikit/common/util/RamlBasicDetailsParser$2.cla
+ ss
+SHA-256-Digest: BjjN1YrG0imLgstMYlbdVaZ28QXPtVIY6JscSWEtOiE=
+
+Name: org/mule/tooling/apikit/common/navigation/MethodColumnLabelProvi
+ der.class
+SHA-256-Digest: 3yEWEQYeM3jIk947Cly+WBCucqZBOjbdVK342PoY72g=
+
+Name: plugin.xml
+SHA-256-Digest: HYKkPLh5d51dHtJagtA91RFZAC5CwqbHJZRBOKNd9B0=
+
+Name: lib/api-platform-cli.jar
+SHA-256-Digest: iFTX3ec/udDHm1iGu+k/H0rKVKc+ExaqUdK6gSZxZd8=
+
+Name: resources/archetype-resources/src/main/api/api.raml
+SHA-256-Digest: 01YMSj8RIRyzyI6aG84lFM6A/gQZ0zHhP7MOmCo8ZTA=
+
+Name: org/mule/tooling/apikit/common/model/RamlCoords.class
+SHA-256-Digest: 9aNLRmtCQjdt3g9aqB0NNCytdCbO8cFI7jrj8DUPnr0=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiDefinitionPartExtension
+ $DummyContribution.class
+SHA-256-Digest: iDtlGAIsRIWVNagNVkbUG7cDq+q1avoUfoxNltU84DM=
+
+Name: org/mule/tooling/apikit/common/metadata/resolver/APIkitRouterInv
+ okerMetadataResolver$2.class
+SHA-256-Digest: Te+46yNsMWy1LyWzpuWWiNnUHV//2qZXtwG8w2WlcC8=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiChooserComponent$1.clas
+ s
+SHA-256-Digest: /lieDbaKeYuGknIPeSN2GBDedJ5AoTITsmv03W3tdno=
+
+Name: org/mule/tooling/apikit/common/metadata/resolver/APIkitRouterInv
+ okerMetadataResolver$1.class
+SHA-256-Digest: HcDujDqPPF79eB1u8iIhIbDBfeYcau7czqerFAf96Cs=
+
+Name: org/mule/tooling/apikit/common/scaffolder/VelocityProcessingScaf
+ folderDecorator.class
+SHA-256-Digest: 4DijmtN7leHWhAB2fQiXPNamC0oObosvagKT2uagzoI=
+
+Name: org/mule/tooling/apikit/common/util/UpdateReporter.class
+SHA-256-Digest: QUOt8Pjy3EnpvB0yufjNg0fSFrcd6Vpl9Uw9GwK7jww=
+
+Name: lib/commons-io.jar
+SHA-256-Digest: zGpB3D6qzJ5ECmvQ0okLINNrTuQI/i1nEi8yi7bgFYE=
+
+Name: org/mule/tooling/apikit/common/views/APIkitConsolesView$3.class
+SHA-256-Digest: Sb56SGfI5BqC9jcRO5RmTImvkaQphggGf3Ljgb55V0Y=
+
+Name: org/mule/tooling/apikit/common/dialog/DeprecatedApisViewerFilter
+ .class
+SHA-256-Digest: 8tUYBZgNRbDUndR3QYOh0pEyAw290ZEQGoKGWLMiYqk=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$9.class
+SHA-256-Digest: vZCw3Lapijt9OcVR5EtdyzQHvn+H/TWTaOq8Tyyelwc=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$1$1.class
+SHA-256-Digest: 3L4GBNyDfkcUVVTvAwaAaExEeDxsthZzfIc8xGbAG2w=
+
+Name: org/mule/tooling/apikit/common/error/ApiActionErrorCalculator.cl
+ ass
+SHA-256-Digest: wYLA7kR8lD/31t3eJO5lm0AtReLaIOmM8LtaRfmgvR4=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiDefinitionPartExtension
+ .class
+SHA-256-Digest: DsFJShqb1TbtF1IlrK5DTzjZwnSuOfkOvVkUWkD93Wc=
+
+Name: org/mule/tooling/apikit/common/action/SyncWithApiPlatformAction.
+ class
+SHA-256-Digest: QcR2Pp+Qyix2k0RM5MyNHo0yioyrxFLA8ifNulb2ho8=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLFileProvider$1.class
+SHA-256-Digest: QfA4WpbQGJsBhvYK+YvkNmuqw+TmhHB+DpHbGdeW9+Y=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLUrlFileProvider.class
+SHA-256-Digest: g9OfEOn+LFOhaAwYXpveKYYZBC67t7RUHlzj/N3cPrs=
+
+Name: org/mule/tooling/apikit/common/scaffolder/DefaultApikitScaffolde
+ r.class
+SHA-256-Digest: zxvynpcPT5kQeVhWmEbWM9v1FDs1ftqfnJgjGq7ClhQ=
+
+Name: org/mule/tooling/apikit/common/preferences/ApikitSyncPrefManager
+ $1.class
+SHA-256-Digest: /fyrPDz49B8/XlW2JceEWTwq1n+NtjXj+o5myL81OTA=
+
+Name: icons/small/api-sync-view.png
+SHA-256-Digest: Za8OCuFDBBTHLVXEeJILXxVEXhZ7JzpMQy2pwLuxVwE=
+
+Name: org/mule/tooling/apikit/common/error/ApiSyncErrorCalculator$1.cl
+ ass
+SHA-256-Digest: bMr5pBwFlqt+zgH46QbNjZOut58/ClahPCwErqtTHAE=
+
+Name: org/mule/tooling/apikit/common/metadata/resolver/APIkitRouterInv
+ okerMetadataResolver$AbstractMetaDataResolver.class
+SHA-256-Digest: EaPC9EcoJr0jmNZaf8torvTKfDCiq1qMUnY9IkIiR+I=
+
+Name: org/mule/tooling/apikit/common/views/APIkitConsolesView$2.class
+SHA-256-Digest: tWV0q6LXv7ThYYG2QNapiCMkRPvGto6lKe83RxaDE4U=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$9.class
+SHA-256-Digest: QVP2wO0tXiamIlKyhlJp/s3DS7/6Ha32adjiSqnwZwM=
+
+Name: lib/activation.jar
+SHA-256-Digest: KIHHnJ1u8BxY5ivuoT6dGsi4uqFvL8GYrW5ndt79zdM=
+
+Name: org/mule/tooling/apikit/common/util/APIKitProjectHelper.class
+SHA-256-Digest: U5MHaFD53MOoXyCAkHuWchqbgUS1Jke1VQYUKVI1TM0=
+
+Name: org/mule/tooling/apikit/common/util/APIKitHelper$6.class
+SHA-256-Digest: P+DhyBf6RxsVRFmo7fLXeaicHxXPtlmpeMVCYEK6uWA=
+
+Name: org/mule/tooling/apikit/common/metadata/resolver/APIkitRouterInv
+ okerMetadataResolver$1$1.class
+SHA-256-Digest: mpBvdBl8lx/RGyG0P/nTUc9T0FntfnZDezLOauRlnyk=
+
+Name: org/mule/tooling/apikit/common/action/SyncAllNodesJob.class
+SHA-256-Digest: mb0BuaDMvNqAS6WXDsPjlnYTAHvOwGTXK29OdF/VT1c=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$5.class
+SHA-256-Digest: iio56tWi+cv1LJdUoiBbot6zR8W5I+JGwO0GIAoakEQ=
+
+Name: org/mule/tooling/apikit/common/navigation/FlowMappingReference.c
+ lass
+SHA-256-Digest: xOvu0/EUr53QL4gdrm8ceGZg0FRXXud4q5Dt0hd4qos=
+
+Name: org/mule/tooling/apikit/common/model/VCSDataModel.class
+SHA-256-Digest: toZuDpLFq4TlKPNwSJ/M1M4d7rD5lNYYMlLqxoWJIPI=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiChooserComponent.class
+SHA-256-Digest: wu8Yzk4l2hE81MpyqDLABoIop7dNRrDJbtNinhlOxmo=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$2.class
+SHA-256-Digest: HUfCdqCgAlKYNcK1c0z4Pd3uxlFVR7TbPDpzbnppSfI=
+
+Name: components/apikit.xml
+SHA-256-Digest: 1IrMpjbDgbTeDmR136UY/wG28tsu5w6IkHxbyeE8Gtw=
+
+Name: org/mule/tooling/apikit/common/action/EmptyRootStatusNode.class
+SHA-256-Digest: o4bVkLCO2chT3PdUTB8gY9r5soWbL0zMHKrICaZVczI=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLCompressedFileProvider
+ .class
+SHA-256-Digest: YD3VB2DxHCFJRfvu4IDxIpmg4/Sa2L1u7qMeGeHSPg0=
+
+Name: org/mule/tooling/apikit/common/navigation/MethodColumnLabelProvi
+ der$1$1.class
+SHA-256-Digest: gHTzNQHzMnobZ4dRQi4j2PkvlpbVfypXLyruFv9c0Fg=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$SortDirect
+ ionListener.class
+SHA-256-Digest: nrM8ReWBtwgj0d3LNIGR+ADgi4wzluHXUd2ZtkU06KQ=
+
+Name: org/mule/tooling/apikit/common/decorators/ApiLabelDecorator.clas
+ s
+SHA-256-Digest: DSKzgGKjDcQZjiXrD0uwadCtIbga1QxvC92qtDyDOnA=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution$RamlErrorDialog$1.class
+SHA-256-Digest: 1jIEP819Dz1wkKbNAI1Z7zWp+E1dDwrtxCmh4aJRSoo=
+
+Name: icons/decorators/delete_ovr.gif
+SHA-256-Digest: LzCNU9Js2fy3i5aWAJDlYxA+l2Q+h9O7r5EX0BXfgyg=
+
+Name: icons/decorators/success_ovr.gif
+SHA-256-Digest: fEzi7igBwSdohJdd0b2DKoYdZnu1U9rKOrIPvboqFJM=
+
+Name: lib/jettison.jar
+SHA-256-Digest: N3lAKIsGQ8SHgBN/b2hXiTfh6lyitzgwqCDFCnt+2AE=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$9.class
+SHA-256-Digest: k+OWLoSvmJNRx/a5Uo1JZaXdaFKuBfl+qncAMG9DuB0=
+
+Name: org/mule/tooling/apikit/common/error/ConnectProjectToApiManagerH
+ andler$1.class
+SHA-256-Digest: SD8i5TjvRNT8Nf8r3JSITDeohn/Dq7tRe1vticKQR+0=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$4.class
+SHA-256-Digest: vKWEcdNjsIbVNU3scK319eBcU7F4AaCwD2idsu1ie4s=
+
+Name: org/mule/tooling/apikit/common/wizard/VCSRamlProvider.class
+SHA-256-Digest: ysNJ6q+Autvl232pZVt2uh8hbQG5vrSox1i1QSE6IAI=
+
+Name: org/mule/tooling/apikit/common/widgets/MappingsLabelProvider.cla
+ ss
+SHA-256-Digest: 6ZxcMaMnyQzC3xmZ/gwN/ANtulBgjmndtLTF7qccepc=
+
+Name: org/mule/tooling/apikit/common/navigation/ResourceColumnLabelPro
+ vider.class
+SHA-256-Digest: UibZA8n1V2TpyKQpmHiDkgKtKnPIeorTgCUyMtIyPIc=
+
+Name: org/mule/tooling/apikit/common/apidefinition/ApiDefinitionContri
+ bution.class
+SHA-256-Digest: BDOYcautHr9fLYKyQNiadn93VpR/UoBU0qxPyBg73v4=
+
+Name: org/mule/tooling/apikit/common/State.class
+SHA-256-Digest: NKVMXeL5c9HH3eyazPsW401krrdsAfdDylkceENKFiA=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$ApiName
+ Provider.class
+SHA-256-Digest: 8BwZDXHC8Fh93D2qrWwRSNHWB/hOukNyCoER4djhIEA=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$3$1.class
+SHA-256-Digest: Kqf8CuoVifS7Hs2qD3d7BGS6o6brjVF+lyWo8eX0iHk=
+
+Name: org/mule/tooling/apikit/common/widgets/APIKitMappingCustomEditor
+ $3.class
+SHA-256-Digest: B8RuAMSkKFb7JdPG3vlHNqAXAPZPZ8uQuVbpLeNQjMU=
+
+Name: lib/gson.jar
+SHA-256-Digest: DytfcVpVBswU7TUuX/QGtMSAoGNEpHlim4XnbCquf6o=
+
+Name: org/mule/tooling/apikit/common/navigation/FlowMappingFilter.clas
+ s
+SHA-256-Digest: GZOWvkVOCIJFt8Y1ILlY6Y0jYc1Daj2/HmCxvHZ1mU4=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiChooserComponent$OpenVC
+ SDiscoveryDialogAction.class
+SHA-256-Digest: Zn5+E1k+6sFyqogNyYNRDemglHkBmBMeOVjRBT6IUqk=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution.class
+SHA-256-Digest: 0nje80n20hLrDdr3Wyx9GiEbxB0o3nYvlqzBk1QfdWs=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$1.class
+SHA-256-Digest: IwdMcy0ra0ytwnFwvkKKEpCJL+vyyiq0QdJ3MvVh45M=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLFileProvider.class
+SHA-256-Digest: MWTrZYSg+TAhKhSRFHhW/2+IOFp22SSKDFsQsGgDU8I=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog.class
+SHA-256-Digest: FVUt7RCazmErP9QkMYUJnefJC0hjJ6KQul1M0SJNA6A=
+
+Name: org/mule/tooling/apikit/common/handlers/AbstractGenerateFlowsHan
+ dler$1.class
+SHA-256-Digest: +E8BvqnAM62AjRH7dNPg5jbaik8Q7GfRhgMEUFTfAlI=
+
+Name: org/mule/tooling/apikit/common/util/MappingManager.class
+SHA-256-Digest: XCSauZM7hJTO0Ql6xpxloHxFs1mZXhsZlg1k9SCa924=
+
+Name: org/mule/tooling/apikit/common/dialog/AddMappingDialog$6.class
+SHA-256-Digest: 9VrLkRqgvksRzbKSu2hcaPbrStQpk017h1f4mvEnLHk=
+
+Name: org/mule/tooling/apikit/common/action/UploadNodeAction.class
+SHA-256-Digest: izlSFZccH+mHTk+fVmq61JD2RC6NVbuk4vRSNE47MW8=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLFolderProvider$1.class
+SHA-256-Digest: asiT2as1LZyXe/9iJenFdQCz2XYYf/XQjbFMpSEscd4=
+
+Name: resources/archetype-resources/src/main/resources/api.properties
+SHA-256-Digest: KUhmcFEb63Jk3yjE0KonVhorwjYSoR+AoYn185YXo3s=
+
+Name: org/mule/tooling/apikit/common/action/ConnectProjectToApiManager
+ Action$1.class
+SHA-256-Digest: ZiDHVbKvV+lQWE/kuPn13C76ItjrwL53xWRzN6rSKag=
+
+Name: org/mule/tooling/apikit/common/VCSServiceImpl$1.class
+SHA-256-Digest: ng6Tt3U2ZRWN3xSCcVnlBKYExJOcfsVnSFYyutQ9wu0=
+
+Name: org/mule/tooling/apikit/common/launch/APIkitConfiguration.class
+SHA-256-Digest: TFYadONQLrXv0yKmfXEDkhABLPh/wyqex31fNazJkx8=
+
+Name: org/mule/tooling/apikit/common/wizard/ApiChooserComponent$2.clas
+ s
+SHA-256-Digest: dP8e3/Kj9HN6o+JoiOWBByifbQezHbkHGnc0MKJcuys=
+
+Name: org/mule/tooling/apikit/common/dialog/ApiDiscoveryDialog$6.class
+SHA-256-Digest: 42yyerU9o3y+iMRp++4KHcUkvu3AekTS1Wkp+WYgm+A=
+
+Name: org/mule/tooling/apikit/common/util/MappingManager$2.class
+SHA-256-Digest: RUGwTtLQ7vgwVqA29iYG3ELBx1pU656Bwcgm6qIWOcI=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$1.class
+SHA-256-Digest: qspWILjCRoyv+n82lf9IWHbIxfKMi6Gv2QsYFXQQkDc=
+
+Name: lib/jersey-core.jar
+SHA-256-Digest: g9zfM17Ltw0RPwRfnIx0LAPCmePoJOjlG/l8sHChAbE=
+
+Name: icons/small/newAPIKitProject-16x16.png
+SHA-256-Digest: pIIwr3KtoBGxhdm43Cqen/gSBueaAEZk2Baiw4zsKV4=
+
+Name: resources/archetype-resources/README.md
+SHA-256-Digest: VqOp3sBpMoV8ME7CqU77DYzYYC1d+xvluNTCTqeI5Qc=
+
+Name: org/mule/tooling/apikit/common/wizard/ComposedRamlProvider.class
+SHA-256-Digest: f52Nl7lYtNN4mku129NWdjLYAjwQN9eZaCkWNqsGWiM=
+
+Name: org/mule/tooling/apikit/common/wizard/ApikitRamlDefinitionContri
+ bution$5.class
+SHA-256-Digest: z2nPkSWOOhqTRwHnTDy5bhNdo9ZjDiRG0IW7y09cnOY=
+
+Name: org/mule/tooling/apikit/common/views/ApiSyncView$8$1.class
+SHA-256-Digest: hCje42tMm6DJmC5Vic/HkyCmgMz6B0UokwYH/0KLUic=
+
+Name: lib/jaxb-impl.jar
+SHA-256-Digest: +j4UmbGSwxAxK/AogSdLaDlKrqTJVj5sVUzEBq5kT/g=
+
+Name: org/mule/tooling/apikit/common/error/SyncExceptionReport.class
+SHA-256-Digest: +A4G667pTWDUMKXBGa8vtQvIiT03Wrr83/10Hj0XOeY=
+
+Name: org/mule/tooling/apikit/common/navigation/ResourceColumnLabelPro
+ vider$1$1.class
+SHA-256-Digest: 7eLYfQq+MaW6RuJZwZxmeaxErmYMS/8Do9KznYygDVA=
+
+Name: org/mule/tooling/apikit/common/error/ApiSyncErrorCalculator$2.cl
+ ass
+SHA-256-Digest: i+VZiexBUAWCdyBKWWntaiYhCp1DxDpruWQKeYCrEm0=
+
+Name: org/mule/tooling/apikit/common/action/VCSManagerAction.class
+SHA-256-Digest: Q1FdbKBYRP5rIzoxboPb6nvRCfTjsPmgZlhEHYGF65M=
+
+Name: org/mule/tooling/apikit/common/decorators/ApiViewerDecoratingLab
+ elProvider$StyledLabelProviderAdapter.class
+SHA-256-Digest: tp6eHDg71ZGiKHiQIsGJi5FMeZHhsweO1v9XIecHueA=
+
+Name: org/mule/tooling/apikit/common/dialog/ProgressBarMonitor.class
+SHA-256-Digest: a0Nr/2xgoYUSNQE5OHi0shOGX7WAVmA7dJ8tF9a32fM=
+
+Name: org/mule/tooling/apikit/common/views/APIkitConsolesView.class
+SHA-256-Digest: p6LythpaO56PbiA2izhwd1leFJf1s0JAGcx53dxrK1w=
+
+Name: org/mule/tooling/apikit/common/dialog/DiscoveryDialog$5.class
+SHA-256-Digest: c/ppACNZQXMGU8/bx0iBoS9Pn8YA/FxPji4JWTs6Q48=
+
+Name: org/mule/tooling/apikit/common/preferences/ApikitSyncPrefManager
+ .class
+SHA-256-Digest: iapd0W09urhub5FUVpb3gXmaSp0YPMb8IMvJR6GRw9A=
+
+Name: org/mule/tooling/apikit/common/launch/APIkitWithConsoleLaunchCon
+ figPart$2.class
+SHA-256-Digest: MTpDRo7okSW0guSpoRjy5b1cOtlwX7lguVh9G5bNjTo=
+
+Name: org/mule/tooling/apikit/common/util/DummyResourceWrapper.class
+SHA-256-Digest: ZA0EB/LLoLcexmMRKRCYthuvMzZIg55qxhY8oP/5jWg=
+
+Name: org/mule/tooling/apikit/common/wizard/RAMLUrlCompressedFileProvi
+ der$1.class
+SHA-256-Digest: +N6dGlw5tq/r6pYoCIGP2KDoox8dybKneoueG1RFbrI=
+
+Name: org/mule/tooling/apikit/common/widgets/Mapping.class
+SHA-256-Digest: t0PXL2W4x/BUuE04rS2IZYPB6JRUMfTYdJXWAzaXwlg=
+
+Name: org/mule/tooling/apikit/common/dialog/AddApiDialog$1.class
+SHA-256-Digest: xBmCqHJ6KjoYgAYfae/LYmQjN7a6VmhIukUUHAGOJjw=
+

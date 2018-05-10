@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://modelo.utn.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://modelo.utn.com" xmlns:intf="http://modelo.utn.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://modelo.utn.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="update">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateResponse">
+    <complexType/>
+   </element>
+   <element name="deleteById">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteByIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getTransaction">
+    <complexType/>
+   </element>
+   <element name="getTransactionResponse">
+    <complexType/>
+   </element>
+   <element name="delelteAll">
+    <complexType/>
+   </element>
+   <element name="delelteAllResponse">
+    <complexType/>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getTransactionRequest">
+
+      <wsdl:part element="impl:getTransaction" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="delelteAllResponse">
+
+      <wsdl:part element="impl:delelteAllResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteByIdResponse">
+
+      <wsdl:part element="impl:deleteByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTransactionResponse">
+
+      <wsdl:part element="impl:getTransactionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateRequest">
+
+      <wsdl:part element="impl:update" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="delelteAllRequest">
+
+      <wsdl:part element="impl:delelteAll" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateResponse">
+
+      <wsdl:part element="impl:updateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteByIdRequest">
+
+      <wsdl:part element="impl:deleteById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="TransactionDB">
+
+      <wsdl:operation name="update">
+
+         <wsdl:input message="impl:updateRequest" name="updateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateResponse" name="updateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteById">
+
+         <wsdl:input message="impl:deleteByIdRequest" name="deleteByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteByIdResponse" name="deleteByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTransaction">
+
+         <wsdl:input message="impl:getTransactionRequest" name="getTransactionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTransactionResponse" name="getTransactionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="delelteAll">
+
+         <wsdl:input message="impl:delelteAllRequest" name="delelteAllRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:delelteAllResponse" name="delelteAllResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="TransactionDBSoapBinding" type="impl:TransactionDB">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="update">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTransaction">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTransactionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTransactionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="delelteAll">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="delelteAllRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="delelteAllResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="TransactionDBService">
+
+      <wsdl:port binding="impl:TransactionDBSoapBinding" name="TransactionDB">
+
+         <wsdlsoap:address location="http://localhost:8080/Clase18WSSoap/services/TransactionDB"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

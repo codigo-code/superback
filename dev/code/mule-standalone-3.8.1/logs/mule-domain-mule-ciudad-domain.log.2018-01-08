@@ -1,0 +1,28 @@
+INFO  2018-01-08 17:35:52,487 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ New domain 'mule-ciudad-domain'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2018-01-08 17:35:52,488 [WrapperListener_start_runner] org.mule.module.launcher.domain.DefaultMuleDomain: 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing domain 'mule-ciudad-domain'                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+INFO  2018-01-08 17:35:52,837 [WrapperListener_start_runner] org.mule.lifecycle.AbstractLifecycleManager: Initialising RegistryBroker
+INFO  2018-01-08 17:35:53,188 [WrapperListener_start_runner] org.mule.config.spring.MuleDomainContext: Refreshing org.mule.config.spring.MuleDomainContext@2fc46ee5: startup date [Mon Jan 08 17:35:53 ART 2018]; root of context hierarchy
+INFO  2018-01-08 17:35:55,092 [WrapperListener_start_runner] org.springframework.context.support.PropertySourcesPlaceholderConfigurer: Loading properties file from class path resource [config.properties]
+INFO  2018-01-08 17:35:55,097 [WrapperListener_start_runner] org.springframework.context.support.PropertySourcesPlaceholderConfigurer: Loading properties file from class path resource [config.properties]
+INFO  2018-01-08 17:35:55,134 [WrapperListener_start_runner] org.mule.config.spring.processors.ContextExclusiveInjectorProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  2018-01-08 17:35:56,235 [WrapperListener_start_runner] org.mule.util.journal.TransactionJournal: Using files for tx logs C:\software\mule-standalone-3.8.1\.\.mule\mule-ciudad-domain\queue-tx-log\tx1.log and C:\software\mule-standalone-3.8.1\.\.mule\mule-ciudad-domain\queue-tx-log\tx2.log
+INFO  2018-01-08 17:35:56,266 [WrapperListener_start_runner] org.mule.util.journal.TransactionJournal: Using files for tx logs C:\software\mule-standalone-3.8.1\.\.mule\mule-ciudad-domain\queue-xa-tx-log\tx1.log and C:\software\mule-standalone-3.8.1\.\.mule\mule-ciudad-domain\queue-xa-tx-log\tx2.log
+INFO  2018-01-08 17:35:56,606 [WrapperListener_start_runner] org.mule.config.spring.SpringXmlDomainConfigurationBuilder: Configured Mule using "org.mule.config.spring.SpringXmlDomainConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='mule-domain-config.xml'}]"
+INFO  2018-01-08 17:35:56,609 [WrapperListener_start_runner] org.mule.util.queue.QueueXaResourceManager: Starting ResourceManager
+INFO  2018-01-08 17:35:56,610 [WrapperListener_start_runner] org.mule.util.queue.QueueXaResourceManager: Started ResourceManager
+INFO  2018-01-08 17:35:56,659 [WrapperListener_start_runner] org.mule.module.http.internal.listener.DefaultHttpListenerConfig: Listening for requests on http://0.0.0.0:8095
+INFO  2018-01-08 17:35:56,676 [WrapperListener_start_runner] org.mule.DefaultMuleContext: 
+**********************************************************************
+* Application: mule-ciudad-domain                                    *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Wrapper Manager: Mule PID #0, Wrapper PID #5924                  *
+**********************************************************************

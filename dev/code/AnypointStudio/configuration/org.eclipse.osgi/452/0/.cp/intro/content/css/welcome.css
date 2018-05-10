@@ -1,0 +1,211 @@
+/********************************************************************
+ * Core Styles
+ *******************************************************************/
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Ubuntu'), url(ubuntu-400.woff) format('woff');
+}
+
+/**
+ * Markup free clearing.
+ *
+ * @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/* IE6 */
+* html .clearfix {
+	height: 1%;
+}
+/* IE7 */
+*:first-child + html .clearfix {
+	min-height: 1%;
+}
+/* End Clearfix */
+
+html {
+	/* Use a 16px base font size */
+	font-size: 100%; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust: 100%; /* 2 */
+	/* Establish a vertical rhythm. */
+	line-height: 1.5em;
+}
+
+html, button, input, select, textarea {
+	font-family: Ubuntu, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+html, body {
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
+}
+
+p, pre {
+	/* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+	margin: 0 0 1.5em;
+}
+
+img {
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	/* Responsive images */
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #ddd;
+	background: #58585a;
+}
+
+a:link, a:visited {
+	color: #bcbdc0;
+	text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+	color: #fff;
+}
+
+/********************************************************************
+ * Specific Styles
+ *******************************************************************/
+#page {
+	position: relative;
+	height: 100%;
+}
+
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #007cba;
+	height: 104px;
+	max-height: 104px;
+	width: 100%;
+}
+
+#header .inner {
+	padding: 21px 34px 0;
+	min-width: 960px;
+}
+
+#header a.studio {
+	float: left;
+}
+
+#header a.logo {
+	float: right;
+}
+
+#main {
+	height: 100%;
+	overflow: hidden; /* Clearfix gap bug */
+}
+
+#sidebar, #content {
+	height: 100%;
+	margin-top: 104px; /* Header */
+}
+
+#sidebar {
+	float: left;
+	width: 380px;
+	background: #404041;
+	position: relative;
+}
+
+#sidebar .inner {
+	padding-top: 30px;
+}
+
+#sidebar a.sidebar-link:link, #sidebar a.sidebar-link:visited {
+	height: 73px;
+	padding-top: 17px;
+	border-bottom: 2px solid transparent;
+	margin-bottom: 16px;
+	display: block;
+}
+
+#sidebar a.sidebar-link:hover, #sidebar a.sidebar-link:focus, #sidebar a.sidebar-link:active {
+	background: #939395 url(images/background-arrow.png) no-repeat right center;
+	border-color: #404041;
+	color: #ddd;
+}
+
+#sidebar a.sidebar-link span {
+	display: block;
+	line-height: 52px;
+	margin-left: 38px;
+	padding-left: 68px;
+	background: url(images/icon-create-new-project.png) no-repeat left top;
+}
+
+#sidebar a#sidebar-link-open span {
+	background-image: url(images/icon-open-a-project.png);
+}
+
+#sidebar a#sidebar-link-docs span {
+	background-image: url(images/icon-documentation.png);
+}
+
+#add-community-runtime {
+	display: block;
+	position: absolute;
+	bottom: 102px;
+	width: 100%;
+	padding-top: 34px;
+	height: 78px;
+	background: #007cba;
+	z-index: 2;
+}
+
+#add-community-runtime a {
+	display: inline-block;
+	background: url(images/icon-community-runtime.png) no-repeat left top;
+	line-height: 45px;
+	margin-left: 38px;
+	padding-left: 60px;
+}
+
+#content .inner {
+	display: block;
+	text-align: center;
+}
+
+#content .inner .inner-inner {
+	padding-top: 60px;
+	min-width: 960px;
+}
+
+#content h1 {
+	font-size: 50px;
+}
+
+#content h2 {
+	font-weight: normal;
+	line-height: normal;
+	font-size: 25px;
+}
+
+a.get-started-link:link, a.get-started-link:visited {
+	position: relative;
+	display: inline-block;
+	z-index: 2;
+	line-height: 28px;
+	background: url(images/icon-get-started.png) no-repeat left top;
+	padding-left: 37px;
+	margin-top: 35px;
+}

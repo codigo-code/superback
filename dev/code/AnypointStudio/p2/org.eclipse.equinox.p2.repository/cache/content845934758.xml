@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='org.mule.tooling.devkit.updatesite' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='1'>
+    <property name='p2.timestamp' value='1471876437859'/>
+  </properties>
+  <units size='6'>
+    <unit id='org.mule.tooling.devkit' version='1.1.5.201608221430'>
+      <update id='org.mule.tooling.devkit' range='[0.0.0,1.1.5.201608221430)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='org.mule.tooling.devkit'/>
+        <property name='maven-groupId' value='org.mule.tooling.devkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.devkit'/>
+        <property name='maven-version' value='1.1.5-SNAPSHOT'/>
+      </properties>
+      <provides size='6'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit' version='1.1.5.201608221430'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.devkit' version='1.1.5.201608221430'/>
+        <provided namespace='java.package' name='org.mule.tooling.devkit.builder' version='0.0.0'/>
+        <provided namespace='java.package' name='org.mule.tooling.devkit.common' version='0.0.0'/>
+        <provided namespace='java.package' name='org.mule.tooling.devkit.template' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='45'>
+        <required namespace='osgi.bundle' name='org.mule.tooling.runtime' range='[6.1.0,7.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.apache.velocity' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.maven' range='[6.1.0,7.0.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='[6.1.0,7.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.maven.ui' range='[6.1.0,7.0.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.ui' range='[6.1.0,7.0.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.ui.widgets' range='[6.1.0,7.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.repository' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.metadata' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.operations' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.engine' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.messageflow' range='[6.1.0,7.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ltk.core.refactoring' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.apt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.devkit.apt' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.util' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.p2.ui.sdk' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.utils' range='[6.1.0,7.0.0)'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.search' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.apache.commons.lang' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='javax.wsdl' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xsd' range='0.0.0'/>
+        <required namespace='java.package' name='com.google.common.base' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.commons.io' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.commons.io.filefilter' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.maven.model' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.maven.model.io.xpp3' range='0.0.0'/>
+        <required namespace='java.package' name='org.codehaus.plexus.util' range='0.0.0'/>
+        <required namespace='java.package' name='org.codehaus.plexus.util.xml.pull' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.devkit' version='1.1.5.201608221430'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.devkit;singleton:=true&#xA;Bundle-Version: 1.1.5.201608221430
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='201608221430.org.mule.tooling.category.devkit' version='1.0.0.2179cKNMcL7735E3I775A93'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Anypoint Devkit Plugin'/>
+        <property name='org.eclipse.equinox.p2.description' value='Anypoint Devkit Plugin'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='201608221430.org.mule.tooling.category.devkit' version='1.0.0.2179cKNMcL7735E3I775A93'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit.extension.feature.group' range='[1.1.5.201608221430,1.1.5.201608221430]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.devkit.templates' version='1.1.5.201608221430'>
+      <update id='org.mule.tooling.devkit.templates' range='[0.0.0,1.1.5.201608221430)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='Templates'/>
+        <property name='maven-groupId' value='org.mule.tooling.devkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.devkit.templates'/>
+        <property name='maven-version' value='1.1.5-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit.templates' version='1.1.5.201608221430'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.devkit.templates' version='1.1.5.201608221430'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='6'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.devkit.templates' version='1.1.5.201608221430'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.devkit.templates;singleton:=true&#xA;Bundle-Version: 1.1.5.201608221430
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.devkit.extension.feature.group' version='1.1.5.201608221430' singleton='false'>
+      <update id='org.mule.tooling.devkit.extension.feature.group' range='[0.0.0,1.1.5.201608221430)' severity='0'/>
+      <properties size='11'>
+        <property name='org.eclipse.equinox.p2.name' value='Anypoint DevKit Extension'/>
+        <property name='org.eclipse.equinox.p2.description' value='Anypoint DevKit Plugin.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.mulesoft.org/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='org.mule.tooling.devkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.devkit.extension'/>
+        <property name='maven-version' value='1.1.5-SNAPSHOT'/>
+        <property name='image.url' value='http://www.mulesoft.org/documentation/download/thumbnails/94110945/connector.png?version=1&amp;modificationDate=1372094304960'/>
+        <property name='doc.url' value='https://github.com/mulesoft/mule-tooling-devkit#mule-tooling-devkit'/>
+        <property name='tutorial.url' value='http://mulesoft.github.io/mule-cookbook-tutorial/'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit.extension.feature.group' version='1.1.5.201608221430'/>
+      </provides>
+      <requires size='4'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit' range='[1.1.5.201608221430,1.1.5.201608221430]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit.apt' range='[1.1.5.201608221430,1.1.5.201608221430]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit.templates' range='[1.1.5.201608221430,1.1.5.201608221430]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit.extension.feature.jar' range='[1.1.5.201608221430,1.1.5.201608221430]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <copyright uri='http://www.mulesoft.org' url='http://www.mulesoft.org'>
+        Copyright 2012 Mulesoft Inc.
+      </copyright>
+    </unit>
+    <unit id='org.mule.tooling.devkit.apt' version='1.1.5.201608221430'>
+      <update id='org.mule.tooling.devkit.apt' range='[0.0.0,1.1.5.201608221430)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Mule Tooling Devkit APT'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft Inc.'/>
+        <property name='maven-groupId' value='org.mule.tooling.devkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.devkit.apt'/>
+        <property name='maven-version' value='1.1.5-SNAPSHOT'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit.apt' version='1.1.5.201608221430'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.devkit.apt' version='1.1.5.201608221430'/>
+        <provided namespace='java.package' name='com.google.common.base' version='0.0.0'/>
+        <provided namespace='java.package' name='org.mule.api.annotations' version='0.0.0'/>
+        <provided namespace='java.package' name='org.mule.devkit.generation.api.gatherer' version='0.0.0'/>
+        <provided namespace='java.package' name='org.mule.tooling.devkit.apt' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.apt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.apt.pluggable.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.maven.model' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.maven.model.io.xpp3' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.devkit.apt' version='1.1.5.201608221430'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.devkit.apt;singleton:=true&#xA;Bundle-Version: 1.1.5.201608221430
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.devkit.extension.feature.jar' version='1.1.5.201608221430'>
+      <properties size='9'>
+        <property name='org.eclipse.equinox.p2.name' value='Anypoint DevKit Extension'/>
+        <property name='org.eclipse.equinox.p2.description' value='Anypoint DevKit Plugin.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.mulesoft.org/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft Inc.'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.mule.tooling.devkit.extension'/>
+        <property name='org.eclipse.update.feature.exclusive' value='true'/>
+        <property name='maven-groupId' value='org.mule.tooling.devkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.devkit.extension'/>
+        <property name='maven-version' value='1.1.5-SNAPSHOT'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.devkit.extension.feature.jar' version='1.1.5.201608221430'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.devkit.extension' version='1.1.5.201608221430'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.devkit.extension' version='1.1.5.201608221430'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <copyright uri='http://www.mulesoft.org' url='http://www.mulesoft.org'>
+        Copyright 2012 Mulesoft Inc.
+      </copyright>
+    </unit>
+  </units>
+</repository>

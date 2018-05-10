@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1502758541298" transient="false" version="3.0">
+	<site updateable="true" url="platform:/base/" enabled="true" policy="USER-EXCLUDE">
+		<feature id="org.mule.tooling.ui.synchronize.extension" version="1.5.1.201707171700" url="features/org.mule.tooling.ui.synchronize.extension_1.5.1.201707171700/" plugin-identifier="org.mule.tooling.ui.contribution.mule-synchronize">
+		</feature>
+		<feature id="org.mule.tooling.ui.extension.sqs.3.5.0" version="4.2.0.201703301643" url="features/org.mule.tooling.ui.extension.sqs.3.5.0_4.2.0.201703301643/">
+		</feature>
+		<feature id="com.cloveretl.gui.commercial" version="3.4.4.215P" url="features/com.cloveretl.gui.commercial_3.4.4.215P/">
+		</feature>
+		<feature id="org.eclipse.emf.common" version="2.11.1.v20160208-0816" url="features/org.eclipse.emf.common_2.11.1.v20160208-0816/">
+		</feature>
+		<feature id="org.eclipse.platform" version="4.5.2.v20160212-1500" url="features/org.eclipse.platform_4.5.2.v20160212-1500/">
+		</feature>
+		<feature id="org.eclipse.xsd.edit" version="2.9.0.v20160208-0841" url="features/org.eclipse.xsd.edit_2.9.0.v20160208-0841/">
+		</feature>
+		<feature id="org.eclipse.wst.web_core.feature" version="3.7.1.v201601132216" url="features/org.eclipse.wst.web_core.feature_3.7.1.v201601132216/">
+		</feature>
+		<feature id="org.eclipse.pde" version="3.11.2.v20160212-1500" url="features/org.eclipse.pde_3.11.2.v20160212-1500/">
+		</feature>
+		<feature id="com.cloveretl.gui.license" version="3.3.0.M2" url="features/com.cloveretl.gui.license_3.3.0.M2/">
+		</feature>
+		<feature id="org.eclipse.wst.server_core.feature" version="3.3.600.v201601132216" url="features/org.eclipse.wst.server_core.feature_3.3.600.v201601132216/">
+		</feature>
+		<feature id="org.eclipse.jdt" version="3.11.2.v20160212-1500" url="features/org.eclipse.jdt_3.11.2.v20160212-1500/">
+		</feature>
+		<feature id="org.eclipse.rcp" version="4.5.2.v20160212-1500" url="features/org.eclipse.rcp_4.5.2.v20160212-1500/">
+		</feature>
+		<feature id="org.mule.tooling.extension.apigateway.ui" version="6.3.0.201707282110" url="features/org.mule.tooling.extension.apigateway.ui_6.3.0.201707282110/">
+		</feature>
+		<feature id="org.mule.tooling.studio" version="6.3.0.201707282110" url="features/org.mule.tooling.studio_6.3.0.201707282110/" plugin-identifier="org.mule.tooling.branding">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature" version="1.1.0.v20151130-0157" url="features/org.eclipse.ecf.filetransfer.httpclient4.ssl.feature_1.1.0.v20151130-0157/">
+		</feature>
+		<feature id="org.eclipse.wst.common_core.feature" version="3.7.1.v201508262220" url="features/org.eclipse.wst.common_core.feature_3.7.1.v201508262220/">
+		</feature>
+		<feature id="org.mule.tooling.ui.extension.mongo.3.5.0" version="3.6.1.201502271137" url="features/org.mule.tooling.ui.extension.mongo.3.5.0_3.6.1.201502271137/">
+		</feature>
+		<feature id="org.mule.tooling.extension.server.3.8.1" version="6.0.0.201612271237" url="features/org.mule.tooling.extension.server.3.8.1_6.0.0.201612271237/" plugin-identifier="org.mule.tooling.server.3.8.1">
+		</feature>
+		<feature id="org.eclipse.wst.web_userdoc.feature" version="3.6.0.v201405062147" url="features/org.eclipse.wst.web_userdoc.feature_3.6.0.v201405062147/">
+		</feature>
+		<feature id="org.eclipse.ecf.core.ssl.feature" version="1.1.0.v20151130-0157" url="features/org.eclipse.ecf.core.ssl.feature_1.1.0.v20151130-0157/">
+		</feature>
+		<feature id="org.eclipse.help" version="2.1.2.v20160212-1500" url="features/org.eclipse.help_2.1.2.v20160212-1500/" plugin-identifier="org.eclipse.help.base">
+		</feature>
+		<feature id="org.eclipse.emf.ecore" version="2.11.2.v20160208-0816" url="features/org.eclipse.emf.ecore_2.11.2.v20160208-0816/">
+		</feature>
+		<feature id="org.mule.tooling.apikit.feature.3.7.0" version="1.7.5.201707281134" url="features/org.mule.tooling.apikit.feature.3.7.0_1.7.5.201707281134/">
+		</feature>
+		<feature id="com.cloveretl.gui" version="3.4.4.215P" url="features/com.cloveretl.gui_3.4.4.215P/">
+		</feature>
+		<feature id="org.eclipse.e4.rcp" version="1.4.1.v20160212-1350" url="features/org.eclipse.e4.rcp_1.4.1.v20160212-1350/">
+		</feature>
+		<feature id="org.eclipse.draw2d" version="3.10.1.201508170204" url="features/org.eclipse.draw2d_3.10.1.201508170204/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.user.ui" version="2.2.102.v20160129-0947" url="features/org.eclipse.equinox.p2.user.ui_2.2.102.v20160129-0947/">
+		</feature>
+		<feature id="org.eclipse.wst.xml_ui.feature" version="3.7.2.v201511240257" url="features/org.eclipse.wst.xml_ui.feature_3.7.2.v201511240257/" plugin-identifier="org.eclipse.wst.xml.ui">
+		</feature>
+		<feature id="org.mule.tooling.apikit.feature" version="1.5.3.201707281134" url="features/org.mule.tooling.apikit.feature_1.5.3.201707281134/">
+		</feature>
+		<feature id="org.eclipse.wst.jsdt.feature" version="1.6.201.v201512010225" url="features/org.eclipse.wst.jsdt.feature_1.6.201.v201512010225/" plugin-identifier="org.eclipse.wst.jsdt.ui">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient4.feature" version="3.12.0.v20151130-0157" url="features/org.eclipse.ecf.filetransfer.httpclient4.feature_3.12.0.v20151130-0157/">
+		</feature>
+		<feature id="org.mule.tooling.maven.dependencies" version="6.3.0.201707282110" url="features/org.mule.tooling.maven.dependencies_6.3.0.201707282110/" plugin-identifier="org.mule.tooling.core">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.ssl.feature" version="1.1.0.v20151130-0157" url="features/org.eclipse.ecf.filetransfer.ssl.feature_1.1.0.v20151130-0157/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.rcp.feature" version="1.2.101.v20150826-1318" url="features/org.eclipse.equinox.p2.rcp.feature_1.2.101.v20150826-1318/">
+		</feature>
+		<feature id="org.mule.tooling.extension.server.3.8.5.ee" version="6.3.0.201707181700" url="features/org.mule.tooling.extension.server.3.8.5.ee_6.3.0.201707181700/" plugin-identifier="org.mule.tooling.server.3.8.5.ee">
+		</feature>
+		<feature id="org.eclipse.wst.xml_userdoc.feature" version="3.6.0.v201405062147" url="features/org.eclipse.wst.xml_userdoc.feature_3.6.0.v201405062147/">
+		</feature>
+		<feature id="org.mule.tooling.messaging.extension" version="1.0.1" url="features/org.mule.tooling.messaging.extension_1.0.1/" plugin-identifier="org.mule.tooling.incubator.messaging.extension">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.12.0.v20151130-0157" url="features/org.eclipse.ecf.filetransfer.feature_3.12.0.v20151130-0157/">
+		</feature>
+		<feature id="org.eclipse.xsd" version="2.11.0.v20160208-0841" url="features/org.eclipse.xsd_2.11.0.v20160208-0841/">
+		</feature>
+		<feature id="org.mule.tooling.munit.extension" version="1.5.1.201707171700" url="features/org.mule.tooling.munit.extension_1.5.1.201707171700/" plugin-identifier="org.mule.tooling.ui.contribution.munit">
+		</feature>
+		<feature id="org.mule.tooling.ui.extension.magento.3.5.0" version="2.2.0.201502271302" url="features/org.mule.tooling.ui.extension.magento.3.5.0_2.2.0.201502271302/">
+		</feature>
+		<feature id="org.mule.tooling.ui.extension.sfdc.3.5.0" version="8.3.1.201707111332" url="features/org.mule.tooling.ui.extension.sfdc.3.5.0_8.3.1.201707111332/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.core.feature" version="1.3.100.v20150527-1706" url="features/org.eclipse.equinox.p2.core.feature_1.3.100.v20150527-1706/">
+		</feature>
+		<feature id="org.eclipse.wst.web_ui.feature" version="3.7.1.v201602111638" url="features/org.eclipse.wst.web_ui.feature_3.7.1.v201602111638/" plugin-identifier="org.eclipse.wst.web.ui">
+		</feature>
+		<feature id="org.mule.tooling.thirdparty" version="6.3.0.201707282110" url="features/org.mule.tooling.thirdparty_6.3.0.201707282110/">
+		</feature>
+		<feature id="org.eclipse.wst.xml_core.feature" version="3.7.2.v201510130005" url="features/org.eclipse.wst.xml_core.feature_3.7.2.v201510130005/">
+		</feature>
+		<feature id="org.eclipse.wst.server_ui.feature" version="3.3.601.v201602111638" url="features/org.eclipse.wst.server_ui.feature_3.3.601.v201602111638/">
+		</feature>
+		<feature id="org.mule.tooling.ui.extension.cmis.3.5.0" version="2.1.0.201510201313" url="features/org.mule.tooling.ui.extension.cmis.3.5.0_2.1.0.201510201313/">
+		</feature>
+		<feature id="org.mule.tooling" version="6.3.0.201707282110" url="features/org.mule.tooling_6.3.0.201707282110/" plugin-identifier="org.mule.tooling.core">
+		</feature>
+		<feature id="org.mule.tooling.apikit.feature.3.6.0" version="1.6.2.201707281134" url="features/org.mule.tooling.apikit.feature.3.6.0_1.6.2.201707281134/">
+		</feature>
+		<feature id="org.raml.editor.feature" version="0.13.0.201707280013" url="features/org.raml.editor.feature_0.13.0.201707280013/">
+		</feature>
+		<feature id="org.eclipse.ecf.core.feature" version="1.2.0.v20151130-0157" url="features/org.eclipse.ecf.core.feature_1.2.0.v20151130-0157/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.extras.feature" version="1.2.101.v20160129-0947" url="features/org.eclipse.equinox.p2.extras.feature_1.2.101.v20160129-0947/">
+		</feature>
+		<feature id="org.eclipse.wst.server_userdoc.feature" version="3.3.300.v201405011426" url="features/org.eclipse.wst.server_userdoc.feature_3.3.300.v201405011426/">
+		</feature>
+		<feature id="org.eclipse.gef" version="3.10.1.201508170204" url="features/org.eclipse.gef_3.10.1.201508170204/">
+		</feature>
+		<feature id="org.mule.tooling.dfl.sdk" version="6.3.0.201707282110" url="features/org.mule.tooling.dfl.sdk_6.3.0.201707282110/">
+		</feature>
+		<feature id="org.mule.tooling.ui.extension.s3.3.5.0" version="4.2.0.201703301621" url="features/org.mule.tooling.ui.extension.s3.3.5.0_4.2.0.201703301621/">
+		</feature>
+		<feature id="org.mule.tooling.datamapper" version="6.3.0.201707282110" url="features/org.mule.tooling.datamapper_6.3.0.201707282110/" plugin-identifier="org.mule.tooling.datamapper.core">
+		</feature>
+		<feature id="org.eclipse.wst.common_ui.feature" version="3.7.2.v201510130022" url="features/org.eclipse.wst.common_ui.feature_3.7.2.v201510130022/">
+		</feature>
+		<feature id="org.mule.tooling.ui.extension.sap.3.5.0" version="6.3.0.201706231759" url="features/org.mule.tooling.ui.extension.sap.3.5.0_6.3.0.201706231759/" plugin-identifier="org.mule.tooling.ui.contribution.sap.3.5.0">
+		</feature>
+		<feature id="org.mule.tooling.soapkit.extension" version="1.1.1.201706231215" url="features/org.mule.tooling.soapkit.extension_1.1.1.201706231215/">
+		</feature>
+	</site>
+</config>

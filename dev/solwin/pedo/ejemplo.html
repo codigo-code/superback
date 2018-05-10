@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+          var clientId = '1062778371602-h44vmr65cd7ms5hphugufqj6or5kgbg0.apps.googleusercontent.com';
+          var apiKey = '';
+          var scopes = 'https://www.googleapis.com/auth/contacts.readonly';
+          $(document).on("click",".googleContactsButton", function(){
+            gapi.client.setApiKey(apiKey);
+            window.setTimeout(authorize);
+          });
+          function authorize() {
+            gapi.auth.authorize({client_id: clientId, scope: scopes, immediate: false}, handleAuthorization);
+          }
+          function handleAuthorization(authorizationResult) {
+            if (authorizationResult && !authorizationResult.error) {
+              $.get("https://www.google.com/m8/feeds/contacts/default/thin?alt=json&access_token=" + authorizationResult.access_token + "&max-results=500&v=3.0",
+                function(response){
+                  //process the response here
+
+                  console.log(response.feed.entry);
+
+
+                  $.each(  response.feed.entry, function( key, value ) {
+                        //console.log(value.gd$email[0].address);
+                        if(value.gd$email != null)
+                            $("#correos").append("<input type='checkbox' value='"+value.gd$email[0].address + "'/>"+value.gd$email[0].address+"  <br>");                   
+                  });  
+                });
+            }
+          }
+        </script>
+        <script src="https://apis.google.com/js/client.js"></script>
+        <button class="googleContactsButton">Get my contacts</button>
+        <div id="correos">
+
+        </div>
+  </body>
+</html>

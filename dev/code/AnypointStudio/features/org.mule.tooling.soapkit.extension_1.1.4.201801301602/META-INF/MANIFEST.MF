@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_80
+Built-By: ubuntu
+Created-By: Apache Maven 3.2.3
+Archiver-Version: Plexus Archiver
+
+Name: p2.inf
+SHA-256-Digest: 3PJLzPjaqbRqJ7fe72fR98fUPJeTbHfi3F2ze/9igso=
+
+Name: feature.xml
+SHA-256-Digest: 3ZDuEjAmixYOw5eYgC9UHOLg0ZlA8FUBcV9zBHzqGJU=
+

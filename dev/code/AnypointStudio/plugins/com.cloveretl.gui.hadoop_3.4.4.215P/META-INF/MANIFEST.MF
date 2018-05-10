@@ -1,0 +1,83 @@
+Manifest-Version: 1.0
+Export-Package: com.cloveretl.gui.hadoop,org.jetel.hadoop,org.jetel.ha
+ doop.component,org.jetel.hadoop.connection,org.jetel.hadoop.fileopera
+ tion,org.jetel.hadoop.mapreduce,org.jetel.hadoop.service,org.jetel.ha
+ doop.service.filesystem,org.jetel.hadoop.service.mapreduce
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: com.cloveretl.gui.hadoop.jar
+Bundle-Name: %Bundle-Name
+Bundle-Localization: plugin
+Created-By: 20.14-b01 (Sun Microsystems Inc.)
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui
+ .ide,org.eclipse.core.resources,org.eclipse.gef,org.eclipse.jface.tex
+ t,com.cloveretl.gui
+Ant-Version: Apache Ant 1.7.1
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Version: 3.4.4.215P
+Bundle-ManifestVersion: 2
+Bundle-Activator: com.cloveretl.gui.hadoop.plugin.Activator
+Bundle-SymbolicName: com.cloveretl.gui.hadoop; singleton:=true
+
+Name: icons/writers/HDFSWriter-64x64.png
+SHA1-Digest: PG9Ze84DaXnMlu59jXtooVdU77o=
+
+Name: icons/connection-hadoop-16.png
+SHA1-Digest: H/4XIjH8DgpDA79RAC3Sl+/iSBc=
+
+Name: icons/connection-hadoop-external-16.png
+SHA1-Digest: wYFjtqgMbl2t3t6hNFXuuelTwM4=
+
+Name: icons/metadata-external-16.png
+SHA1-Digest: O1rrhUA52x9G7fvEO1xqffoBPyg=
+
+Name: com.cloveretl.gui.hadoop.jar
+SHA1-Digest: H13goQFBNMVb0Q43gJTywbREqXw=
+
+Name: icons/connection-external-16.png
+SHA1-Digest: SLk/oEngOsfNM+Ev3DbHdcf9/AY=
+
+Name: plugin.properties
+SHA1-Digest: BCAiyuwc34VVhBbPMq9/41ywF04=
+
+Name: icons/readers/HDFSReader-16x16.png
+SHA1-Digest: wZSd4njU27RKbBMyeB9CxbTNQW0=
+
+Name: icons/editor16.png
+SHA1-Digest: QMMAMmip7+zAzo01Dfrqyzx6wxw=
+
+Name: icons/readers/HDFSReader-64x64.png
+SHA1-Digest: JCiensHSfTeu/53xWtfcrmTPp54=
+
+Name: about.ini
+SHA1-Digest: 7Gx1+uS5bUY/FeOxmFyzZCwY0xU=
+
+Name: icons/writers/HDFSWriter-16x16.png
+SHA1-Digest: /rGUZPeJj9jlAl2kVZgnugO4sTo=
+
+Name: icons/cloveretl32.gif
+SHA1-Digest: 0mQ+nRFRCGBdODRDjSpx4Ef8/F4=
+
+Name: components.xml
+SHA1-Digest: Bij/6t5jojnu4ifsxM9NYkb8YPw=
+
+Name: icons/readers/HDFSReader-32x32.png
+SHA1-Digest: S2qjdSu32wxfFVq23E19g2jijPM=
+
+Name: about.properties
+SHA1-Digest: 91+mwWwHm7SJ3X1atX4iy9uXFrA=
+
+Name: plugin.xml
+SHA1-Digest: 6Xx9bbt7ywU/SEK8ks6JkARGECo=
+
+Name: about.html
+SHA1-Digest: T0WrJ6chxBlO3K6bLpBEB/zHo7g=
+
+Name: icons/cloveretl32_feature_icon.gif
+SHA1-Digest: 0mQ+nRFRCGBdODRDjSpx4Ef8/F4=
+
+Name: icons/writers/HDFSWriter-32x32.png
+SHA1-Digest: Fv/FozD1hfb8Dw+xJr/uI+HTW5Y=
+
+Name: about.mappings
+SHA1-Digest: UcDEjQd4fzauzJz/X7nwT7XYTNQ=
+

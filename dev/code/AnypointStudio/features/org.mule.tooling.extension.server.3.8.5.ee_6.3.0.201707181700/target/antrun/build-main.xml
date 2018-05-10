@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy file="/home/ubuntu/atlassian-bamboo-5.12.3.1/xml-data/build-dir/TOOL-SND6-JOB1/org.mule.tooling.extension.server.3.8.5.ee/feature.xml.template" tofile="/home/ubuntu/atlassian-bamboo-5.12.3.1/xml-data/build-dir/TOOL-SND6-JOB1/org.mule.tooling.extension.server.3.8.5.ee/feature.xml" overwrite="true"/>
+  <replace file="/home/ubuntu/atlassian-bamboo-5.12.3.1/xml-data/build-dir/TOOL-SND6-JOB1/org.mule.tooling.extension.server.3.8.5.ee/feature.xml">
+    <replacefilter token="@muleServerLabel@" value="Mule Server 3.8.5 EE"/>
+    <replacefilter token="@muleVersionNumber@" value="3.8.5"/>
+  </replace>
+</target>
+</project>

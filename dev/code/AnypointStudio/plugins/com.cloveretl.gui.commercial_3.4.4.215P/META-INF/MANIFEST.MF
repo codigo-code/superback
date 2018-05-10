@@ -1,0 +1,56 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 20.14-b01 (Sun Microsystems Inc.)
+Export-Package: com.cloveretl.gui.commercial.jface.dialogs,com.opensys
+ .cloveretl.component,com.opensys.cloveretl.component.complexdatareade
+ r,com.opensys.cloveretl.component.tree.bean,com.opensys.cloveretl.com
+ ponent.tree.bean.schema.generator,com.opensys.cloveretl.component.tre
+ e.bean.schema.model,com.opensys.cloveretl.component.tree.bean.schema.
+ util,com.opensys.cloveretl.component.ws,com.opensys.cloveretl.compone
+ nt.ws.exception,com.opensys.cloveretl.component.ws.extension,com.open
+ sys.cloveretl.component.ws.proxy,com.opensys.cloveretl.component.ws.u
+ tils,com.opensys.cloveretl.component.xmlformatter,com.opensys.clovere
+ tl.ctl,com.opensys.cloveretl.ctl.extensions,com.opensys.cloveretl.dat
+ a.parser,com.opensys.cloveretl.interpreter.extensions,com.opensys.clo
+ veretl.java,com.opensys.cloveretl.lookup,com.opensys.cloveretl.lookup
+ .aspell,com.opensys.cloveretl.tools
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: com.cloveretl.gui.commercial.jar,lib/plugins/org.jet
+ el.component.commercial/cloveretl.component.commercial.jar,lib/plugin
+ s/org.jetel.lookup.commercial/cloveretl.lookup.commercial.jar,lib/plu
+ gins/org.jetel.lookup.commercial/lib/jdbm-1.0.jar,lib/plugins/org.jet
+ el.component.commercial/lib/wsdl4j-1.6.2.jar,lib/plugins/org.jetel.co
+ mponent.commercial/lib/commons-jxpath-1.3.jar,lib/plugins/org.jetel.c
+ omponent.commercial/lib/jaxb-api.jar,lib/plugins/org.jetel.component.
+ commercial/lib/commons-io-1.4.jar,lib/plugins/org.jetel.component.com
+ mercial/lib/httpclient-4.2.2.jar,lib/plugins/org.jetel.component.comm
+ ercial/lib/httpcore-4.2.2.jar,lib/plugins/org.jetel.component.commerc
+ ial/lib/httpmime-4.2.2.jar,lib/plugins/org.jetel.tlfunction.commercia
+ l/cloveretl.tlfunction.commercial.jar,lib/plugins/org.jetel.compiler.
+ commercial/cloveretl.compiler.commercial.jar,lib/plugins/org.jetel.ct
+ lfunction.commercial/cloveretl.ctlfunction.commercial.jar,lib/jgraphx
+ -1.6.1.2.jar,lib/plugins/org.jetel.component.commercial/lib/axis2-ker
+ nel-1.5.6.jar,lib/plugins/org.jetel.component.commercial/lib/commons-
+ fileupload-1.2.1.jar,lib/plugins/org.jetel.component.commercial/lib/n
+ eethi-2.0.5.jar,lib/plugins/org.jetel.component.commercial/lib/axiom-
+ api-1.2.12.jar,lib/plugins/org.jetel.component.commercial/lib/axiom-i
+ mpl-1.2.12.jar,lib/plugins/org.jetel.component.commercial/lib/commons
+ -beanutils-core-1.8.3.jar,lib/plugins/org.jetel.component.commercial/
+ lib/jackson-core-asl-1.9.3.jar,lib/plugins/org.jetel.component.commer
+ cial/lib/mail-1.4.2.jar,lib/plugins/org.jetel.component.commercial/li
+ b/jcifs-1.3.17.jar
+Bundle-Localization: plugin
+Bundle-Name: %Bundle-Name
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.ui
+ .ide,org.eclipse.core.resources,org.eclipse.gef,org.eclipse.jface.tex
+ t,com.cloveretl.gui,org.eclipse.jdt.ui,org.eclipse.compare,com.clover
+ etl.gui.hadoop
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Version: 3.4.4.215P
+Bundle-ManifestVersion: 2
+Bundle-Activator: com.cloveretl.gui.commercial.CommercialGUIPlugin
+Import-Package: org.eclipse.jdt.core,org.eclipse.jdt.core.search,org.e
+ clipse.jdt.internal.ui,org.eclipse.ui.editors.text,org.eclipse.ui.tex
+ teditor
+Bundle-SymbolicName: com.cloveretl.gui.commercial; singleton:=true
+

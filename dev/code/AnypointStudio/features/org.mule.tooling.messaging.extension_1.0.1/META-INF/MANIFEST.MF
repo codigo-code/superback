@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_79
+Built-By: marianoquintela
+Created-By: Apache Maven 3.3.9
+Archiver-Version: Plexus Archiver
+
+Name: META-INF/maven/org.mule.tooling.messaging/org.mule.tooling.messa
+ ging.extension/pom.properties
+SHA-256-Digest: MxHDgUhmFAeEOxcqe65JHuxrZ/rHwBo2a47X9UVbtq4=
+
+Name: META-INF/maven/org.mule.tooling.messaging/org.mule.tooling.messa
+ ging.extension/pom.xml
+SHA-256-Digest: s3bSKDUE+NifN0v1UMO6Obm8WKmMwRtAUrSeFfwtuLE=
+
+Name: feature.xml
+SHA-256-Digest: +F8TdUovScmlLnZOpwpnC7yVB1gWk8ZbIsd9iosf5VM=
+

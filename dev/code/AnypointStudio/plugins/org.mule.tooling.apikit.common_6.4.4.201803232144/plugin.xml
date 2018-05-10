@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="apidefinition" name="API Definitions for APIkit" schema="schema/apidefinition.exsd"/>
+  <extension point="org.mule.tooling.core.contribution" id="apikit" >
+    <contribution path="components/apikit.xml" id="apikit-editor"/>
+  </extension>
+	<extension
+         point="org.mule.tooling.projectStructure">
+      <projectStructure
+            description="This is the extension used to add the &quot;api&quot; folder to the project structure."
+            folderPath="src/main/api"
+            id="org.mule.tooling.apikit.ProjectStructure"
+            isSourceFolder="true"
+            muleFolder="api"
+            name="Structure Project Extension"
+            addToMuleRuntime="false"
+            wizardId="org.mule.tooling.apikit.wizard.ApikitProject">
+         <fileType
+               extension="yaml">
+         </fileType>
+      </projectStructure>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+	  <category
+            name="APIkit Command Category"
+            id="org.mule.tooling.apikit.ui.commands.category">
+      </category>
+      <command
+            name="Generate Flows Command"
+            categoryId="org.mule.tooling.apikit.ui.commands.category"
+            id="org.mule.tooling.apikit.ui.commands.generateflows">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="org.mule.tooling.apikit.ui.commands.generateflows"
+            class="org.mule.tooling.apikit.common.handlers.GenerateFlowsHandlerFromSelection">
+            <enabledWhen>
+            	<with variable="selection">
+		   		    <iterate operator="and" ifEmpty="false">
+		      			<adapt type="org.eclipse.core.resources.IResource">
+							<test property="org.eclipse.core.resources.projectNature" value="org.mule.tooling.core.muleNature"/>
+		      			</adapt>
+		   		    </iterate>
+				</with>
+            </enabledWhen>
+      </handler>
+      <handler
+            commandId="org.mule.tooling.apikit.ui.commands.generateflows"
+            class="org.mule.tooling.apikit.common.handlers.GenerateFlowsHandlerFromRamlEditor">
+            <activeWhen>
+            	<with
+	                     variable="activePartId">
+	                  <equals
+	                        value="org.raml.editor">
+	                  </equals>
+	               </with>
+            </activeWhen>
+      </handler>
+   </extension>
+   <extension point="org.eclipse.ui.menus">
+   		<menuContribution locationURI="popup:org.mule.tooling.popup.mule?before=muleStart">
+        <command
+              commandId="org.mule.tooling.apikit.ui.commands.generateflows"
+              icon="icons/small/scaffolder.png"
+              label="Generate Flows from REST API"
+              style="push">
+           <visibleWhen
+                 checkEnabled="false">
+              <with
+                    variable="selection">
+                 <iterate
+                       ifEmpty="false"
+                       operator="and">
+                    <adapt
+                          type="org.eclipse.core.resources.IResource">
+                    </adapt>
+                 </iterate>
+              </with>
+           </visibleWhen>
+        </command>
+        <separator
+              name="org.mule.tooling.apikit.common.separator"
+              visible="true">
+        </separator>
+        </menuContribution>
+     <menuContribution
+           allPopups="false"
+           locationURI="popup:org.mule.tooling.popup.deploy?before=org.mule.tooling.ui.separator.deployStart">
+     </menuContribution>
+     
+     <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               label="Mule"
+               id="org.mule.tooling.apikit.raml.editor.main.popup">
+            <command
+	              commandId="org.mule.tooling.apikit.ui.commands.generateflows"
+	              icon="icons/small/scaffolder.png"
+	              label="Generate Flows from RAML"
+	              style="push">
+	            <visibleWhen
+	                  checkEnabled="false">
+	               <with
+	                     variable="activePartId">
+	                  <equals
+	                        value="org.raml.editor">
+	                  </equals>
+	               </with>
+	            </visibleWhen>
+	         </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+   <extension
+         point="org.mule.tooling.ui.wizardpagepart">
+         <wizardpagepart
+               class="org.mule.tooling.apikit.common.wizard.ApiDefinitionPartExtension">
+               <targetWizardPage id="org.mule.tooling.ui.mulenewproject" level="11" />
+         </wizardpagepart>
+   </extension>
+   <extension
+         point="org.mule.tooling.ui.launchconfigpart">
+      <launchconfigpart
+            class="org.mule.tooling.apikit.common.launch.APIkitWithConsoleLaunchConfigPart">
+         <targetLaunchConfigTab
+               id="org.mule.tooling.ui.generalTab"
+               level="10">
+         </targetLaunchConfigTab>
+         <targetLaunchConfigTab
+               id="org.mule.tooling.ui.generalPolicyTab"
+               level="6">
+         </targetLaunchConfigTab>
+      </launchconfigpart>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+      		allowMultiple="true"
+            name="APIkit Consoles"
+            icon="icons/small/api_console_view.png"
+            category="org.mule.tooling.ui.apikit.views"
+            class="org.mule.tooling.apikit.common.views.APIkitConsolesView"
+            id="org.mule.tooling.apikit.common.views.APIkitConsolesView">
+      </view>
+      <view
+      		allowMultiple="false"
+            name="API Manager Sync"
+            icon="icons/small/api-sync-view.png"
+            category="org.mule.tooling.ui.apikit.views"
+            class="org.mule.tooling.apikit.common.views.ApiSyncView"
+            id="org.mule.tooling.apikit.common.views.ApiSyncView">
+      </view>
+      <category
+			id="org.mule.tooling.ui.apikit.views"
+			name="APIkit Views" />
+   </extension>
+   <extension
+         point="org.mule.tooling.ui.modules.core.flowInvokerMetadataResolver">
+      <resolver
+            class="org.mule.tooling.apikit.common.metadata.resolver.APIkitRouterInvokerMetadataResolver">
+      </resolver>
+   </extension>
+
+    <extension
+          point="org.mule.tooling.messageflow.goToImplementation">
+       <goToImplementationHandler
+             elementType="http://www.mulesoft.org/schema/mule/apikit/router"
+             handler="org.mule.tooling.apikit.common.handlers.OpenAPIkitNavigationPopupHandler"
+             id="org.mule.tooling.apikit.goToAPIkitFlowHandler">
+       </goToImplementationHandler>
+    </extension>
+
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="org.mule.tooling.apikit.ui.commands.generateflows"
+            contextId="org.raml.editor.RAMLScope"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+M2+G">
+      </key>
+   </extension>
+
+   <extension
+         point="org.mule.tooling.maven.ui.mavenizeactions">
+      <mavenizeAction
+            mavenizeAction="org.mule.tooling.apikit.common.util.APIkitProjectMavenizeExtension">
+      </mavenizeAction>
+   </extension>
+	
+	<extension
+         point="org.mule.tooling.servers.commons.schemaLocationLookup">
+      <schemaLocationLookup>
+      	<server matcher="[3.8,8.0)"/>
+		<schemaLocation prefix="apikit" namespace="http://www.mulesoft.org/schema/mule/apikit" location="http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd" />      	
+      </schemaLocationLookup>
+   </extension>
+ <extension
+       point="org.mule.tooling.apikit.common.apidefinition">
+    <apiDefinition
+          class="org.mule.tooling.apikit.common.wizard.ApikitRamlDefinitionContribution">
+    </apiDefinition>
+ </extension>
+   
+   <extension  
+      point="org.eclipse.ui.decorators">  
+	   <decorator  
+	         id="org.mule.tooling.apikit.common.decorators.ApiLabelDecorator"
+	         class="org.mule.tooling.apikit.common.decorators.ApiLabelDecorator"  
+	         label="Api label decorator"  
+	         lightweight="true"  
+	         location="TOP_RIGHT"  
+	         state="true">  
+	   </decorator>  
+	</extension>
+	
+	
+	
+	<extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.mule.tooling.popup.deploy">
+         <command
+               commandId="org.mule.tooling.d2i.command.connectProjectToApiManager"
+               style="push"	
+               label="Connect to API Manager">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="org.mule.tooling.d2i.command.connectProjectToApiManager"
+            name="Connect Project to API Manager">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.mule.tooling.apikit.common.error.ConnectProjectToApiManagerHandler"
+            commandId="org.mule.tooling.d2i.command.connectProjectToApiManager">
+            <enabledWhen>
+            	<with variable="selection">
+		   		    <iterate operator="and" ifEmpty="false">
+		      			<adapt type="org.eclipse.core.resources.IResource">
+							<test property="org.eclipse.core.resources.projectNature" value="org.mule.tooling.core.muleNature"/>
+		      			</adapt>
+		   		    </iterate>
+				</with>
+            </enabledWhen>
+      </handler>
+   </extension>
+   
+   	<extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.mule.tooling.popup.deploy">
+         <command
+               commandId="org.mule.tooling.d2i.command.connectProjectVCSManager"
+               style="push"	
+               label="Import from Design Center">
+         </command>
+      </menuContribution>
+   </extension>
+   
+    <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.mule.tooling.apikit.common.error.ConnectVCSManagerHandler"
+            commandId="org.mule.tooling.d2i.command.connectProjectVCSManager">
+            <enabledWhen>
+            	<with variable="selection">
+		   		    <iterate operator="and" ifEmpty="false">
+		      			<adapt type="org.eclipse.core.resources.IResource">
+							<test property="org.eclipse.core.resources.projectNature" value="org.mule.tooling.core.muleNature"/>
+		      			</adapt>
+		   		    </iterate>
+				</with>
+            </enabledWhen>
+      </handler>
+   </extension>
+    <extension
+          point="org.raml.editor.validationfilefilter">
+       <validationFileFilter
+             filter="org.mule.tooling.apikit.common.ApiSyncValidationFileFilter">
+       </validationFileFilter>
+    </extension>
+   
+   
+</plugin>

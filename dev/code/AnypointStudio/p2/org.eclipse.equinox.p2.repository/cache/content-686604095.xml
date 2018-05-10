@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='APIkit SOAP Update Site' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='1'>
+    <property name='p2.timestamp' value='1512155213285'/>
+  </properties>
+  <units size='5'>
+    <unit id='org.mule.tooling.category.soapkit' version='1.0.0.2177cKNTsL'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Anypoint APIkit SOAP Plugin'/>
+        <property name='org.eclipse.equinox.p2.description' value='Anypoint Soapkit Plugin'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.category.soapkit' version='1.0.0.2177cKNTsL'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.soapkit.extension.feature.group' range='[1.1.4,1.1.4]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.soapkit' version='1.1.4'>
+      <update id='org.mule.tooling.soapkit' range='[0.0.0,1.1.4)' severity='0'/>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='Soap Plugin'/>
+        <property name='maven-groupId' value='org.mule.tooling.soapkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.soapkit'/>
+        <property name='maven-version' value='1.1.4'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.soapkit' version='1.1.4'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.soapkit' version='1.1.4'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='22'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='com.google.guava' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.ui' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.messageflow' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.metadata' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.ui.modules.core' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.utils' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.maven' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.maven.ui' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.apikit.common' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.ui.authentication' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.webservice.consumer' range='[6.3.0,6.5.0)'/>
+        <required namespace='osgi.bundle' name='org.apache.commons.lang' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='javax.wsdl' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xsd' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.apache.commons.io' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.soapkit' version='1.1.4'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.soapkit;singleton:=true&#xA;Bundle-Version: 1.1.4
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.soapkit.extension.feature.group' version='1.1.4' singleton='false'>
+      <update id='org.mule.tooling.soapkit.extension.feature.group' range='[0.0.0,1.1.4)' severity='0'/>
+      <properties size='11'>
+        <property name='org.eclipse.equinox.p2.name' value='Anypoint APIkit SOAP Extension'/>
+        <property name='org.eclipse.equinox.p2.description' value='Anypoint APIkit SOAP Plugin.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.mulesoft.org/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+        <property name='maven-groupId' value='org.mule.tooling'/>
+        <property name='maven-artifactId' value='org.mule.tooling.soapkit.extension'/>
+        <property name='maven-version' value='1.1.4'/>
+        <property name='image.url' value='http://www.mulesoft.org/documentation/download/thumbnails/94110945/connector.png?version=1&amp;modificationDate=1372094304960'/>
+        <property name='doc.url' value='https://github.com/mulesoft/mule-tooling-soapkit#mule-tooling-soapkit'/>
+        <property name='tutorial.url' value='http://www.youtube.com/watch?v=X6176iSszGM'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.soapkit.extension.feature.group' version='1.1.4'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.soapkit' range='[1.1.4,1.1.4]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.soapkit.contribution' range='[1.1.4,1.1.4]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.soapkit.extension.feature.jar' range='[1.1.4,1.1.4]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <copyright uri='http://www.mulesoft.org' url='http://www.mulesoft.org'>
+        Copyright 2015 Mulesoft Inc.
+      </copyright>
+    </unit>
+    <unit id='org.mule.tooling.soapkit.contribution' version='1.1.4'>
+      <update id='org.mule.tooling.soapkit.contribution' range='[0.0.0,1.1.4)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='APIkit SOAP'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft Inc.'/>
+        <property name='maven-groupId' value='org.mule.tooling.soapkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.soapkit.contribution'/>
+        <property name='maven-version' value='1.1.4'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.soapkit.contribution' version='1.1.4'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.soapkit.contribution' version='1.1.4'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.soapkit.contribution' version='1.1.4'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.soapkit.contribution;singleton:=true&#xA;Bundle-Version: 1.1.4
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.soapkit.extension.feature.jar' version='1.1.4'>
+      <properties size='9'>
+        <property name='org.eclipse.equinox.p2.name' value='Anypoint APIkit SOAP Extension'/>
+        <property name='org.eclipse.equinox.p2.description' value='Anypoint APIkit SOAP Plugin.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.mulesoft.org/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft Inc.'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.mule.tooling.soapkit.extension'/>
+        <property name='org.eclipse.update.feature.exclusive' value='true'/>
+        <property name='maven-groupId' value='org.mule.tooling'/>
+        <property name='maven-artifactId' value='org.mule.tooling.soapkit.extension'/>
+        <property name='maven-version' value='1.1.4'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.soapkit.extension.feature.jar' version='1.1.4'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.soapkit.extension' version='1.1.4'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.soapkit.extension' version='1.1.4'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <copyright uri='http://www.mulesoft.org' url='http://www.mulesoft.org'>
+        Copyright 2015 Mulesoft Inc.
+      </copyright>
+    </unit>
+  </units>
+</repository>

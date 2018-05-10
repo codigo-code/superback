@@ -1,0 +1,1773 @@
+<ETLComponentList>
+
+  <ETLComponent category="others" iconPath="icons/transformers/WebService" name="WebServiceClient" type="WEB_SERVICE_CLIENT">
+    <shortDescription>Call a web-service.</shortDescription>
+    <description>Send incoming data record to a web-service and the response is passed on output ports.</description>
+    <inputPorts>
+      <singlePort name="0" required="false" label="request"/>
+    </inputPorts>
+    <outputPorts>
+      <multiplePort required="false" label="response"/>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="WSDL URL" modifiable="true" name="wsdlURL" nullable="true" required="true">
+        <singleType name="wsWSDLFile" fields="input" single_url="true" updateNamespaceBinding="true" namespaceBindingProperty="namespaceBindings" />
+      </property>
+      <property category="basic" displayName="Operation name" modifiable="true" name="operationName" nullable="true" required="true">
+        <singleType name="wsOperationName"/>
+      </property>
+      <!--property category="basic" displayName="Requeste mapping" modifiable="true" name="requestMapping" nullable="true" required="!requestStructure" redundant="requestStructure">
+        <singleType name="multiline"/>
+      </property-->
+      <property category="basic" displayName="Request Body structure" modifiable="true" name="requestStructure" nullable="true" required="true">
+        <singleType name="wsRequestStructure"/>
+      </property>
+      <property category="basic" displayName="Request Header structure" modifiable="true" name="requestHeaderStructure" nullable="true">
+        <singleType name="wsRequestHeaderStructure"/>
+      </property>
+      <property category="basic" displayName="Response mapping" modifiable="true" name="responseMapping" nullable="true">
+        <singleType name="wsResponseMapping"/>
+      </property>
+      <property category="basic" displayName="Fault mapping" modifiable="true" name="faultMapping" nullable="true">
+        <singleType name="wsFaultMapping"/>
+      </property>
+      <property category="basic" displayName="Namespace Bindings" modifiable="true" name="namespaceBindings" nullable="true">
+        <singleType name="properties" />
+      </property>
+      <property category="basic" displayName="Use nested nodes" modifiable="true" name="useNestedNodes" nullable="true" defaultHint="true">
+        <singleType name="bool" />
+      </property>
+      <!--property category="basic" displayName="Validate" modifiable="true" name="validate" nullable="true" defaultHint="None">
+        <enumType>
+          <item displayValue="None" value="NONE"/>
+          <item displayValue="Input" value="INPUT"/>
+          <item displayValue="Output" value="OUTPUT"/>
+          <item displayValue="Both" value="BOTH"/>
+        </enumType>
+      </property-->
+      <property category="advanced" displayName="Username" modifiable="true" name="authUsername" nullable="true">
+        <singleType name="string"/>
+      </property>
+      <property category="advanced" displayName="Password" modifiable="true" name="authPassword" nullable="true">
+        <singleType name="string"/>
+      </property>
+      <property category="advanced" displayName="Auth Domain" modifiable="true" name="authDomain" nullable="true">
+        <singleType name="string"/>
+      </property>
+      <property category="advanced" displayName="Auth Realm" modifiable="true" name="authRealm" nullable="true">
+        <singleType name="string"/>
+      </property>
+      <property category="advanced" displayName="Timeout (ms)" modifiable="true" name="connectionTimeout" nullable="true" defaultHint="600000">
+        <singleType name="interval"/>
+      </property>
+      <property category="advanced" displayName="Override Server URL" modifiable="true" name="overrideServerURL" nullable="true">
+        <singleType name="string"/>
+      </property>
+      <property category="advanced" displayName="Override Server URL from field" modifiable="true" name="overrideServerURLFromField" nullable="true">
+        <singleType name="field" inputPortName="0" />
+      </property>      
+      <property category="advanced" displayName="Disable SSL Certificate Validation" modifiable="true" name="disableSSLCertValidation" nullable="true" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      
+    </properties>
+  </ETLComponent>
+  
+  <ETLComponent category="readers" iconPath="icons/readers/ComplexDataReader" name="ComplexDataReader"  type="COMPLEX_DATA_READER" viewGridData="false">
+    <shortDescription>Reads non-homogeneous data.</shortDescription>
+    <description>Reads non-homogeneous data from files containing multiple metadata.</description>
+    <inputPorts>
+      <singlePort name="0" required="false" label="input"/>
+    </inputPorts>
+    <outputPorts>
+      <multiplePort required="true" />
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="File URL" modifiable="true" name="fileURL" nullable="true" required="true">
+        <singleType name="file" fields="input" dictionary="input" selectionMode="file_only"/>
+      </property>
+      <property category="basic" displayName="Transform" modifiable="true" name="transformCode" nullable="true" redundant="transformURL|transformClass">
+        <singleType name="statefulTransform" />
+      </property>
+      <property category="basic" displayName="Charset" modifiable="true" name="charset" nullable="true" defaultHintProvider="charsetSource">
+        <singleType name="charset"/>
+      </property>
+      <property category="basic" displayName="Data policy" modifiable="true" name="dataPolicy" nullable="true" defaultHint="Strict">
+        <enumType>
+          <item displayValue="Strict" value="strict"/>
+          <item displayValue="Controlled" value="controlled"/>
+          <item displayValue="Lenient" value="lenient"/>
+        </enumType>
+      </property>
+      <property category="basic" displayName="Trim strings" modifiable="true" name="trim" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="basic" displayName="Quoted strings" modifiable="true" name="quotedStrings" nullable="true" defaultHintProvider="quotedStringsFromOutputPortHint">
+        <singleType name="bool"/>
+      </property>
+      <property category="basic" displayName="Quote character" modifiable="true" name="quoteCharacter" nullable="true" defaultHintProvider="quotedCharFromOutputPortHint">
+        <singleType name="readerQuoteChar"/>
+      </property>
+      <property category="advanced" displayName="Skip leading blanks" modifiable="true" name="skipLeadingBlanks" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Skip trailing blanks" modifiable="true" name="skipTrailingBlanks" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Max error count" modifiable="true" name="maxErrorCount" nullable="true" defaultHint="0">
+        <singleType name="int"/>
+      </property>
+      <property category="advanced" displayName="Treat multiple delimiters as one" modifiable="true" name="treatMultipleDelimitersAsOne" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Verbose" modifiable="true" name="verbose" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Selector code" modifiable="true" name="selectorCode" nullable="true" redundant="selectorURL|selectorClass">
+        <singleType name="multilineEditableJava" />
+      </property>
+      <property category="advanced" displayName="Selector URL" modifiable="true" name="selectorURL" nullable="true" redundant="selectorClass|selectorCode">
+        <singleType name="file" />
+      </property>
+      <property category="advanced" displayName="Selector class" modifiable="true" name="selectorClass" nullable="true" redundant="selectorURL|selectorCode" defaultHint="custom code if available, prefix selector otherwise">
+        <singleType name="class" />
+      </property>
+      <property category="advanced" displayName="Transform URL" modifiable="true" name="transformURL" nullable="true" redundant="transformClass|transformCode">
+        <singleType name="file" />
+      </property>
+      <property category="advanced" displayName="Transform class" modifiable="true" name="transformClass" nullable="true" redundant="transformURL|transformCode">
+        <singleType name="class" />
+      </property>
+      <property category="advanced" displayName="Selector properties" modifiable="true" name="selectorProperties" nullable="true" defaultHint="Properties passed to user-defined processor/transform/selector">
+        <singleType name="statefulTransformSelectorProperties" />
+      </property>
+      <property category="advanced" displayName="State metadata" modifiable="true" name="stateMetadata" nullable="true">
+        <singleType name="statefulTransformMetadata" />
+      </property>
+    </properties>
+  </ETLComponent>
+  
+  <ETLComponent category="readers" iconPath="icons/readers/SpreadsheetDataReader" name="SpreadsheetDataReader" type="SPREADSHEET_READER" viewPlainData="false">
+    <shortDescription>Reads data from Excel files.</shortDescription>
+    <description>Reads specified sheets of Excel files, converts their contents to data records and sends them to connected output port. Mapping of sheet content to output metadata must be defined.</description>
+    <inputPorts>
+      <singlePort name="0" required="false" label="input" />
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="true" label="output"/>
+      <singlePort name="1" label="logs">
+        <Metadata id="SpreadsheetReader_ErrPort"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="File URL" modifiable="true" name="fileURL" nullable="true" required="true">
+        <singleType name="file" fields="input" dictionary="input" selectionMode="file_only" />
+      </property>
+      <property category="basic" displayName="Sheet" modifiable="true" name="sheet" nullable="true" defaultHint="0">
+        <singleType name="spreadsheetSheetName" multiselect="true"/>
+      </property>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" redundant="mappingURL">
+        <singleType name="spreadsheetMapping"/>
+      </property>
+      <property category="basic" displayName="Mapping URL" modifiable="true" name="mappingURL" nullable="true" redundant="mapping">
+        <singleType name="file"/>
+      </property>
+      <property category="basic" displayName="Data policy" modifiable="true" name="dataPolicy" nullable="true" defaultHint="Strict">
+        <enumType>
+          <item displayValue="Strict" value="strict" />
+          <item displayValue="Controlled" value="controlled" />
+          <item displayValue="Lenient" value="lenient" />
+        </enumType>
+      </property>
+      <property category="advanced" displayName="Read mode" modifiable="true" name="attitude" nullable="true" defaultHint="Stream">
+        <enumType>
+          <item displayValue="In-memory" value="IN_MEMORY" />
+          <item displayValue="Stream" value="STREAM" />
+        </enumType>
+      </property>
+      <property category="advanced" displayName="Number of skipped records" modifiable="true" name="skipRecords" nullable="true">
+        <singleType name="int" />
+      </property>
+      <property category="advanced" displayName="Max number of records" modifiable="true" name="numRecords" nullable="true">
+        <singleType name="int" min="1" />
+      </property>
+      <property category="advanced" displayName="Number of skipped records per source" modifiable="true" name="skipSourceRecords" nullable="true" defaultHintProvider="skipSourceRecords">
+        <singleType name="int" />
+      </property>
+      <property category="advanced" displayName="Max number of records per source" modifiable="true" name="numSourceRecords" nullable="true">
+        <singleType name="int" min="1"/>
+      </property>
+      <property category="advanced" displayName="Number of skipped records per spreadsheet" modifiable="true" name="skipSheetRecords" nullable="true">
+        <singleType name="int" />
+      </property>
+      <property category="advanced" displayName="Max number of records per spreadsheet" modifiable="true" name="numSheetRecords" nullable="true">
+        <singleType name="int" min="1"/>
+      </property>
+      <property category="advanced" displayName="Max error count" modifiable="true" name="maxErrorCount" nullable="true" defaultHint="(unlimited)">
+        <singleType name="int" />
+      </property>
+      <property category="advanced" displayName="Incremental file" modifiable="true" name="incrementalFile" nullable="true" required="incrementalKey">
+        <singleType name="file" />
+      </property>
+      <property category="advanced" displayName="Incremental key" modifiable="true" name="incrementalKey" nullable="true" required="incrementalFile">
+        <singleType name="string" />
+      </property>
+      <property category="advanced" displayName="Encryption password" modifiable="true" name="password" nullable="true" required="false">
+            <singleType name="string"/>
+      </property>
+    </properties>
+  </ETLComponent>
+  
+  <ETLComponent category="writers" iconPath="icons/writers/SpreadsheetDataWriter" name="SpreadsheetDataWriter" type="SPREADSHEET_WRITER" viewPlainData="false" viewGridData="false">
+    <shortDescription>Writes data to Excel files.</shortDescription>
+    <description>Writes into specified sheets of Excel files. Mapping of input metadata to sheet content must be defined.</description>
+    <inputPorts>
+      <singlePort name="0" required="true" label="input" />
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false" label="output"/>
+    </outputPorts>
+    <properties>
+      <!-- basic properties -->
+      <property category="basic" displayName="File URL" modifiable="true" name="fileURL" nullable="true" required="true">
+        <singleType name="file" fields="output" dictionary="output" selectionMode="file_only" mandatory_existing_file="false"/>
+      </property>
+      <property category="basic" displayName="Sheet" modifiable="true" name="sheet" nullable="true" defaultHint="Create new sheet">
+        <singleType name="spreadsheetSheetName" />
+      </property>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" redundant="mappingURL">
+        <singleType name="spreadsheetMapping"/>
+      </property>
+      <property category="basic" displayName="Mapping URL" modifiable="true" name="mappingURL" nullable="true" redundant="mapping">
+        <singleType name="file"/>
+      </property>
+      <property category="basic" displayName="Write mode" modifiable="true" name="writeMode" nullable="false" defaultValue="OVERWRITE_SHEET_IN_MEMORY">
+        <enumType>
+          <item displayValue="Overwrite in sheet (in-memory)" value="OVERWRITE_SHEET_IN_MEMORY"/>
+              <item displayValue="Insert into sheet (in-memory)" value="INSERT_INTO_SHEET_IN_MEMORY"/>
+              <item displayValue="Append to sheet (in-memory)" value="APPEND_TO_SHEET_IN_MEMORY"/>
+              <item displayValue="Create new file (streaming - XLSX only)" value="CREATE_FILE_IN_STREAM"/>
+              <item displayValue="Create new file (in-memory)" value="CREATE_FILE_IN_MEMORY"/>
+        </enumType>
+      </property>
+      <property category="basic" displayName="Actions on existing sheets" modifiable="true" name="existingSheetsActions" nullable="false" defaultValue="DO_NOTHING">
+        <enumType>
+          <item displayValue="Do nothing, keep existing sheets and data" value="DO_NOTHING"/>
+          <item displayValue="Clear target sheet(s)" value="CLEAR_SHEETS"/>
+          <item displayValue="Replace all existing sheets" value="REMOVE_SHEETS"/> 
+        </enumType>
+      </property>      
+      
+      <!--advanced properties -->
+      <property category="advanced" displayName="Template File URL" modifiable="true" name="templateFileURL" nullable="true" required="false">
+        <singleType name="file" fields="output" dictionary="output" selectionMode="file_only" />
+      </property>
+      <property category="advanced" displayName="Create directories" modifiable="true" name="makeDirs" nullable="true" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Records per file" modifiable="true" name="numFileRecords" nullable="true">
+        <singleType name="int" />
+      </property>
+      <property category="advanced" displayName="Number of skipped records" modifiable="true" name="skipRecords" nullable="true">
+        <singleType name="int" />
+      </property>
+      <property category="advanced" displayName="Max number of records" modifiable="true" name="numRecords" nullable="true">
+        <singleType name="int" min="1" />
+      </property>
+      <property category="advanced" displayName="Partition key" modifiable="true" name="partitionKey" nullable="true" required="partition">
+        <singleType name="key" inputPortName="0" rightLabel="Partition key:"/>
+      </property>
+      <property category="advanced" displayName="Partition lookup table" modifiable="true" name="partition" nullable="true" required="partitionOutFields">
+        <singleType name="lookupTableID" />
+      </property>
+      <property category="advanced" displayName="Partition file tag" modifiable="true" name="partitionFileTag" nullable="true" defaultHint="Number file tag">
+        <enumType>
+          <item displayValue="Number file tag" value="numberFileTag" />
+          <item displayValue="Key file tag" value="keyNameFileTag" />
+        </enumType>
+      </property>
+      <property category="advanced" displayName="Partition output fields" modifiable="true" name="partitionOutFields" nullable="true" required="partition">
+        <singleType name="key" lookupMatadataProp="partition" rightLabel="Partition output fields:"/>
+      </property>
+      <property category="advanced" displayName="Partition unassigned file name" modifiable="true" name="partitionUnassignedFileName" nullable="true" redundant="!partition">
+        <singleType name="string" />
+      </property>
+      <property category="advanced" displayName="Type of formatter" modifiable="true" name="formatterType" nullable="true" defaultHint="Auto">
+        <enumType>
+          <item displayValue="Auto" value="auto"/>
+          <item displayValue="XLS" value="XLS"/>
+          <item displayValue="XLSX" value="XLSX"/>
+        </enumType>
+      </property>
+    </properties>
+  </ETLComponent>
+    <ETLComponent category="readers" iconPath="icons/readers/JavaBeanReader" name="JavaBeanReader" type="BEAN_READER">
+    <shortDescription>Reads data from Java beans.</shortDescription>
+    <description>Reads data from Java beans, converts properties matched by XPath defined in mapping along with their direct children to data records and sends them into different connected output ports as defined by mapping.</description>
+    <inputPorts>
+    </inputPorts>
+    <outputPorts>
+      <multiplePort required="true">
+        <MetadataProvider id="treeReaderErrMetadataProvider"/>
+      </multiplePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Dictionary Source" modifiable="true" name="fileURL" nullable="true" required="true">
+        <singleType name="dictionaryKey" includeInput="true" selectFile="false"/>
+      </property>
+      <property category="basic" displayName="Data policy" modifiable="true" name="dataPolicy" nullable="true" defaultHint="Strict">
+        <enumType>
+          <item displayValue="Strict" value="strict" />
+          <item displayValue="Controlled" value="controlled" />
+          <item displayValue="Lenient" value="lenient" />
+        </enumType>
+      </property>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" nullable="true" required="!mappingURL" redundant="mappingURL">
+        <singleType name="javaBeanReaderMapping" />
+      </property>
+      <property category="basic" displayName="Mapping URL" modifiable="true" name="mappingURL" nullable="true" required="!mapping" redundant="mapping">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Implicit mapping" modifiable="true" name="implicitMapping" nullable="true" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="writers" iconPath="icons/writers/JavaBeanWriter" name="JavaBeanWriter"  type="BEAN_WRITER">
+    <shortDescription>Writes data to Java objects.</shortDescription>
+    <description>Receives data through all connected input ports, converts data records to Java Bean properties based on defined mapping.</description>
+    <inputPorts>
+      <multiplePort required="false"/>
+    </inputPorts>
+    <outputPorts/>
+    <properties>
+      <property category="basic" displayName="Dictionary Target" modifiable="true" name="fileURL" nullable="true" required="true">
+        <singleType name="dictionaryKey" includeOutput="true" selectFile="false"/>
+      </property>
+      <property category="basic" displayName="Bean structure" modifiable="true" name="schema" nullable="true" required="false" defaultHint="none">
+        <singleType name="objectIntrospector"/>
+      </property>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" required="!mappingURL" redundant="mappingURL">
+        <singleType name="beanWriterMapping"/>
+      </property>
+      <property category="basic" displayName="Mapping URL" modifiable="true" name="mappingURL" nullable="true" required="!mapping" redundant="mapping">
+        <singleType name="file"/>
+      </property>
+      <property category="advanced" displayName="Cache size (e.g. '300MB','1GB')" modifiable="true" name="cacheSize" nullable="true" defaultHint="auto">
+        <singleType name="string" />
+      </property>
+      <property category="advanced" displayName="Cache in Memory" modifiable="true" name="cacheInMemory" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Sorted input" modifiable="true" name="sortedInput" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Sort keys" modifiable="true" name="sortKeys" nullable="true" required="false"  defaultHint="">
+        <singleType name="sortKey"/>
+      </property>
+      <!-- property category="advanced" displayName="Records per file" modifiable="true" name="recordsPerFile" nullable="true">
+        <singleType name="int" />
+      </property-->
+      <property category="advanced" displayName="Max number of records" modifiable="true" name="recordCount" nullable="true">
+        <singleType name="int" />
+      </property>
+      <!-- property category="advanced" displayName="Partition key" modifiable="true" name="partitionKey" nullable="true" required="partition">
+        <singleType name="key" xmlMapping="mapping" xmlMappingUrl="mappingURL"/>
+      </property-->
+      <!-- property category="advanced" displayName="Partition lookup table" modifiable="true" name="partition" nullable="true" required="partitionOutFields">
+        <singleType name="lookupTableID" />
+      </property-->
+      <!-- property category="advanced" displayName="Partition output fields" modifiable="true" name="partitionOutFields" nullable="true" required="partition">
+        <singleType name="key" lookupMatadataProp="partition" />
+      </property-->
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="writers" iconPath="icons/writers/JavaMapWriter" name="JavaMapWriter" type="MAP_WRITER">
+    <shortDescription>Writes data to Maps.</shortDescription>
+    <description>Receives data through all connected input ports, converts data records to Maps based on defined mapping and writes the resulting tree structure of elements to Maps.</description>
+    <inputPorts>
+      <multiplePort required="false"/>
+    </inputPorts>
+    <properties>
+      <property category="basic" displayName="Dictionary Target" modifiable="true" name="fileURL" nullable="true" required="true">
+        <singleType name="dictionaryKey" includeOutput="true" selectFile="false"/>
+      </property>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" required="!mappingURL" redundant="mappingURL">
+        <singleType name="mapWriterMapping"/>
+      </property>
+      <property category="basic" displayName="Mapping URL" modifiable="true" name="mappingURL" nullable="true" required="!mapping" redundant="mapping">
+        <singleType name="file"/>
+      </property>
+      <property category="advanced" displayName="Cache size (e.g. '300MB','1GB')" modifiable="true" name="cacheSize" nullable="true" defaultHint="auto">
+        <singleType name="string" />
+      </property>
+      <property category="advanced" displayName="Cache in Memory" modifiable="true" name="cacheInMemory" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Sorted input" modifiable="true" name="sortedInput" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Sort keys" modifiable="true" name="sortKeys" nullable="true" required="false"  defaultHint="">
+        <singleType name="sortKey"/>
+      </property>
+      <!-- property category="advanced" displayName="Records per file" modifiable="true" name="recordsPerFile" nullable="true">
+        <singleType name="int" />
+      </property-->
+      <property category="advanced" displayName="Max number of records" modifiable="true" name="recordCount" nullable="true">
+        <singleType name="int" />
+      </property>
+      <!-- property category="advanced" displayName="Partition key" modifiable="true" name="partitionKey" nullable="true" required="partition">
+        <singleType name="key" xmlMapping="mapping" xmlMappingUrl="mappingURL"/>
+      </property-->
+      <!-- property category="advanced" displayName="Partition lookup table" modifiable="true" name="partition" nullable="true" required="partitionOutFields">
+        <singleType name="lookupTableID" />
+      </property-->
+      <!-- property category="advanced" displayName="Partition file tag" modifiable="true" name="partitionFileTag" nullable="true">
+        <enumType>
+          <item displayValue="Number file tag" value="numberFileTag" />
+          <item displayValue="Key file tag" value="keyNameFileTag" />
+        </enumType>
+      </property-->
+      <!-- property category="advanced" displayName="Partition output fields" modifiable="true" name="partitionOutFields" nullable="true" required="partition">
+        <singleType name="key" lookupMatadataProp="partition" />
+      </property-->
+      <!-- property category="advanced" displayName="Partition unassigned file name" modifiable="true" name="partitionUnassignedFileName" nullable="true" redundant="!partition">
+        <singleType name="string" />
+      </property-->
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="readers" iconPath="icons/readers/JSONReader" name="JSONReader" type="JSON_READER">
+    <shortDescription>Reads data from JSON.</shortDescription>
+    <description>Reads data from JSON, converts properties matched by XPath defined in mapping along with their direct children to data records and sends them into different connected output ports as defined by mapping.</description>
+    <inputPorts>
+      <singlePort name="0" required="false" />
+    </inputPorts>
+    <outputPorts>
+      <multiplePort required="true">
+        <MetadataProvider id="treeReaderErrMetadataProvider"/>
+      </multiplePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="File URL" modifiable="true" name="fileURL" nullable="true" required="true">
+        <singleType name="file" fields="input" dictionary="input" selectionMode="file_only" />
+      </property>
+      <property category="basic" displayName="Charset" modifiable="true" name="charset" nullable="true" defaultHint="Auto">
+        <singleType name="charset"/>
+      </property>
+      <property category="basic" displayName="Data policy" modifiable="true" name="dataPolicy" nullable="true" defaultHint="Strict">
+        <enumType>
+          <item displayValue="Strict" value="strict" />
+          <item displayValue="Controlled" value="controlled" />
+          <item displayValue="Lenient" value="lenient" />
+        </enumType>
+      </property>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" nullable="true" required="!mappingURL" redundant="mappingURL">
+        <singleType name="jsonReaderMapping" />
+      </property>
+      <property category="basic" displayName="Mapping URL" modifiable="true" name="mappingURL" nullable="true" required="!mapping" redundant="mapping">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Implicit mapping" modifiable="true" name="implicitMapping" nullable="true" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="writers" iconPath="icons/writers/JSONWriter" name="JSONWriter"  type="JSON_WRITER">
+    <shortDescription>Writes data to JSON files.</shortDescription>
+    <description>Receives data through all connected input ports, converts data records to JSON objects based on defined mapping and writes the resulting tree structure of elements to JSON files.</description>
+    <inputPorts>
+      <multiplePort required="false"/>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false" />
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="File URL" modifiable="true" name="fileURL" nullable="true" required="true">
+        <singleType name="file" fields="output" dictionary="output" mandatory_existing_file="false"/>
+      </property>
+      <property category="basic" displayName="Charset" modifiable="true" name="charset" nullable="true" defaultHint="UTF-8">
+        <singleType name="charset"/>
+      </property>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" required="!mappingURL" redundant="mappingURL">
+        <singleType name="jsonWriterMapping"/>
+      </property>
+      <property category="basic" displayName="Mapping URL" modifiable="true" name="mappingURL" nullable="true" required="!mapping" redundant="mapping">
+        <singleType name="file"/>
+      </property>
+      <property category="advanced" displayName="Create directories" modifiable="true" name="makeDirs" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Omit new lines wherever possible" modifiable="true" name="omitNewLines" nullable="true" defaultHint="false">
+	      <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Cache size (e.g. '300MB','1GB')" modifiable="true" name="cacheSize" nullable="true" defaultHint="auto">
+        <singleType name="string" />
+      </property>
+      <property category="advanced" displayName="Cache in Memory" modifiable="true" name="cacheInMemory" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Sorted input" modifiable="true" name="sortedInput" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Sort keys" modifiable="true" name="sortKeys" nullable="true" required="false"  defaultHint="">
+        <singleType name="sortKey"/>
+      </property>
+      <property category="advanced" displayName="Records per file" modifiable="true" name="recordsPerFile" nullable="true">
+        <singleType name="int" />
+      </property>
+      <property category="advanced" displayName="Max number of records" modifiable="true" name="recordCount" nullable="true">
+        <singleType name="int" />
+      </property>
+      <property category="advanced" displayName="Partition key" modifiable="true" name="partitionKey" nullable="true" required="partition">
+        <singleType name="key" xmlMapping="mapping" xmlMappingUrl="mappingURL" rightLabel="Partition key:"/>
+      </property>
+      <property category="advanced" displayName="Partition lookup table" modifiable="true" name="partition" nullable="true" required="partitionOutFields">
+        <singleType name="lookupTableID" />
+      </property>
+      <property category="advanced" displayName="Partition file tag" modifiable="true" name="partitionFileTag" nullable="true">
+        <enumType>
+          <item displayValue="Number file tag" value="numberFileTag" />
+          <item displayValue="Key file tag" value="keyNameFileTag" />
+        </enumType>
+      </property>
+      <property category="advanced" displayName="Partition output fields" modifiable="true" name="partitionOutFields" nullable="true" required="partition">
+        <singleType name="key" lookupMatadataProp="partition" rightLabel="Partition output fields:"/>
+      </property>
+      <property category="advanced" displayName="Partition unassigned file name" modifiable="true" name="partitionUnassignedFileName" nullable="true" redundant="!partition">
+        <singleType name="string" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" iconPath="icons/jobControl/ExecuteGraph" name="ExecuteGraph" type="EXECUTE_GRAPH" defaultVisibility="jobflow">
+    <shortDescription>Runs subgraphs with user-specified settings.</shortDescription>
+    <description>The component ExecuteGraph allows running subgraphs with user-specified settings and provides their results and tracking information to output ports.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteGraph_RunConfig"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteGraph_RunStatus"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+        <Metadata id="ExecuteGraph_RunStatus"/>
+      </singlePort>  
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Graph URL" modifiable="true" name="jobURL" nullable="true" openActionLabel="Open Graph"  openActionIcon="icons/graph16.png">
+        <singleType name="file" selectionMode="file_only"/>
+      </property>
+      <property category="basic" displayName="Execution type" modifiable="true" name="executionType" nullable="true" required="false" defaultHint="Synchronous">
+        <enumType>
+          <item displayValue="Synchronous" value="synchronous"/>
+          <item displayValue="Asynchronous" value="asynchronous"/>
+        </enumType>
+      </property>
+      <property category="basic" displayName="Timeout (ms)" modifiable="true" name="timeout" nullable="true" required="false" defaultHint="0 (unlimited)">
+        <singleType name="interval"/>
+      </property>
+      <property category="advanced" displayName="Execution group" modifiable="true" name="executionGroup" nullable="true" required="false">
+        <singleType name="string"/>
+      </property>
+      <property category="advanced" displayName="Preferred cluster node ID" modifiable="true" name="clusterNodeId" nullable="true" required="false">
+        <singleType name="string"/>
+      </property>
+      <property category="advanced" displayName="Execute graph as daemon" modifiable="true" name="daemon" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Skip checkConfig" modifiable="true" name="skipCheckConfig" nullable="true" required="false" defaultHint="Inherited from parent job">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Stop processing on fail" modifiable="true" name="stopOnFail" nullable="true" required="false" defaultHint="true">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Number of executors" modifiable="true" name="executorsNumber" nullable="true" required="false" defaultHint="1">
+        <singleType name="int"/>
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="executeGraphInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="outputMapping" nullable="true">
+        <singleType name="executeGraphOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorMapping" nullable="true">
+        <singleType name="executeGraphOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" iconPath="icons/jobControl/ExecuteScript" name="ExecuteScript" type="EXECUTE_SCRIPT" defaultVisibility="jobflow">
+    <shortDescription>Runs either shell scripts or scripts interpreted by a selected interpreter.</shortDescription>
+    <description>SystemExecute is a component that runs either shell scripts or scripts interpreted by a selected interpreter. It either runs a script only once or the script is executed repeatedly for each incoming record. Each incoming record can redefine almost all parameters of run including the script itself.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteScript_RunConfig"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteScript_RunResult"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+        <Metadata id="ExecuteScript_RunResult"/>
+      </singlePort>  
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Script" modifiable="true" name="script" nullable="true" required="false">
+        <singleType name="multiline" />
+      </property>
+      <property category="basic" displayName="Script URL" modifiable="true" name="scriptURL" nullable="true">
+        <singleType name="file"/>
+      </property>
+      <property category="basic" displayName="Script charset" modifiable="true" name="scriptCharset" nullable="true" defaultHintProvider="charsetDecoder">
+        <singleType name="charset"/>
+      </property>
+      <property category="basic" displayName="Working directory" modifiable="true" name="workingDirectory" nullable="true" defaultHint="">
+        <singleType name="string" />
+      </property>
+      <property category="basic" displayName="Timeout (ms)" modifiable="true" name="timeout" nullable="true" required="false" defaultHint="0 (unlimited)">
+        <singleType name="interval"/>
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="executeScriptInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="standardOutputMapping" nullable="true">
+        <singleType name="executeScriptOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorOutputMapping" nullable="true">
+        <singleType name="executeScriptOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Interpreter" modifiable="true" name="interpreter" nullable="true" defaultHint="OS shell (e.g. /bin/sh ${})">
+        <singleType name="string" />
+      </property>
+      <property category="advanced" displayName="Environment variables" modifiable="true" name="environmentVariables" nullable="false">
+        <singleType name="environment" extended="true"/>
+      </property>
+      <property category="advanced" displayName="Standard input" modifiable="true" name="stdIn" nullable="true" required="false">
+        <singleType name="multiline" />
+      </property>
+      <property category="advanced" displayName="Standard input file URL" modifiable="true" name="stdInFileURL" nullable="true">
+        <singleType name="file"/>
+      </property>
+      <property category="advanced" displayName="Standard output file URL" modifiable="true" name="stdOutFileURL" nullable="true">
+        <singleType name="file"/>
+      </property>
+      <property category="advanced" displayName="Error output file URL" modifiable="true" name="errOutFileURL" nullable="true">
+        <singleType name="file"/>
+      </property>
+      <property category="advanced" displayName="Append" modifiable="true" name="append" nullable="true" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Data charset" modifiable="true" name="dataCharset" nullable="true" defaultHintProvider="charsetDecoder">
+        <singleType name="charset"/>
+      </property>
+      <property category="advanced" displayName="Script file extension" modifiable="true" name="scriptFileExtension" nullable="true" required="false" defaultHint="bat">
+        <singleType name="string" />
+      </property>
+      <property category="advanced" displayName="Stop processing on fail" modifiable="true" name="stopOnFail" nullable="true" required="false" defaultHint="true">
+        <singleType name="bool"/>
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" iconPath="icons/jobControl/ExecuteJobflow" name="ExecuteJobflow" type="EXECUTE_JOBFLOW" defaultVisibility="jobflow">
+    <shortDescription>Runs jobflow with user-specified settings.</shortDescription>
+    <description>The component ExecuteJobflow allows running jobflows with user-specified settings and provides their results and tracking information to output ports.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteGraph_RunConfig"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteGraph_RunStatus"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+        <Metadata id="ExecuteGraph_RunStatus"/>
+      </singlePort>  
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Jobflow URL" modifiable="true" name="jobURL" nullable="true" openActionLabel="Open Jobflow" openActionIcon="icons/jobflow16.png">
+        <singleType name="file"/>
+      </property>
+      <property category="basic" displayName="Execution type" modifiable="true" name="executionType" nullable="true" required="false" defaultHint="Synchronous">
+        <enumType>
+          <item displayValue="Synchronous" value="synchronous"/>
+          <item displayValue="Asynchronous" value="asynchronous"/>
+        </enumType>
+      </property>
+      <property category="basic" displayName="Timeout (ms)" modifiable="true" name="timeout" nullable="true" required="false" defaultHint="0 (unlimited)">
+        <singleType name="interval"/>
+      </property>
+      <property category="advanced" displayName="Execution group" modifiable="true" name="executionGroup" nullable="true" required="false">
+        <singleType name="string"/>
+      </property>
+      <property category="advanced" displayName="Preferred cluster node ID" modifiable="true" name="clusterNodeId" nullable="true" required="false">
+        <singleType name="string"/>
+      </property>
+      <property category="advanced" displayName="Execute jobflow as daemon" modifiable="true" name="daemon" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Skip checkConfig" modifiable="true" name="skipCheckConfig" nullable="true" required="false" defaultHint="Inherited from parent job">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Stop processing on fail" modifiable="true" name="stopOnFail" nullable="true" required="false" defaultHint="true">
+        <singleType name="bool"/>
+      </property>
+      <property category="advanced" displayName="Number of executors" modifiable="true" name="executorsNumber" nullable="true" required="false" defaultHint="1">
+        <singleType name="int"/>
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="executeGraphInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="outputMapping" nullable="true">
+        <singleType name="executeGraphOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorMapping" nullable="true">
+        <singleType name="executeGraphOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" iconPath="icons/jobControl/MonitorGraph" name="MonitorGraph" type="MONITOR_GRAPH" defaultVisibility="jobflow">
+    <shortDescription>Watches running graphs.</shortDescription>
+    <description>The component MonitorGraph allows watching running graphs. Component can either wait for final execution status or periodically monitor current execution status.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="MonitorGraph_RunConfig"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteGraph_RunStatus"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+        <Metadata id="ExecuteGraph_RunStatus"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="advanced" displayName="Run ID" modifiable="true" name="runId" nullable="true" required="false">
+        <singleType name="long"/>
+      </property>
+      <property category="basic" displayName="Graph URL" modifiable="true" name="jobURL" nullable="true">
+        <singleType name="file"/>
+      </property>
+      <property category="basic" displayName="Timeout (ms)" modifiable="true" name="timeout" nullable="true" required="false" defaultHint="0 (unlimited)">
+        <singleType name="interval"/>
+      </property>
+      <property category="basic" displayName="Monitoring interval (ms)" modifiable="true" name="monitoringInterval" nullable="true" required="false" defaultHint="none">
+        <singleType name="interval"/>
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="monitorGraphInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="outputMapping" nullable="true">
+        <singleType name="executeGraphOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorMapping" nullable="true">
+        <singleType name="executeGraphOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" iconPath="icons/jobControl/MonitorJobflow" name="MonitorJobflow" type="MONITOR_JOBFLOW" defaultVisibility="jobflow">
+    <shortDescription>Watches running jobflows.</shortDescription>
+    <description>The component MonitorJobflow allows watching running jobflows. Component can either wait for final execution status or periodically monitor current execution status.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="MonitorGraph_RunConfig"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteGraph_RunStatus"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+        <Metadata id="ExecuteGraph_RunStatus"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="advanced" displayName="Run ID" modifiable="true" name="runId" nullable="true" required="false">
+        <singleType name="long"/>
+      </property>
+      <property category="basic" displayName="Jobflow URL" modifiable="true" name="jobURL" nullable="true">
+        <singleType name="file"/>
+      </property>
+      <property category="basic" displayName="Timeout (ms)" modifiable="true" name="timeout" nullable="true" required="false" defaultHint="0 (unlimited)">
+        <singleType name="interval"/>
+      </property>
+      <property category="basic" displayName="Monitoring interval (ms)" modifiable="true" name="monitoringInterval" nullable="true" required="false" defaultHint="none">
+        <singleType name="interval"/>
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="monitorGraphInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="outputMapping" nullable="true">
+        <singleType name="executeGraphOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorMapping" nullable="true">
+        <singleType name="executeGraphOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" name="KillGraph" type="KILL_GRAPH" iconPath="icons/jobControl/KillGraph" defaultVisibility="jobflow">
+    <shortDescription>Aborts specified graphs.</shortDescription>
+    <description>The KillGraph component aborts specified graphs and passes their final status to output port.</description>
+    <inputPorts>
+      <singlePort name="0" required="false" />
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteGraph_RunStatus"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Run ID" modifiable="true" name="runId" nullable="true" required="false">
+        <singleType name="long"/>
+      </property>
+      <property category="basic" displayName="Execution group" modifiable="true" name="executionGroup" nullable="true">
+        <singleType name="string" />
+      </property>
+      <property category="basic" displayName="Kill daemon children" modifiable="true" name="killDaemonChildren" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="killGraphInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="outputMapping" nullable="true">
+        <singleType name="killGraphOutputMapping"/>
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" name="KillJobflow" type="KILL_JOBFLOW" iconPath="icons/jobControl/KillJobflow" defaultVisibility="jobflow">
+    <shortDescription>Aborts specified jobflows.</shortDescription>
+    <description>The KillJobflow component aborts specified jobflows and passes their final status to output port.</description>
+    <inputPorts>
+      <singlePort name="0" required="false" />
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false" />
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Run ID" modifiable="true" name="runId" nullable="true" required="false">
+        <singleType name="long"/>
+      </property>
+      <property category="basic" displayName="Execution group" modifiable="true" name="executionGroup" nullable="true">
+        <singleType name="string" />
+      </property>
+      <property category="basic" displayName="Kill daemon children" modifiable="true" name="killDaemonChildren" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="killGraphInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="outputMapping" nullable="true">
+        <singleType name="killGraphOutputMapping"/>
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" name="GetJobInput" type="GET_JOB_INPUT" iconPath="icons/jobControl/GetJobInput">
+    <shortDescription>Produces single record populated by dictionary content.</shortDescription>
+    <description>The component GetJobInput produces single record populated by dictionary content and/or graph parameters.</description>
+    <inputPorts>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false" />
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" nullable="true">
+        <singleType name="getJobInputMapping" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" name="SetJobOutput" type="SET_JOB_OUTPUT" iconPath="icons/jobControl/SetJobOutput">
+    <shortDescription>Sets incoming values to dictionary content.</shortDescription>
+    <description>The component SetJobOutput receives input records and sets the incoming values to dictionary content.</description>
+    <inputPorts>
+      <singlePort name="0" required="false" />
+    </inputPorts>
+    <outputPorts>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" nullable="true">
+        <singleType name="setJobOutputMapping" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" iconPath="icons/jobControl/Fail" name="Fail" type="FAIL">
+    <shortDescription>Aborts parent job.</shortDescription>
+    <description>The component Fail aborts the parent job (jobflow or graph) with user-specified error message.</description>
+    <inputPorts>
+      <singlePort name="0" required="false" />
+    </inputPorts>
+    <outputPorts>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Error message" modifiable="true" name="errorMessage" nullable="true" required="false" defaultHint="user abort">
+        <singleType name="string"/>
+      </property>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" nullable="true">
+        <singleType name="failMapping" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" iconPath="platform:/plugin/com.cloveretl.gui/icons/transformers/SimpleGather" name="TokenGather"  type="TOKEN_GATHER" passThrough="true" defaultVisibility="jobflow">
+    <shortDescription>Copies incoming tokens from any input port to all output ports.</shortDescription>
+    <description>The component TokenGather copies each incoming token from any input port to all connected output ports. If input metadata differs from output metadata copying based on field names is used. This component is typically used to collect all tokens from several parallel execution branches and send them to one unified output.</description>
+    <inputPorts>
+      <multiplePort required="true"/>
+    </inputPorts>
+    <outputPorts>
+      <multiplePort required="true"/>
+    </outputPorts>
+    <properties />
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" iconPath="icons/jobControl/Barrier" name="Barrier" type="BARRIER" defaultVisibility="jobflow">
+    <shortDescription>Waits for results of parallel running jobs and sends an aggregated result to output port.</shortDescription>
+    <description>The component Barrier allows to wait for results of parallel running jobs and react to the success or failure of groups of jobs in a simple way. Barrier waits for all input tokens belonging to a group, evaluates this group and based on the results sends output token(s) to first or second output port.</description>
+    <inputPorts>
+      <multiplePort required="true" />
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false" label="success"/>
+      <singlePort name="1" required="false" label="fail"/>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Input grouping" modifiable="true" name="chunkPartitioner" nullable="true" defaultHint="Tuple (New group created when all inputs receive a token)">
+        <enumType>
+          <item displayValue="Tuple (New group created when all inputs receive a token)" value="TUPLE" />
+          <item displayValue="All (One group for all tokens)" value="ALL" />
+        </enumType>
+      </property>
+      <property category="basic" displayName="Token evaluation expression" modifiable="true" name="successCondition" nullable="true" required="false" defaultHint="$status == &quot;FINISHED_OK&quot;">
+        <singleType name="filter" metadataIntersection="true"/>
+      </property>
+      <property category="basic" displayName="Group evaluation criteria" modifiable="true" name="successEvaluator" nullable="true" defaultHint="AND (All true)">
+        <enumType>
+          <item displayValue="AND (All true)" value="AND" />
+          <item displayValue="OR (At least one)" value="OR" />
+        </enumType>
+      </property>
+      <property category="basic" displayName="Output" modifiable="true" name="chunkProcessor" nullable="true" defaultHint="Single token">
+        <enumType>
+          <item displayValue="Single token" value="SINGLE" />
+          <item displayValue="All tokens" value="ALL" />
+        </enumType>
+      </property>
+    </properties>
+  </ETLComponent>
+  
+  <ETLComponent category="jobControl" iconPath="icons/jobControl/Success" name="Success" type="SUCCESS">
+    <shortDescription></shortDescription>
+    <description>The Success component indicates successful termination of tokens.</description>
+    <inputPorts>
+      <singlePort name="0" required="false" />
+    </inputPorts>
+    <outputPorts>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Message" modifiable="true" name="message" nullable="true">
+        <singleType name="string"/>
+      </property>
+      <property category="basic" displayName="Mapping" modifiable="true" name="mapping" nullable="true">
+        <singleType name="successMapping" />
+      </property>
+    </properties>
+  </ETLComponent>
+  
+  <ETLComponent category="jobControl" name="Condition"  type="CONDITION" iconPath="icons/jobControl/Condition" passThrough="true" defaultVisibility="jobflow">
+    <shortDescription>Routes incoming tokens to one of its output ports.</shortDescription>
+    <description>The Condition component routes incoming tokens to one of its output ports based on result of specified condition. It is similar to 'if' statement in programming languages.</description>
+    <inputPorts>
+      <singlePort name="0" required="true"/>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="true" label="true"/>
+      <singlePort name="1" label="false"/>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Condition" modifiable="true" name="filterExpression" nullable="true" required="true">
+        <singleType name="filter"/>
+      </property>
+    </properties>
+  </ETLComponent>
+  
+  <ETLComponent category="joiners" iconPath="icons/joiners/Combine" name="Combine"  type="COMBINE">
+    <shortDescription>Joins data flows by tuples.</shortDescription>
+    <description>The component Combine takes single records from each input port and combines them to single output record according to specified transformation.</description>
+    <inputPorts>
+      <multiplePort required="true" />
+    </inputPorts>
+    <outputPorts>
+      <multiplePort required="true" />
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Transform" modifiable="true" name="transform" nullable="true" required="!transformClass,!transformURL">
+        <singleType name="transform"/>
+      </property>
+      <property category="basic" displayName="Transform URL" modifiable="true" name="transformURL" nullable="true" required="!transformClass,!transform">
+        <singleType name="file"/>
+      </property>
+      <property category="basic" displayName="Transform class" modifiable="true" name="transformClass" nullable="true" required="!transform,!transformURL">
+        <singleType name="class"/>
+      </property>
+      <property category="basic" displayName="Transform source charset" modifiable="true" name="charset" nullable="true" defaultHintProvider="charsetSource">
+        <singleType name="charset"/>
+      </property>
+      <property category="basic" displayName="Allow incomplete tuples" modifiable="true" name="incompleteTuples" nullable="true" defaultHint="false">
+        <singleType name="bool"/>
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="fileOperations" iconPath="icons/file operations/CreateFiles" name="CreateFiles" type="CREATE_FILES" defaultVisibility="jobflow">
+    <shortDescription>Creates files and directories, sets last modification date.</shortDescription>
+    <description>Creates files and directories or sets the last modified date.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+      	<Metadata id="CreateFiles_Attributes"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+      	<Metadata id="CreateFiles_Result"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+      	<Metadata id="CreateFiles_Error"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="File URL" modifiable="true" name="fileURL" nullable="true" required="false">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Create as directory" modifiable="true" name="directory" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Create parent directories" modifiable="true" name="makeParentDirs" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Last modified date" modifiable="true" name="modifiedDate" nullable="true" required="false">
+        <singleType name="datetime" />
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="createFilesInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="standardOutputMapping" nullable="true">
+        <singleType name="createFilesStandardOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorOutputMapping" nullable="true">
+        <singleType name="createFilesErrorOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Verbose output" modifiable="true" name="verboseOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Stop processing on fail" modifiable="true" name="stopOnFail" nullable="true" required="false" defaultHint="true">
+        <singleType name="bool"/>
+      </property>
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="fileOperations" iconPath="icons/file operations/DeleteFiles" name="DeleteFiles" type="DELETE_FILES" defaultVisibility="jobflow">
+    <shortDescription>Deletes files and directories.</shortDescription>
+    <description>Deletes files and directories.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+      	<Metadata id="DeleteFiles_Attributes"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+      	<Metadata id="DeleteFiles_Result"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+      	<Metadata id="DeleteFiles_Error"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="File URL" modifiable="true" name="fileURL" nullable="true" required="false">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Recursive" modifiable="true" name="recursive" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="deleteFilesInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="standardOutputMapping" nullable="true">
+        <singleType name="deleteFilesStandardOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorOutputMapping" nullable="true">
+        <singleType name="deleteFilesErrorOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Verbose output" modifiable="true" name="verboseOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Stop processing on fail" modifiable="true" name="stopOnFail" nullable="true" required="false" defaultHint="true">
+        <singleType name="bool"/>
+      </property>
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="fileOperations" iconPath="icons/file operations/ListFiles" name="ListFiles" type="LIST_FILES" defaultVisibility="jobflow">
+    <shortDescription>Lists directory contents, retrieves file attributes.</shortDescription>
+    <description>Lists directory contents and reads file attributes, such as size or last modification data.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+      	<Metadata id="ListFiles_Attributes"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="true">
+      	<Metadata id="ListFiles_Result"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+      	<Metadata id="ListFiles_Error"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="File URL" modifiable="true" name="fileURL" nullable="true" required="false">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Recursive" modifiable="true" name="recursive" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="listFilesInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="standardOutputMapping" nullable="true">
+        <singleType name="listFilesStandardOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorOutputMapping" nullable="true">
+        <singleType name="listFilesErrorOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Stop processing on fail" modifiable="true" name="stopOnFail" nullable="true" required="false" defaultHint="true">
+        <singleType name="bool"/>
+      </property>
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="fileOperations" iconPath="icons/file operations/CopyFiles" name="CopyFiles" type="COPY_FILES" defaultVisibility="jobflow">
+    <shortDescription>Copies files and directories.</shortDescription>
+    <description>Copies files and directories. Subdirectories may be copied recursively.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+      	<Metadata id="CopyFiles_Attributes"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+      	<Metadata id="CopyFiles_Result"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+      	<Metadata id="CopyFiles_Error"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Source file URL" modifiable="true" name="sourceURL" nullable="true" required="false">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Target file URL" modifiable="true" name="targetURL" nullable="true" required="false">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Recursive" modifiable="true" name="recursive" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Overwrite" modifiable="true" name="overwrite" nullable="true" required="false" defaultHint="always">
+        <enumType>
+          <item displayValue="always" value="always" />
+          <item displayValue="update" value="update" />
+          <item displayValue="never" value="never" />
+        </enumType>
+      </property>
+      <property category="basic" displayName="Create parent directories" modifiable="true" name="makeParentDirs" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="copyFilesInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="standardOutputMapping" nullable="true">
+        <singleType name="copyFilesStandardOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorOutputMapping" nullable="true">
+        <singleType name="copyFilesErrorOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Verbose output" modifiable="true" name="verboseOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Stop processing on fail" modifiable="true" name="stopOnFail" nullable="true" required="false" defaultHint="true">
+        <singleType name="bool"/>
+      </property>
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="fileOperations" iconPath="icons/file operations/MoveFiles" name="MoveFiles" type="MOVE_FILES" defaultVisibility="jobflow">
+    <shortDescription>Moves files and directories.</shortDescription>
+    <description>Moves files and directories.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+      	<Metadata id="MoveFiles_Attributes"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+      	<Metadata id="MoveFiles_Result"/>
+      </singlePort>
+      <singlePort name="1" required="false" label="error">
+      	<Metadata id="MoveFiles_Error"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Source file URL" modifiable="true" name="sourceURL" nullable="true" required="false">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Target file URL" modifiable="true" name="targetURL" nullable="true" required="false">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Overwrite" modifiable="true" name="overwrite" nullable="true" required="false" defaultHint="always">
+        <enumType>
+          <item displayValue="always" value="always" />
+          <item displayValue="update" value="update" />
+          <item displayValue="never" value="never" />
+        </enumType>
+      </property>
+      <property category="basic" displayName="Create parent directories" modifiable="true" name="makeParentDirs" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="moveFilesInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="standardOutputMapping" nullable="true">
+        <singleType name="moveFilesStandardOutputMapping" outputPortName="0"/>
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorOutputMapping" nullable="true">
+        <singleType name="moveFilesErrorOutputMapping" outputPortName="1"/>
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="basic" displayName="Verbose output" modifiable="true" name="verboseOutput" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Stop processing on fail" modifiable="true" name="stopOnFail" nullable="true" required="false" defaultHint="true">
+        <singleType name="bool"/>
+      </property>
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="cluster" iconPath="icons/cluster/ClusterGather" name="ClusterSimpleGather" type="CLUSTER_SIMPLE_GATHER" passThrough="true" defaultVisibility="etlGraph">
+    <shortDescription>Gathers data flows from cluster nodes.</shortDescription>
+    <description>Receives gather data through all cluster nodes. Gets all incoming records and sends them to connected output port. Terminates when all incoming records are received and sent to connected output port.</description>
+    <inputPorts>
+      <singlePort name="0" required="true" />
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="true" />
+    </outputPorts>
+  </ETLComponent>
+  <ETLComponent category="cluster" iconPath="icons/cluster/ClusterGather" name="ClusterMerge" type="CLUSTER_MERGE" passThrough="true" defaultVisibility="etlGraph">
+    <shortDescription>Merges data flows from cluster nodes.</shortDescription>
+    <description>Receives sorted data through all connected cluster nodes. Gets all incoming records and sends them to connected output port sorted in the same way. Terminates when all incoming records are received and sent to connected output port.</description>
+    <inputPorts>
+      <singlePort name="0" required="true" />
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="true" />
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Merge key" modifiable="true" name="mergeKey" nullable="true" required="true">
+        <singleType name="key" inputPortName="0" rightLabel="Merge key:"/>
+      </property>
+    </properties>
+  </ETLComponent>
+  <ETLComponent category="cluster" iconPath="icons/cluster/ClusterPartition" name="ClusterPartition" type="CLUSTER_PARTITION" passThrough="true" defaultVisibility="etlGraph">
+    <shortDescription>Splits incoming data flow on cluster nodes.</shortDescription>
+    <description>Receives data through connected input port, splits incoming data flow into more flows and sends each of them to different cluster node.</description>
+    <inputPorts>
+      <singlePort name="0" required="true" label="input"/>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="true" label="output"/>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Partition" modifiable="true" name="partitionSource" nullable="true">
+        <singleType name="transformPartition" />
+      </property>
+      <property category="basic" displayName="Partition URL" modifiable="true" name="partitionURL" nullable="true">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Partition class" modifiable="true" name="partitionClass" nullable="true">
+        <singleType name="class" />
+      </property>
+      <property category="basic" displayName="Ranges" modifiable="true" name="ranges" nullable="true">
+        <singleType name="ranges" adjustable="true" />
+      </property>
+      <property category="basic" displayName="Partition key" modifiable="true" name="partitionKey" nullable="true">
+        <singleType name="key" inputPortName="0" rightLabel="Partition key:"/>
+      </property>
+      <property category="advanced" displayName="Partition source charset" modifiable="true" name="charset" nullable="true" defaultHintProvider="charsetSource">
+        <singleType name="charset" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="transformers" iconPath="platform:/plugin/com.cloveretl.gui/icons/transformers/Partition" name="LoadBalancingPartition" type="LOAD_BALANCING_PARTITION" passThrough="true">
+    <shortDescription>Splits incoming data flow to available output ports.</shortDescription>
+    <description>Receives data through connected input port, splits incoming data flow into more flows to ensure all output ports are balanced employed.</description>
+    <inputPorts>
+      <singlePort name="0" required="true"/>
+    </inputPorts>
+    <outputPorts>
+      <multiplePort required="true"/>
+    </outputPorts>
+    <properties />
+  </ETLComponent>
+
+  <ETLComponent category="cluster" iconPath="icons/cluster/ClusterPartition" name="ClusterLoadBalancingPartition" type="CLUSTER_LOAD_BALANCING_PARTITION" passThrough="true"  defaultVisibility="etlGraph">
+    <shortDescription>Splits incoming data flow on cluster nodes.</shortDescription>
+    <description>Receives data through connected input port, splits incoming data flow into more flows and sends each of them to different cluster node.</description>
+    <inputPorts>
+      <singlePort name="0" required="true" label="input"/>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="true" label="output"/>
+    </outputPorts>
+    <properties />
+  </ETLComponent>
+
+  <ETLComponent category="cluster" iconPath="icons/cluster/ClusterRepartition" name="ClusterRepartition" type="CLUSTER_REPARTITION" passThrough="true" defaultVisibility="etlGraph">
+    <shortDescription>Repartition already partitioned data flow.</shortDescription>
+    <description>Receives partitioned data through connected input port and repartitions them according different rules.</description>
+    <inputPorts>
+      <singlePort name="0" required="true" label="input"/>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="true" label="output"/>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Partition" modifiable="true" name="partitionSource" nullable="true">
+        <singleType name="transformPartition" />
+      </property>
+      <property category="basic" displayName="Partition URL" modifiable="true" name="partitionURL" nullable="true">
+        <singleType name="file" />
+      </property>
+      <property category="basic" displayName="Partition class" modifiable="true" name="partitionClass" nullable="true">
+        <singleType name="class" />
+      </property>
+      <property category="basic" displayName="Ranges" modifiable="true" name="ranges" nullable="true">
+        <singleType name="ranges" adjustable="true" />
+      </property>
+      <property category="basic" displayName="Partition key" modifiable="true" name="partitionKey" nullable="true">
+        <singleType name="key" inputPortName="0" />
+      </property>
+      <property category="advanced" displayName="Partition source charset" modifiable="true" name="charset" nullable="true" defaultHintProvider="charsetSource">
+        <singleType name="charset" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <ETLComponent category="cluster" iconPath="icons/cluster/ClusterPartition" name="ClusterSimpleCopy"  type="CLUSTER_SIMPLE_COPY" passThrough="true">
+    <shortDescription>Copies data records to all output workers.</shortDescription>
+    <description>Receives data through connected input port and copies data records to all cluster workers. Each incoming record is sent to all output partitions.</description>
+    <inputPorts>
+      <singlePort name="0" required="true" label="input"/>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="true" label="output"/>
+    </outputPorts>
+    <properties />
+  </ETLComponent>
+
+  <ETLComponent category="jobControl" iconPath="icons/jobControl/ExecuteMapReduce" name="ExecuteMapReduce" type="EXECUTE_MAPREDUCE" defaultVisibility="jobflow">
+    <shortDescription>Executes map/reduce jobs on Hadoop cluster.</shortDescription>
+    <description>Jobs are specified as .jar libraries containing at least mapper class, (most of the times) reducer class and input &amp; output location on cluster's file system. Libraries with mapper &amp; reducer are send to cluster together with other settings and executed.</description>
+    <inputPorts>
+      <singlePort name="0" required="false">
+       <MetadataProvider id="cloveretl.gui.commercial.ExecuteMapReduceInputPortMetadataProvider"/>
+      </singlePort>
+    </inputPorts>
+    <outputPorts>
+      <singlePort name="0" required="false">
+        <Metadata id="ExecuteMapReduce_JobResult"/>
+      </singlePort>
+      <singlePort name="1" required="false">
+        <Metadata id="ExecuteMapReduce_JobResult"/>
+      </singlePort>
+    </outputPorts>
+    <properties>
+      <property category="basic" displayName="Hadoop connection" name="hadoopConnectionId" modifiable="true" defaultHint="No connection">
+        <singleType name="hadoopConnection" />
+      </property>
+      <property category="basic" displayName="Job name" name="jobName" modifiable="true" nullable="false" required="false" defaultHint="Job JAR file name">
+        <singleType name="string" />
+      </property>
+      <property category="basic" displayName="URL of JAR file with job classes" name="jarLocation" modifiable="true" nullable="false">
+        <singleType name="file" fields="input" dictionary="input" selectionMode="file_only" />
+      </property>
+      <property category="basic" displayName="Timeout (ms)" modifiable="true" name="timeout" required="false"
+        nullable="true" defaultHint="0 (unlimited)">
+        <singleType name="long" />
+      </property>
+      <property category="basic" displayName="Input mapping" modifiable="true" name="inputMapping" nullable="true">
+        <singleType name="hadoopJobSenderInputMapping" />
+      </property>
+      <property category="basic" displayName="Output mapping" modifiable="true" name="standardOutputMapping"
+        nullable="true">
+        <singleType name="hadoopJobSenderStandardOutputMapping" outputPortName="0" />
+      </property>
+      <property category="basic" displayName="Error mapping" modifiable="true" name="errorOutputMapping" nullable="true">
+        <singleType name="hadoopJobSenderErrorOutputMapping" outputPortName="1" />
+      </property>
+      <property category="basic" displayName="Redirect error output" modifiable="true" name="redirectErrorOutput"
+        required="false" nullable="true" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="jobfolders" displayName="Input files" name="inputFiles" modifiable="true" nullable="false">
+        <singleType name="file" fields="input" dictionary="input" selectionMode="file_only" />
+      </property>
+      <property category="jobfolders" displayName="Output directory" name="outputDirectory" modifiable="true" nullable="false">
+        <singleType name="file" fields="input" dictionary="input" selectionMode="file_only" />
+      </property>
+      <property category="jobfolders" displayName="Working directory" name="workingDirectory" modifiable="true" nullable="false" required="false">
+        <singleType name="file" fields="input" dictionary="input" selectionMode="file_only" />
+      </property>
+      <property category="jobfolders" displayName="Clear output directory before execution" name="clearOutputDir"
+        modifiable="true" nullable="true" required="false" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="classes" displayName="Job implementation API version" name="jobAPIVersion" modifiable="true" nullable="true" defaultHint="New API – org.apache.hadoop.mapreduce package">
+        <enumType>
+          <item displayValue="New API – org.apache.hadoop.mapreduce package" value="mapreduce"/>
+          <item displayValue="Old API – org.apache.hadoop.mapred package" value="mapred"/>
+        </enumType>
+      </property>
+      <property category="classes" displayName="Mapper class" name="mapperClass" modifiable="true" nullable="false" defaultHint="IdentityMapper">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Combiner class" name="combinerClass" modifiable="true" nullable="false"
+        required="false" defaultHint="No combiner">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Partitioner class" name="partitionerClass" modifiable="true" nullable="false"
+        required="false" defaultHint="HashPartitioner">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Reducer class" name="reducerClass" modifiable="true" nullable="false"
+        required="false" defaultHint="IdentityReducer">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Mapper output key class" name="mapperOutKeyClass" modifiable="true" nullable="false" defaultHint="Output key class">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Mapper output value class" name="mapperOutValueClass" modifiable="true" nullable="false" defaultHint="Output value class">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Grouping comparator" name="groupingComparatorClass" modifiable="true" nullable="false" defaultHint="Sorting comparator if set">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Sorting comparator" name="sortingComparatorClass" modifiable="true" nullable="false">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Output key class" name="outKeyClass" modifiable="true" nullable="false" defaultHint="LongWritable">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Output value class" name="outValueClass" modifiable="true" nullable="false" defaultHint="Text">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Input format" name="inputFormatClass" modifiable="true" nullable="false"
+        required="false" defaultHint="TextInputFormat">
+        <singleType name="string" />
+      </property>
+      <property category="classes" displayName="Output format" name="outputFormatClass" modifiable="true"
+        nullable="false" required="false" defaultHint="TextOutputFormat">
+        <singleType name="string" />
+      </property>
+      <property category="advanced" displayName="Number of mappers" name="numMappers" modifiable="true" nullable="true" required="false" defaultHint="Number of map tasks hint (Input format class decides)">
+        <singleType name="int" min="1" />
+      </property>
+      <property category="advanced" displayName="Number of reducers" name="numReducers" modifiable="true" nullable="true" required="false" defaultHint="Required number of reduce tasks (if zero, mapper output goes directly to Output directory)">
+        <singleType name="int" min="0" />
+      </property>
+      <property category="advanced" displayName="Execute job as daemon" name="executeAsDaemon" required="false" modifiable="true"
+        nullable="true" defaultHint="false">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Stop processing on fail" name="stopOnFail" required="false" modifiable="true"
+        nullable="true" defaultHint="true">
+        <singleType name="bool" />
+      </property>
+      <property category="advanced" displayName="Additional job settings" name="additionalSettings" modifiable="true"
+        nullable="false" required="false">
+        <singleType name="properties" />
+      </property>
+    </properties>
+  </ETLComponent>
+
+  <MetadataDefinitions>
+    <Metadata id="SpreadsheetReader_ErrPort">
+      <Record fieldDelimiter="|" name="ErrPort" recordDelimiter="\n" type="delimited">
+        <Field name="recordID" type="integer"/>
+        <Field name="file" type="string"/>
+        <Field name="sheet" type="string"/>
+        <Field name="fieldIndex" type="integer"/>
+        <Field name="fieldName" type="string"/>
+        <Field name="cellCoords" type="string"/>
+        <Field name="cellValue" type="string"/>
+        <Field name="cellType" type="string"/>
+        <Field name="cellFormat" type="string"/>
+        <Field name="message" type="string"/>
+      </Record>
+    </Metadata>
+
+    <Metadata id="ExecuteGraph_RunStatus">
+      <Record fieldDelimiter="|" name="RunStatus" recordDelimiter="\n" type="delimited">
+        <Field name="runId" type="long"/>
+        <Field name="originalJobURL" type="string"/>
+        <Field name="startTime" type="date" format="yyyy-MM-dd HH:mm:ss" />
+        <Field name="endTime" type="date" format="yyyy-MM-dd HH:mm:ss" />
+        <Field name="duration" type="long"/>
+        <Field name="status" type="string"/>
+        <Field name="errException" type="string"/>
+        <Field name="errMessage" type="string"/>
+        <Field name="errComponent" type="string"/>
+        <Field name="errComponentType" type="string"/>
+      </Record>
+    </Metadata>
+
+    <Metadata id="ExecuteGraph_RunConfig">
+      <Record fieldDelimiter="|" name="RunConfig" recordDelimiter="\n" type="delimited">
+        <Field name="jobURL" type="string"/>
+        <Field name="executionType" type="string"/>
+        <Field name="timeout" type="long"/>
+        <Field name="executionGroup" type="string"/>
+        <Field name="clusterNodeId" type="string"/>
+        <Field name="daemon" type="boolean"/>
+        <Field name="skipCheckConfig" type="boolean"/>
+        <Field name="jobParameters" type="string" containerType="map"/>
+      </Record>
+    </Metadata>
+
+    <Metadata id="MonitorGraph_RunConfig">
+      <Record fieldDelimiter="|" name="RunConfig" recordDelimiter="\n" type="delimited">
+        <Field name="runId" type="long"/>
+        <Field name="timeout" type="long"/>
+        <Field name="monitoringInterval" type="long"/>
+      </Record>
+    </Metadata>
+
+	<Metadata id="ExecuteScript_RunConfig">
+	  <Record fieldDelimiter="|" name="RunConfig" recordDelimiter="\n" type="delimited">
+		<Field name="script" type="string" />
+		<Field name="scriptURL" type="string" />
+		<Field name="scriptCharset" type="string" />
+		<Field name="interpreter" type="string" />
+		<Field name="workingDirectory" type="string" />
+		<Field name="timeout" type="long" />
+		<Field name="environmentVariables" type="string" />
+		<Field name="stdIn" type="string" />
+		<Field name="stdInFileURL" type="string" />
+		<Field name="stdOutFileURL" type="string" />
+		<Field name="errOutFileURL" type="string" />
+		<Field name="append" type="boolean" />
+		<Field name="dataCharset" type="string" />
+		<Field name="redirectErrorOutput" type="boolean" />
+		<Field name="batchFileExtension" type="string" />
+	  </Record>
+	</Metadata>
+
+	<Metadata id="ExecuteScript_RunResult">
+	  <Record fieldDelimiter="|" name="RunResult" recordDelimiter="\n" type="delimited">
+		<Field name="stdOut" type="string" />
+		<Field name="errOut" type="string" />
+		<Field name="startTime" type="date" format="yyyy-MM-dd HH:mm:ss" />
+		<Field name="endTime" type="date" format="yyyy-MM-dd HH:mm:ss" />
+		<Field name="duration" type="long" />
+		<Field name="exitValue" type="long" />
+		<Field name="reachedTimeout" type="boolean" />
+		<Field name="errException" type="string" />
+		<Field name="errMessage" type="string" />
+	  </Record>
+	</Metadata>
+	
+	<Metadata id="CopyFiles_Attributes">
+		<Record fieldDelimiter="|" name="Attributes" recordDelimiter="\n" type="delimited">
+			<Field name="sourceURL" type="string" />
+			<Field name="targetURL" type="string" />
+			<Field name="recursive" type="boolean" />
+			<Field name="overwrite" type="string" />
+			<Field name="makeParentDirs" type="boolean" />
+		</Record>
+	</Metadata>
+	<Metadata id="CreateFiles_Attributes">
+		<Record fieldDelimiter="|" name="Attributes" recordDelimiter="\n" type="delimited">
+			<Field name="fileURL" type="string" />
+			<Field name="directory" type="boolean" />
+			<Field name="makeParentDirs" type="boolean" />
+			<Field name="modifiedDate" type="date" format="yyyy-MM-dd HH:mm:ss" />
+		</Record>
+	</Metadata>
+	<Metadata id="DeleteFiles_Attributes">
+		<Record fieldDelimiter="|" name="Attributes" recordDelimiter="\n" type="delimited">
+			<Field name="fileURL" type="string" />
+			<Field name="recursive" type="boolean" />
+		</Record>
+	</Metadata>
+	<Metadata id="ListFiles_Attributes">
+		<Record fieldDelimiter="|" name="Attributes" recordDelimiter="\n" type="delimited">
+			<Field name="fileURL" type="string" />
+			<Field name="recursive" type="boolean" />
+		</Record>
+	</Metadata>
+	<Metadata id="MoveFiles_Attributes">
+		<Record fieldDelimiter="|" name="Attributes" recordDelimiter="\n" type="delimited">
+			<Field name="sourceURL" type="string" />
+			<Field name="targetURL" type="string" />
+			<Field name="overwrite" type="string" />
+			<Field name="makeParentDirs" type="boolean" />
+		</Record>
+	</Metadata>
+
+	<Metadata id="CopyFiles_Result">
+		<Record fieldDelimiter="|" name="Result" recordDelimiter="\n" type="delimited">
+			<Field name="sourceURL" type="string" />
+			<Field name="targetURL" type="string" />
+			<Field name="resultURL" type="string" />
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+		</Record>
+	</Metadata>
+	<Metadata id="CreateFiles_Result">
+		<Record fieldDelimiter="|" name="Result" recordDelimiter="\n" type="delimited">
+			<Field name="fileURL" type="string" />
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+		</Record>
+	</Metadata>
+	<Metadata id="DeleteFiles_Result">
+		<Record fieldDelimiter="|" name="Result" recordDelimiter="\n" type="delimited">
+			<Field name="fileURL" type="string" />
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+		</Record>
+	</Metadata>
+	<Metadata id="ListFiles_Result">
+		<Record fieldDelimiter="|" name="Result" recordDelimiter="\n" type="delimited">
+			<Field name="URL" type="string" />
+			<Field name="name" type="string" />
+			<Field name="canRead" type="boolean" />
+			<Field name="canWrite" type="boolean" />
+			<Field name="canExecute" type="boolean" />
+			<Field name="isDirectory" type="boolean" />
+			<Field name="isFile" type="boolean" />
+			<Field name="isHidden" type="boolean" />
+			<Field name="lastModified" type="date" format="yyyy-MM-dd HH:mm:ss" />
+			<Field name="size" type="long" />
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+		</Record>
+	</Metadata>
+	<Metadata id="MoveFiles_Result">
+		<Record fieldDelimiter="|" name="Result" recordDelimiter="\n" type="delimited">
+			<Field name="sourceURL" type="string" />
+			<Field name="targetURL" type="string" />
+			<Field name="resultURL" type="string" />
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+		</Record>
+	</Metadata>
+
+	<Metadata id="CopyFiles_Error">
+		<Record fieldDelimiter="|" name="Error" recordDelimiter="\n" type="delimited">
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+			<Field name="sourceURL" type="string" />
+			<Field name="targetURL" type="string" />
+		</Record>
+	</Metadata>
+	<Metadata id="CreateFiles_Error">
+		<Record fieldDelimiter="|" name="Error" recordDelimiter="\n" type="delimited">
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+			<Field name="fileURL" type="string" />
+		</Record>
+	</Metadata>
+	<Metadata id="DeleteFiles_Error">
+		<Record fieldDelimiter="|" name="Error" recordDelimiter="\n" type="delimited">
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+			<Field name="fileURL" type="string" />
+		</Record>
+	</Metadata>
+	<Metadata id="ListFiles_Error">
+		<Record fieldDelimiter="|" name="Error" recordDelimiter="\n" type="delimited">
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+		</Record>
+	</Metadata>
+	<Metadata id="MoveFiles_Error">
+		<Record fieldDelimiter="|" name="Error" recordDelimiter="\n" type="delimited">
+			<Field name="result" type="boolean" />
+			<Field name="errorMessage" type="string" />
+			<Field name="stackTrace" type="string" />
+			<Field name="sourceURL" type="string" />
+			<Field name="targetURL" type="string" />
+		</Record>
+	</Metadata>
+
+	<Metadata id="ExecuteMapReduce_JobResult">
+		<Record fieldDelimiter="|" name="JobResult" recordDelimiter="\n" type="delimited">
+			<Field name="jobID" type="string" />
+			<Field name="startTime" type="date" />
+			<Field name="endTime" type="date" />
+			<Field name="duration" type="long" />
+			<Field name="clusterJobState" type="string" />
+			<Field name="wasJobSuccessfull" type="boolean" />
+			<Field name="timeouted" type="boolean" />
+			<Field name="clusterErrMessage" type="string" />
+			<Field name="errException" type="string" />
+			<Field name="lastMapReducePhase" type="string" />
+			<Field name="lastMapReducePhaseProgress" type="number" />
+		</Record>
+	</Metadata>
+  </MetadataDefinitions>
+
+</ETLComponentList>

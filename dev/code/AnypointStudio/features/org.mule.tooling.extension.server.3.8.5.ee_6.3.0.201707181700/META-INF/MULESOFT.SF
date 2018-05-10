@@ -1,0 +1,27 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: AucnUxumzgWdmPsX9eaMS+fZFRsuN
+ 7djvjHKVEb0Qzg=
+SHA-256-Digest-Manifest: IgjqjgMuqaF0FX+MwD2NYUz8KYFSnC77QwRLJw3/7RU=
+Created-By: 1.7.0_80 (Oracle Corporation)
+
+Name: build.properties
+SHA-256-Digest: LC7o1xeBSshAHYtqkuw/InGWFKXcKaAtLE+EXzYZZt0=
+
+Name: .project
+SHA-256-Digest: 7JzfF7fcowVb7uRsDNUOoiYBPvKw8T18wixYw/p85a8=
+
+Name: pom.xml
+SHA-256-Digest: G1OlbyKs4CTNB2qXl5hfTrXqaX9xB6P6spi7YsAP1Ko=
+
+Name: target/antrun/build-main.xml
+SHA-256-Digest: qE13mGJqOxawn4i81FmxJ/cuxBzZivvDl+7+ALc9xck=
+
+Name: feature.xml
+SHA-256-Digest: 0wtqnhTSwMWooORTaWm+HBCHJ+x6SWhRWBWTTOYezjM=
+
+Name: target/feature.xml
+SHA-256-Digest: 1QGvq6QOVofGZNJ3MrC7HTdKfqlvZfZf3UIrtS6bOo8=
+
+Name: feature.xml.template
+SHA-256-Digest: b0orw6pC6nENGHE50FKam81F+gc+x9IaVfCHLIwq6KY=
+

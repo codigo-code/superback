@@ -1,0 +1,3 @@
+com\utn\model\Auto.class
+com\utn\rest\controller\AutoRestController.class
+com\utn\App.class

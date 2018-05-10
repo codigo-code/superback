@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.intro">
+      <!-- Declare intro page -->   
+      <intro
+           class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+           id="org.mule.tooling.welcome.mainWelcomeScreen"
+           label="Anypoint Studio Welcome Page"
+           icon="intro/content/css/images/welcomeIcon-16x16.png">
+      </intro>
+      <!-- Bind it to your product -->
+      <introProductBinding
+            introId="org.mule.tooling.welcome.mainWelcomeScreen"
+            productId="org.mule.tooling.branding.mulestudio">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            introId="org.mule.tooling.welcome.mainWelcomeScreen"
+            id="org.mule.tooling.welcome.mainWelcomeScreenConfigId"
+            content="intro/content/muleWelcome.xml">
+       <presentation
+              home-page-id="root">
+            <implementation
+                 kind="html"
+                 os="win32,linux,macosx">
+            </implementation>
+       </presentation>
+     </config>
+   </extension>
+</plugin>

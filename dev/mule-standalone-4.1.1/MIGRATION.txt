@@ -1,0 +1,5 @@
+MIGRATION GUIDE
+===============
+
+For a guide on how to migrate from Mule Runtime Community Edition 3.x to 4.x, please refer to our documentation:
+https://docs.mulesoft.com

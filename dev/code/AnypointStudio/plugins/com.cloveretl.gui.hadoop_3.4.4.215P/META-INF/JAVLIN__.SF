@@ -1,0 +1,68 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest-Main-Attributes: pkBI5IdRr90uvC7IYsXcQMHZb00=
+Created-By: 1.6.0_26 (Sun Microsystems Inc.)
+SHA1-Digest-Manifest: DK4vBxEpELKXy+2UoHzt+7A9xIE=
+
+Name: icons/writers/HDFSWriter-64x64.png
+SHA1-Digest: IECEMnNUiAabnnKLtqhQdOoUy7k=
+
+Name: icons/connection-hadoop-16.png
+SHA1-Digest: +m9NUKb/Scp6CfKl2Lb9+WIX3Ms=
+
+Name: icons/connection-hadoop-external-16.png
+SHA1-Digest: 3Q2eenjvtkFjZkT8eflM5X4ni8E=
+
+Name: icons/metadata-external-16.png
+SHA1-Digest: bvG9xdLXBXeJ3pV82bmnfgrtxKE=
+
+Name: com.cloveretl.gui.hadoop.jar
+SHA1-Digest: NxxTRwYnWjDysmzz+Yf+X+1aNmM=
+
+Name: icons/connection-external-16.png
+SHA1-Digest: 3LVMvHSpNMUv4hpEqqVa8Y7ZHbQ=
+
+Name: plugin.properties
+SHA1-Digest: N73eN2mXIgYoeg4VHG+rq8+1QCI=
+
+Name: icons/readers/HDFSReader-16x16.png
+SHA1-Digest: TSBvlR614trrQCjHImxjWJo6P1M=
+
+Name: icons/editor16.png
+SHA1-Digest: Dz9mvxbPV00lbktC4A2/eZNZDv4=
+
+Name: icons/readers/HDFSReader-64x64.png
+SHA1-Digest: wGwWckRoEhcVrwo8Kwd2z3C/IeY=
+
+Name: about.ini
+SHA1-Digest: 8N0aGxzI5LgmaDqa3x2hvyJ1sec=
+
+Name: icons/writers/HDFSWriter-16x16.png
+SHA1-Digest: dP7KBMJrVCwIfG1r0k7fYvB8hhk=
+
+Name: icons/cloveretl32.gif
+SHA1-Digest: yl1zy0yI/6JHx2gRK65tIOvp2fo=
+
+Name: components.xml
+SHA1-Digest: niVVvOyq8e7mwc34rLMbFhJDtNE=
+
+Name: icons/readers/HDFSReader-32x32.png
+SHA1-Digest: jqYhzm6eJm2eO/gnuGYIfBB9qZg=
+
+Name: about.properties
+SHA1-Digest: CmEi0kGxpb6I74/plpiHnEEoy5U=
+
+Name: plugin.xml
+SHA1-Digest: UNs+YtfRxQMjRd9elHYJDKA18Ho=
+
+Name: about.html
+SHA1-Digest: Eh8pGMUec7ZaZUxtg4iAotlNv5E=
+
+Name: icons/cloveretl32_feature_icon.gif
+SHA1-Digest: H+toPfeQSzcYUl+PBk5GnZIjOvM=
+
+Name: icons/writers/HDFSWriter-32x32.png
+SHA1-Digest: OMH5c4fu8Y+1tna+HDFg7nlcARo=
+
+Name: about.mappings
+SHA1-Digest: ZE1ngLOZtaeP5KZ4NzgcI+PmqqQ=
+

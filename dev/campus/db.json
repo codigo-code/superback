@@ -1,0 +1,36 @@
+{
+  "peliculas": [
+    {
+      "id": 1,
+      "nombre": "voler al futuro",
+      "ano": 1985
+    },
+    {
+      "id": 2,
+      "nombre": "voler al futuro II",
+      "ano": 1987
+    },
+    {
+      "id": 3,
+      "nombre": "voler al futuro III",
+      "ano": 1990
+    },
+    {
+      "id": 4
+    }
+  ],
+  "clasificaicones": [
+    {
+      "nombre": "drama",
+      "id": 1
+    },
+    {
+      "nombre": "accion",
+      "id": 2
+    },
+    {
+      "nombre": "terror",
+      "id": 3
+    }
+  ]
+}

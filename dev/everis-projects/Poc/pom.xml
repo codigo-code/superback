@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.everis</groupId>
+	<artifactId>Poc</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.0.1.RELEASE</version>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-ws</artifactId> -->
+		<!-- </dependency> -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.ws</groupId>
+			<artifactId>spring-ws-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.ws</groupId>
+			<artifactId>spring-ws-support</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.2</version>
+		</dependency>
+
+
+	</dependencies>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+
+	<build>
+		<!-- <pluginManagement> -->
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb20-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<schemaLanguage>WSDL</schemaLanguage>
+					<generatePackage>com.everis.services</generatePackage>
+					<schemas>
+						<schema>
+							<url>https://testdia.afip.gob.ar/Dia/ws/wGesTabRef/wGesTabRef.asmx?wsdl</url>
+						</schema>
+					</schemas>
+				</configuration>
+			</plugin>
+
+			<!-- <plugin> -->
+			<!-- <groupId>org.apache.cxf</groupId> -->
+			<!-- <artifactId>cxf-codegen-plugin</artifactId> -->
+			<!-- <version>${cxf.version}</version> -->
+			<!-- <executions> -->
+			<!-- <execution> -->
+			<!-- <id>generate-sources</id> -->
+			<!-- <phase>generate-sources</phase> -->
+			<!-- <configuration> -->
+			<!-- <sourceRoot>${project.build.directory}/generated/cxf</sourceRoot> -->
+			<!-- <wsdlOptions> -->
+			<!-- <wsdlOption> -->
+			<!-- <wsdl>https://graphical.weather.gov/xml/SOAP_server/ndfdXMLserver.php?wsdl</wsdl> -->
+			<!-- </wsdlOption> -->
+			<!-- </wsdlOptions> -->
+			<!-- </configuration> -->
+			<!-- <goals> -->
+			<!-- <goal>wsdl2java</goal> -->
+			<!-- </goals> -->
+			<!-- </execution> -->
+			<!-- </executions> -->
+			<!-- </plugin> -->
+		</plugins>
+		<!-- <plugins> -->
+		<!-- <plugin> -->
+		<!-- <groupId>org.codehaus.mojo</groupId> -->
+		<!-- <artifactId>jaxb2-maven-plugin</artifactId> -->
+		<!-- <version>1.6</version> -->
+		<!-- <executions> -->
+		<!-- <execution> -->
+		<!-- <id>xjc</id> -->
+		<!-- <goals> -->
+		<!-- <goal>xjc</goal> -->
+		<!-- </goals> -->
+		<!-- </execution> -->
+		<!-- </executions> -->
+		<!-- <configuration> -->
+		<!-- <schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory> -->
+		<!-- <outputDirectory>${project.basedir}/src/main/java</outputDirectory> -->
+		<!-- <clearOutputDir>false</clearOutputDir> -->
+		<!-- </configuration> -->
+		<!-- </plugin> -->
+		<!-- </plugins> -->
+		<!-- </pluginManagement> -->
+	</build>
+</project>

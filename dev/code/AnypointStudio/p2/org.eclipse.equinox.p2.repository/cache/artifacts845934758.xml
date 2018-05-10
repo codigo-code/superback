@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='org.mule.tooling.devkit.updatesite' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1471876437858'/>
+    <property name='publishPackFilesAsSiblings' value='true'/>
+  </properties>
+  <mappings size='5'>
+    <rule filter='(&amp; (classifier=osgi.bundle) (format=packed))' output='${repoUrl}/plugins/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='4'>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.devkit.templates' version='1.1.5.201608221430'>
+      <properties size='5'>
+        <property name='artifact.size' value='9260'/>
+        <property name='download.size' value='15853'/>
+        <property name='maven-groupId' value='org.mule.tooling.devkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.devkit.templates'/>
+        <property name='maven-version' value='1.1.5-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.devkit.apt' version='1.1.5.201608221430'>
+      <properties size='5'>
+        <property name='artifact.size' value='19014250'/>
+        <property name='download.size' value='19027628'/>
+        <property name='maven-groupId' value='org.mule.tooling.devkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.devkit.apt'/>
+        <property name='maven-version' value='1.1.5-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.devkit.extension' version='1.1.5.201608221430'>
+      <properties size='6'>
+        <property name='artifact.size' value='1142'/>
+        <property name='download.size' value='6870'/>
+        <property name='maven-groupId' value='org.mule.tooling.devkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.devkit.extension'/>
+        <property name='maven-version' value='1.1.5-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.devkit' version='1.1.5.201608221430'>
+      <properties size='5'>
+        <property name='artifact.size' value='839788'/>
+        <property name='download.size' value='877304'/>
+        <property name='maven-groupId' value='org.mule.tooling.devkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.devkit'/>
+        <property name='maven-version' value='1.1.5-SNAPSHOT'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

@@ -1,0 +1,75 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: CIjMlUygXh8cH4awYELrGd9GdGFIh
+ gLi/qSpXM/IzSQ=
+SHA-256-Digest-Manifest: DaJPLuG7xs7rEh6YlXr3EnJGw0s64PJxKSS3+aFYzsE=
+Created-By: 1.7.0_79 (Oracle Corporation)
+
+Name: org/mule/tooling/messaging/editor/global/ProxyValuePersistence.c
+ lass
+SHA-256-Digest: yfpI+ZStdIcluo7hoV7bvJ/9q7d0+gB7Ydk4ZLAnLyc=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/Abstract
+ 3WayLoadedValueModifierTemplate.class
+SHA-256-Digest: FApW9F3BaQj9FFBywV1Xf/a0rgRNZq0b7rnpWlkc58I=
+
+Name: org/mule/tooling/ui/contribution/messaging/Activator.class
+SHA-256-Digest: VGjSX2jHJZrnWjCYhUe74h6wwwNjQINfdXmckbcGnl0=
+
+Name: messaging.xml
+SHA-256-Digest: SU2nO8bAv4HgXz0QHugtrE5f6wCQQCA/AQs0ZW1st1Y=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/SourcePr
+ efetchLoadedValueModifier.class
+SHA-256-Digest: t9U+DOOCHmcxeD6lSo9Dut/9Oep1tSr3BgKqEA6obC0=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/Prefetch
+ LoadedValueModifier.class
+SHA-256-Digest: T44GplcWq4M8ICxmgaOual9/FeoTOVwoQUj+i15MJVM=
+
+Name: icons/large/messaging-48x32.png
+SHA-256-Digest: bE3JF1gCi0m+HKvFMZwlJArIRW0lhwtqEx3zWiamjuc=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/Provider
+ LoadedValueModifier.class
+SHA-256-Digest: tIaoiWzFXIJAMYJDFuaQz9uiAw0//+L+hCprdVYl1cU=
+
+Name: build.properties
+SHA-256-Digest: bgE7NfWHSNxV1L1otR1qN9T4xFL4e8zUuFDS5h+d7s4=
+
+Name: plugin.xml
+SHA-256-Digest: ET6U55wnf57+GwrcIE0iU/dzkw4RVgyTkg7G5sB3BOk=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/TlsLoade
+ dValueModifier.class
+SHA-256-Digest: iU3EwL4cSLwSBqfyIe1nFkMDcXcwJ3LheYcuTDz0JgM=
+
+Name: org/mule/tooling/messaging/editor/global/TlsValuePersistence.cla
+ ss
+SHA-256-Digest: O9WpkJ4DabbCyc5RedqO6Q5AcMbweQifR/zwSPoHnuM=
+
+Name: mule-module-anypoint-mq-ee.jar
+SHA-256-Digest: Be3AyStjf/dRg1z+ucHxqyILZr0VJzukzEXRsncy/5Y=
+
+Name: META-INF/maven/org.mule.tooling.messaging/org.mule.tooling.messa
+ ging.contribution/pom.xml
+SHA-256-Digest: Nn2BmAguIvewS0OFk84WJ7Jk2MfuHY6/voqf7E/R/MU=
+
+Name: org/mule/tooling/messaging/editor/global/PrefetchValuePersistenc
+ e.class
+SHA-256-Digest: c7zPEHhnWV40ROmFPL6mTG2uWOUXfWOMtil8HDMi9a0=
+
+Name: org/mule/tooling/messaging/editor/global/ProviderValuePersistenc
+ e.class
+SHA-256-Digest: fyYZcXwnAeeYsNj+As6bjpg3gDjDJ8EvtqYwKtMnMRI=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/ProxyLoa
+ dedValueModifier.class
+SHA-256-Digest: 83QvCeO9uE5pm3ZmGBDu8EJlL10lCL1fR20bNRAnF6U=
+
+Name: META-INF/maven/org.mule.tooling.messaging/org.mule.tooling.messa
+ ging.contribution/pom.properties
+SHA-256-Digest: jpwwgNFX/gR7Zvv+iF2764x0ZRyqw+o9aJHoLaRxbis=
+
+Name: icons/small/messaging-24x16.png
+SHA-256-Digest: O+kpoz1FzqibJZyUCN8ypztyxhOO4r0w8gem4HX15tM=
+

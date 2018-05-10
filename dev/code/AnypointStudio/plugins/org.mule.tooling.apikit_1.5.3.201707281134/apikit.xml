@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- SFTP -->
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes"
+	url="http://www.mulesoft.org/schema/mule/apikit" prefix="apikit">
+
+	<global localId="config"
+		category="org.mule.tooling.globalCategory.conponentConfigurations"
+		description="Global Router configuration information." caption="Router"
+		image="icons/large/sub-flow-48x32.png" icon="icons/small/flow-24x16.png">
+		<attribute-category description="Defines an API."
+			caption="Router configuration">
+			<group caption="Generic" id="routerGenericProperties">
+				<name required="false"
+					description="Give a name to this configuration so it can be later referenced by config-ref."
+					caption="Name" name="name"></name>
+				<resource caption="RAML File" name="raml" required="true"
+					description="Path to the RAML file" containerLevel="project" initialPattern="*.raml" resourceTypes="file"/>
+				<boolean caption="Use Console"
+					description="Select/disable in order to use or not to the console"
+					name="consoleEnabled" xsdType="substitutableBoolean" alwaysFill="true"
+					defaultValue="true" />
+				<string caption="Console Path" defaultValue="console"
+					description="The console path" name="consolePath" alwaysFill="true" />
+				<boolean caption="Disable Validations"
+					description="Disable validations"
+					name="disableValidations" xsdType="substitutableBoolean"
+					defaultValue="false" />	
+			</group>
+			<!--childElement inplace="true" description="" caption="" name="http://www.mulesoft.org/schema/mule/apikit/flow-mapping"></childElement -->
+			<group caption="Mappings" id="mappings">
+				<childElement visibleInDialog="false" allowMultiple="true"
+					inplace="true" required="false" description="" caption=""
+					name="http://www.mulesoft.org/schema/mule/apikit/flow-mapping"></childElement>
+				<custom javaType="java.lang.String"
+					class="org.mule.tooling.apikit.common.widgets.APIKitMappingCustomEditor"
+					description="Mapp resources and their actions to flows" caption="Mappings"
+					name="flow-mapping"></custom>
+				<!--custom javaType="java.lang.String" recalcWhen="config-ref" class="org.mule.tooling.apikit.widgets.APIKitMappingCustomEditor" 
+					description="Mapp resources and their actions to flows" caption="Mappings" 
+					name="flow-mapping"></custom -->
+			</group>
+		</attribute-category>
+	</global>
+
+	<nested localId="flow-mapping" caption="" description=""
+		required="false">
+		<string name="resource"
+			description="In case that the key above can't be found in the object store, the default expression is used to generate a value. This is useful in the case of the very first poll."
+			caption="Resource" indented="true" visibleInDialog="false" />
+		<string name="action"
+			description="In case that the key above can't be found in the object store, the default expression is used to generate a value. This is useful in the case of the very first poll."
+			caption="Action" indented="true" visibleInDialog="false" />
+		<string name="content-type"
+			description="The media type of an action."
+			caption="Content Type" indented="true" visibleInDialog="false" required="false"/>
+		<string name="flow-ref"
+			description="In case that the key above can't be found in the object store, the default expression is used to generate a value. This is useful in the case of the very first poll."
+			caption="Flow reference" indented="true" visibleInDialog="false" />
+	</nested>
+	
+	<container localId="mapping-exception-strategy" caption="Mapping Exception Strategy"
+		titleColor="248, 158, 117"
+		icon="icons/small/exception-strategy.png"
+		image="icons/small/CatchExceptionStrategy-24x16-1.png"
+		acceptedByElements="http://www.mulesoft.org/schema/mule/core/choice-exception-strategy 
+			OR http://www.mulesoft.org/schema/mule/core/flow 
+			OR http://www.mulesoft.org/schema/mule/core/exceptionStrategyLane
+			OR http://www.mulesoft.org/schema/mule/ee/core/transactional-scope"
+		category="org.mule.tooling.ui.modules.core.exceptions" pathExpression="${index}"
+		description="This exception strategy allows you to map status codes to exceptions"
+		acceptsElements="http://www.mulesoft.org/schema/mule/apikit/mapping">
+		<attribute-category caption="General"
+			description="This exception strategy allows you to map status codes to exceptions">
+			<group caption="Generic" id="mapp-exception-strategy">
+				<boolean caption="Enable Notifications"
+				description="Determines
+				whether ExceptionNotifications will be fired from this strategy when an exception
+				occurs."
+				name="enableNotifications" defaultValue="true" value="true"
+				visibleInDialog="true" />
+			</group>
+		</attribute-category>
+		<graphical-container contributesToPath="false"
+			layoutFactoryId="verticalLayout" localId="mappingExceptionNested"
+			showsResponse="false" xmlOrder="50" childrenCreatorId="noConnections" />
+	</container>
+	
+	<container localId="mapping-exception-strategy-global"
+		caption="Mapping Exception Strategy" icon="icons/small/exception-strategy.png"
+		image="icons/small/CatchExceptionStrategy-24x16-1.png" titleColor="248, 158, 117"
+		acceptedByElements="http://www.mulesoft.org/schema/mule/core/mule"
+		visibleInPalette="false" category="org.mule.tooling.ui.modules.core.exceptions"
+		elementMatcher="globalElement" xmlname="mapping-exception-strategy"
+		pathExpression="${name}/es" displayNameAttribute="name"
+		description="This exception strategy allows you to map status codes to exceptions"
+		acceptsElements="http://www.mulesoft.org/schema/mule/apikit/mapping">
+		<attribute-category caption="General"
+			description="This exception strategy allows you to map status codes to exceptions">
+			<group caption="Generic" id="mapp-exception-strategy">
+				<name required="true" description="Exception strategy name"
+					caption="Name" name="name"></name>
+				<boolean caption="Enable Notifications"
+					description="Determines 
+		whether ExceptionNotifications will be fired from this strategy when an exception 
+		occurs."
+					name="enableNotifications" defaultValue="true" value="true"
+					visibleInDialog="true" />
+			</group>
+		</attribute-category>
+
+		<graphical-container contributesToPath="false"
+			layoutFactoryId="verticalLayout" localId="mappingExceptionNested"
+			showsResponse="false" xmlOrder="50" childrenCreatorId="noConnections" />
+	</container>
+	
+	<flow localId="router" caption="APIkit Router" abstract="false"
+		supportsInbound="false" paletteCategory="org.mule.tooling.category.flowControl"
+		icon="icons/small/apikit16x16.png" image="icons/large/apikit.png"
+		xmlname="router" description="The Router element allows to define an API"
+		versions="[3.4.0,8.0.0]">
+		<attribute-category description="General properties."
+			caption="General">
+			<group caption="Generic" id="routerGeneric">
+				<globalRef requiredType="http://www.mulesoft.org/schema/mule/apikit/config"
+					description="Specify which configuration to use for this invocation."
+					caption="Router configuration" name="config-ref" required="true"></globalRef>
+			</group>
+		</attribute-category>
+	</flow>
+	
+	<component localId="console" caption="APIkit Console" abstract="false"
+		supportsInbound="false"
+		icon="icons/small/api_console_endpoint.png" image="icons/large/api_console.png"
+		xmlname="console" description="The APIkit console standalone endpoint"
+		versions="[3.4.0,8.0.0]">
+		<attribute-category description="General properties."
+			caption="General">
+			<group caption="Generic" id="consoleGeneric">
+				<globalRef requiredType="http://www.mulesoft.org/schema/mule/apikit/config"
+					description="Specify which configuration to use for this invocation."
+					caption="Console configuration" name="config-ref" required="true"></globalRef>
+			</group>
+		</attribute-category>
+	</component>
+	
+	<container
+		localId="mapping"
+		description="A mapping to an exception"
+		acceptedByElements="http://www.mulesoft.org/schema/mule/apikit/mapping-exception-strategy OR http://www.mulesoft.org/schema/mule/apikit/mapping-exception-strategy-global"
+		caption="Exception Mapping"
+		image="icons/large/sub-flow-48x32.png" 
+		icon="icons/small/exception-mapping.png" 
+		versions="[3.4.0,8.0.0]"
+		pathExpression="${index}"
+		titleColor="247, 166, 166"
+		category="org.mule.tooling.ui.modules.core.exceptions"
+		allowMulipleChildren="true"
+		allowsAllExceptInbounds="true"
+		displayNameAttribute="statusCode">
+		<attribute-category caption="General" description="General properties">
+			<group caption="Generic" id="genericProperties">
+				<integer caption="Status Code" defaultValue="400"
+					description="The status code"
+					max="599" min="400" name="statusCode"
+					alwaysFill="true" required="true"/>
+			</group>
+			<group caption="Exceptions" id="exceptions">
+				<childElement
+					name="http://www.mulesoft.org/schema/mule/apikit/exception"
+					description="An exception" caption="Exception"
+					allowMultiple="true"/>
+			</group>
+		</attribute-category>
+		<graphical-container
+			localId="cacheNested"
+			showsResponse="false"
+			acceptsElements="!category:org.mule.tooling.ui.modules.core.exceptions" />
+	</container>
+	
+	<nested localId="exception"
+		caption="Exception" description="">
+		<classname name="value" description="Expected type."
+					caption="Expected Type" required="true" />
+	</nested>
+	
+</namespace>

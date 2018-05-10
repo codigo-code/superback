@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-current.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+    <context:property-placeholder location="config.properties"/>
+    <http:listener-config name="HTTP_ESB_Listener_Configuration" host="${wf.esb.host}" port="${wf.esb.port}" basePath="${wf.esb.basePath}" doc:name="HTTP Listener Configuration"/>
+    <http:request-config name="HTTP_Request_Configuration" host="${wf.api.rest.host}" port="${wf.api.rest.port}" basePath="${wf.api.rest.basePath}" doc:name="HTTP Request Configuration"/>
+   
+    <choice-exception-strategy name="Flowable_ESB_Choice_Exception_Strategy">
+		<catch-exception-strategy  doc:name="ResponseValidatorException" when="#[exception.causedBy(org.mule.module.http.internal.request.ResponseValidatorException)]">
+		   <logger level="ERROR" message="Exception due to timeout" doc:name="Log"  />
+		   <set-property doc:name="Property" propertyName="http.status" value="#[message.inboundProperties['http.status']]" />
+		   <set-payload doc:name="Set Payload" value="#[exception.cause.?message or exception.cause]" />
+		</catch-exception-strategy>
+	    <catch-exception-strategy doc:name="Validator Exception" when="#[exception.causedBy(org.mule.extension.validation.api.ValidationException)]">
+          <logger level="ERROR" message="Exception due to timeout" doc:name="Log"  />
+          <set-property doc:name="Property" propertyName="http.status" value="#[message.inboundProperties['http.status']]" />
+          <set-payload doc:name="Set Payload" value="#[exception.cause !=null ? message or exception.cause]" />
+	    </catch-exception-strategy>
+	    <catch-exception-strategy doc:name="Connection Exception" when="#[exception.causedBy(java.net.ConnectException)]">
+          <logger level="ERROR" message="Exception due to timeout" doc:name="Log"  />
+          <set-property doc:name="Property" propertyName="http.status" value="500" />
+          <set-payload doc:name="Set Payload" value="{
+									    &quot;code&quot;: &quot;500&quot;,
+									    &quot;message&quot;: &quot;Connection Refuse&quot;,
+									    &quot;exception&quot;: #[exception.cause !=null ? message or exception.cause]
+									}
+									" />
+		</catch-exception-strategy>
+	    <catch-exception-strategy doc:name="TimeOutException" when="#[exception.causedExactlyBy(java.util.concurrent.TimeoutException)]">
+          <logger level="ERROR" message="Exception due to timeout" doc:name="Log"  />
+          <set-property doc:name="Property" propertyName="http.status" value="403" />
+          <set-payload doc:name="Set Payload" value="Exception due to timeout" />
+ 		</catch-exception-strategy>
+	    <catch-exception-strategy doc:name="Exception" when="#[exception.causedExactlyBy(java.lang.Exception)]">
+          <logger  level="ERROR" message="Exception due to timeout" doc:name="Log"/>
+          <set-property doc:name="Property" propertyName="http.status" value="503" />
+          <set-payload doc:name="Set Payload" value="#[exception.cause !=null ? message or exception.cause]" />
+	    </catch-exception-strategy>
+ 	</choice-exception-strategy>
+ 	
+    <flow name="deployModel-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/deployModel" allowedMethods="POST"  doc:name="HTTP"/>
+        <logger level="DEBUG" message="Entrando el servicio deployModel" doc:name="Log"/>
+        <set-payload value="#[message.payload]" encoding="UTF-8" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/deployModel" method="POST" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+ 		<logger level="DEBUG" message="Saliendo el servicio deployModel" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="listProcessDefinitions-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/listProcessDefinitions" allowedMethods="GET" doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio listProcessDefinitions" doc:name="Log"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/listProcessDefinitions" method="GET" doc:name="HTTP">
+        	 <http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+                  <http:query-param paramName="registros" value="#[message.inboundProperties.'http.query.params'.get('registros')]"/>
+                  <http:query-param paramName="limite" value="#[message.inboundProperties.'http.query.params'.get('limite')]"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio listProcessDefinitions" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="startProcess-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/startProcess" allowedMethods="POST"  doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio startProcess" doc:name="Log"/>
+        <set-payload value="#[message.payload]" encoding="UTF-8" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/startProcess" method="POST" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio startProcess" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="getTaskByAsignee-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/getTaskByAsignee" allowedMethods="GET" doc:name="HTTP"/>
+        <logger level="DEBUG" message="Entrando el servicio getTaskByAsignee" doc:name="Log"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/getTaskByAsignee" method="GET" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+                 <http:query-param paramName="userId" value="#[message.inboundProperties.'http.query.params'.get('userId')]"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio getTaskByAsignee" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="getTasksbyRepaSector-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/getTasksbyRepaSector" allowedMethods="GET" doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio getTasksbyRepaSector" doc:name="Log"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/getTasksbyRepaSector" method="GET" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+                 <http:query-param paramName="repaId" value="#[message.inboundProperties.'http.query.params'.get('repaId')]"/>
+                 <http:query-param paramName="sectorId  " value="#[message.inboundProperties.'http.query.params'.get('sectorId')]"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+	    <logger level="DEBUG" message="Saliendo el servicio getTasksbyRepaSector" doc:name="Log"/>
+	    <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="viewTaskDetail-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/viewTaskDetail" allowedMethods="GET" doc:name="HTTP"/>
+        <logger level="DEBUG" message="Entrando el servicio viewTaskDetail" doc:name="Log"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/viewTaskDetail" method="GET" doc:name="HTTP">
+        	<http:request-builder>
+                <http:query-param paramName="taskId" value="#[message.inboundProperties.'http.query.params'.get('taskId')]"/>
+                <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio viewTaskDetail" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="setVariables-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/setVariables" allowedMethods="PUT"  doc:name="HTTP"/>
+         <logger level="DEBUG" message="Entrando el servicio setVariables" doc:name="Log"/>
+        <set-payload value="#[message.payload]" encoding="UTF-8" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/setVariables" method="PUT" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio setVariables" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="getVariables-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/getVariables" allowedMethods="GET" doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio getVariables" doc:name="Log"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/getVariables" method="GET" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+                 <http:query-param paramName="processInstanceId" value="#[message.inboundProperties.'http.query.params'.get('processInstanceId')]"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio getVariables" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="claim-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/claim" allowedMethods="PUT"  doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio claim" doc:name="Log"/>
+        <set-payload value="#[message.payload]" encoding="UTF-8" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/claim" method="PUT" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio claim" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="unclaim-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/unclaim" allowedMethods="PUT"  doc:name="HTTP"/>
+        <logger level="DEBUG" message="Entrando el servicio unclaim" doc:name="Log"/>
+        <set-payload value="#[message.payload]" encoding="UTF-8" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/unclaim" method="PUT" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio claim" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+	<flow name="completeTask-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/completeTask" allowedMethods="PUT"  doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio completeTask" doc:name="Log"/>
+        <set-payload value="#[message.payload]" encoding="UTF-8" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/completeTask" method="PUT" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio viewHistory" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="viewHistory-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/viewHistory" allowedMethods="GET" doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio viewHistory" doc:name="Log"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/viewHistory" method="GET" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+                 <http:query-param paramName="processInstanceId" value="#[message.inboundProperties.'http.query.params'.get('processInstanceId')]"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio viewHistory" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="viewDiagram-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/viewDiagram" allowedMethods="GET" doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio viewDiagram" doc:name="Log"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/viewDiagram" method="GET" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+                 <http:query-param paramName="processInstanceId" value="#[message.inboundProperties.'http.query.params'.get('processInstanceId')]"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio viewDiagram" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="processInstanceAction-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/processInstanceAction" allowedMethods="PUT"  doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio processInstanceAction" doc:name="Log"/>
+        <set-payload value="#[message.payload]" encoding="UTF-8" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/processInstanceAction" method="PUT" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+		<logger level="DEBUG" message="Saliendo el servicio processInstanceAction" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+    <flow name="actualizarSubversion-proxyFlow">
+        <http:listener config-ref="HTTP_ESB_Listener_Configuration" path="/actualizarSubversion" allowedMethods="PUT"  doc:name="HTTP"/>
+		<logger level="DEBUG" message="Entrando el servicio actualizarSubversion" doc:name="Log"/>
+        <set-payload value="#[message.payload]" encoding="UTF-8" mimeType="application/json" doc:name="Set Payload"/>
+        <http:request config-ref="HTTP_Request_Configuration" path="/actualizarSubversion" method="PUT" doc:name="HTTP">
+        	<http:request-builder>
+                 <http:header headerName="tenantId" value="#[message.inboundProperties.'tenantId']"/>
+            </http:request-builder>
+            <http:success-status-code-validator values="200"/>
+        </http:request>
+        <logger level="DEBUG" message="Saliendo el servicio processInstanceAction" doc:name="Log"/>
+        <exception-strategy ref="Flowable_ESB_Choice_Exception_Strategy" doc:name="Reference Exception Strategy"/>    </flow>
+</mule>

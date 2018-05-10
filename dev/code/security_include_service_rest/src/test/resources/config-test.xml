@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:annotation-config />
+	
+	
+	<import resource="classpath:/applicationContext-security.xml"/>
+	
+	<context:component-scan base-package="ar.gob.gcaba.security.common" />
+	<context:component-scan base-package="ar.gob.gcaba.security.services" />
+	<context:component-scan base-package="ar.gob.gcaba.security.il.dao" />
+
+	<context:property-placeholder ignore-resource-not-found="true" location="config.properties" />
+        	
+	<bean id="dataSourceUsuarios"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+		<property name="url"
+			value="${bbdd_url}" />
+		<property name="username" value="${bbdd_user}" />
+		<property name="password" value="${bbdd_password}" />
+	</bean>
+	
+	<bean id="tiempoRecargaReparticionesMs" class="java.lang.String">
+		<constructor-arg type="java.lang.String" value="${tiempoRecargaReparticionesMs}" />
+	</bean>
+	
+	<bean id="tiempoRecargaSectoresInternosMs" class="java.lang.String">
+		<constructor-arg type="java.lang.String" value="${tiempoRecargaSectoresInternosMs}" />
+	</bean>	
+	
+    
+	<bean id="logger" class="org.springframework.beans.factory.config.CommonsLogFactoryBean">
+		<property name="logName" value="LOGFILE" />
+	</bean>
+
+	<!-- FIN SERVICIOS -->
+
+</beans>

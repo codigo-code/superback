@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.mule.tooling.dfl.sdk"
+      label="DFL SDK Feature "
+      version="6.3.0.201707282110"
+      provider-name="MuleSoft Inc.">
+
+   <description url="http://www.mulesoft.org/">
+      DFL
+   </description>
+
+   <copyright url="http://www.mulesoft.org">
+      Copyright 2015 MuleSoft Inc.
+   </copyright>
+
+   <plugin
+         id="org.mule.tooling.dfl.preprocess"
+         download-size="22"
+         install-size="38"
+         version="6.3.0.201707282110"
+         unpack="false"/>
+
+   <plugin
+         id="org.mule.tooling.dfl"
+         download-size="939"
+         install-size="2829"
+         version="6.3.0.201707282110"
+         unpack="false"/>
+
+   <plugin
+         id="org.mule.tooling.dfl.ui"
+         download-size="1293"
+         install-size="3877"
+         version="6.3.0.201707282110"
+         unpack="false"/>
+
+   <plugin
+         id="org.mule.tooling.ui.dfl.contribution"
+         download-size="478"
+         install-size="1075"
+         version="6.3.0.201707282110"
+         unpack="false"/>
+
+   <plugin
+         id="org.mule.tooling.ui.flatfile.contribution"
+         download-size="33630"
+         install-size="37662"
+         version="6.3.0.201707282110"
+         unpack="false"/>
+         
+   <plugin
+         id="org.mule.tooling.dfl.ui.preview.3.7.0"
+         download-size="24753"
+         install-size="27292"
+         version="6.3.0.201707282110"
+         unpack="false"/>
+   <plugin
+         id="org.mule.tooling.dfl.ui.preview.3.7.1"
+         download-size="24776"
+         install-size="27319"
+         version="6.3.0.201707282110"
+         unpack="false"/>
+
+</feature>

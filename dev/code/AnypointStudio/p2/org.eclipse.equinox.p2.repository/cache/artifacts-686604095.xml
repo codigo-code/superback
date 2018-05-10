@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='APIkit SOAP Update Site' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1512155213112'/>
+    <property name='publishPackFilesAsSiblings' value='true'/>
+  </properties>
+  <mappings size='5'>
+    <rule filter='(&amp; (classifier=osgi.bundle) (format=packed))' output='${repoUrl}/plugins/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='3'>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.soapkit.extension' version='1.1.4'>
+      <properties size='6'>
+        <property name='artifact.size' value='1115'/>
+        <property name='download.size' value='6201'/>
+        <property name='maven-groupId' value='org.mule.tooling'/>
+        <property name='maven-artifactId' value='org.mule.tooling.soapkit.extension'/>
+        <property name='maven-version' value='1.1.4'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.soapkit' version='1.1.4'>
+      <properties size='5'>
+        <property name='artifact.size' value='596654'/>
+        <property name='download.size' value='604959'/>
+        <property name='maven-groupId' value='org.mule.tooling.soapkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.soapkit'/>
+        <property name='maven-version' value='1.1.4'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.soapkit.contribution' version='1.1.4'>
+      <properties size='5'>
+        <property name='artifact.size' value='120813'/>
+        <property name='download.size' value='126957'/>
+        <property name='maven-groupId' value='org.mule.tooling.soapkit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.soapkit.contribution'/>
+        <property name='maven-version' value='1.1.4'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

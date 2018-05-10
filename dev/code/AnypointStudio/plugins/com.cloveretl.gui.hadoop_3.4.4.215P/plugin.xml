@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension point="com.cloveretl.gui.component">
+      <component
+            file="components.xml"
+            id="com.cloveretl.gui.hadoop.component">
+      </component>
+   </extension>
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            name="%newWizards.category.name"
+            id="com.cloveretl.gui">
+      </category>
+      <wizard
+            category="com.cloveretl.gui"
+            class="com.cloveretl.gui.hadoop.NewHadoopConnectionWizard"
+            icon="icons/connection-hadoop-16.png"
+            id="com.cloveretl.gui.hadoop.NewHadoopConnectionWizard"
+            name="%NewHadoopConnectionWizard.name">
+         <description>
+            %NewHadoopConnectionWizard.description
+         </description>
+         <selection
+               class="org.eclipse.core.resources.IResource">
+         </selection>
+      </wizard>
+   </extension>
+   <extension point="com.cloveretl.gui.enginePlugin">
+      <enginePlugin
+            classLoaderProvider="com.cloveretl.gui.hadoop.plugin.CLProvider"
+            directory="lib/plugins"
+            id="com.cloveretl.gui.hadoop.enginePlugin">
+      </enginePlugin>
+   </extension>
+   <extension point="com.cloveretl.gui.connection">
+      <connection
+            connectionReaderWriter="com.cloveretl.gui.hadoop.HadoopConnectionReaderWriter"
+            icon="icons/connection-hadoop-16.png"
+            id="cloveretl.gui.hadoop.connection"
+            name="%connection.hadoop.create.name"
+            type="HADOOP"
+            wizardFactory="com.cloveretl.gui.hadoop.HadoopConnectionWizardFactory">
+      </connection>
+      <connection
+            connectionReaderWriter="com.cloveretl.gui.hadoop.HadoopConnectionReaderWriter"
+            icon="icons/connection-hadoop-external-16.png"
+            id="cloveretl.gui.hadoop.connection2"
+            name="%connection.hadoop.link.name"
+            type="HADOOP-config"
+            wizardFactory="com.cloveretl.gui.hadoop.HadoopConnectionConfigWizardFactory">
+      </connection>
+   </extension>
+   <extension point="com.cloveretl.gui.editor">
+      <editor
+            class="com.cloveretl.gui.hadoop.propertytoolkit.UIHadoopConnectionPropertyToolkit"
+            id="cloveretl.gui.hadoop.editor"
+            name="hadoopConnection">
+      </editor>
+   </extension>
+   <extension point="com.cloveretl.gui.urlResourcePanel">
+      <resourceFolder
+            class="com.cloveretl.gui.hadoop.urldialog.HadoopHDFSResourcePanelFactory"
+            id="com.cloveretl.gui.hadoop.urldialog.HadoopHDFSResourcePanelFactory"
+            name="%urlResourcePanel.hadoop.panel">
+      </resourceFolder>
+   </extension>
+   
+   <extension
+         point="com.cloveretl.gui.resourceURL">
+      <projectURL
+            class="com.cloveretl.gui.hadoop.HDFSURLProvider"
+            id="com.cloveretl.gui.hadoop.HDFSURLProvider"
+            name="%HDFSURLProvider.name">
+      </projectURL>
+   </extension>
+   
+   
+   <extension
+         point="com.cloveretl.gui.graphElementFactory">
+      <factory
+            class="com.cloveretl.gui.hadoop.HadoopConnectionFactory"
+            id="com.cloveretl.gui.hadoop.HadoopConnectionFactory"
+            name="%HadoopConnectionFactory.name">
+      </factory>
+   </extension>
+   
+</plugin>

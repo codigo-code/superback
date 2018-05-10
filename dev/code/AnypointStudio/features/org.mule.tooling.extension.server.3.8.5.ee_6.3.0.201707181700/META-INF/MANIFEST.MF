@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_80
+Built-By: ubuntu
+Created-By: Apache Maven 3.2.3
+Archiver-Version: Plexus Archiver
+
+Name: build.properties
+SHA-256-Digest: 9TWoUmKzXAAX94q2BZSSUjVcdycsxrCzNZ0yYwGpgqc=
+
+Name: .project
+SHA-256-Digest: Uo5zb9yLTJBgQiZm4orHJvkdpW/W/AEGenj1Tw/ZGOg=
+
+Name: pom.xml
+SHA-256-Digest: cas4sDayhfWb+Rt0ZHvGUbGeq1KhM6c+LuuHQdzmz7Y=
+
+Name: feature.xml
+SHA-256-Digest: OAXiZ2G9QbscoMDScmAFGzJToUyWMbvZG+F2xXqBG1k=
+
+Name: target/antrun/build-main.xml
+SHA-256-Digest: gvD2qsWFLuI1LVnGkiu5pIXafS6FwOkpecYJEqREtAU=
+
+Name: target/feature.xml
+SHA-256-Digest: OAXiZ2G9QbscoMDScmAFGzJToUyWMbvZG+F2xXqBG1k=
+
+Name: feature.xml.template
+SHA-256-Digest: vvPzUuUpOwD89pWAHYfeJky2My1m1Gln3smwDrD4rFE=
+

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.cloveretl.gui"
+      label="CloverETL Designer"
+      version="3.4.4.215P"
+      provider-name="Javlin a.s."
+      image="cloveretl.gif">
+   <install-handler/>
+
+   <description url="http://www.cloveretl.org/">
+CloverETL Designer - Visual designer of CloverETL data transformations.
+(C) Javlin, a.s.
+
+CloverETL Designer is visual designer of data transformations which
+are executed by CloverETL Engine. The CloverETL Designer has been developed
+as an Eclipse platform plugin and is well integrated with other
+Eclipse functionality.
+   </description>
+
+   <copyright>
+CloverETL Designer
+(C) Javlin, a.s.
+   </copyright>
+
+   <license url="license.html">
+      CloverETL® End User License Agreement
+
+IMPORTANT! READ CAREFULLY! This license agreement is a legal agreement between you ("LICENSEE") and Javlin, a.s. ("JAVLIN") under which JAVLIN grants licenses with respect to computer software, associated media, printed materials, and online or electronic documentation. PLEASE READ THIS AGREEMENT CAREFULLY BEFORE YOU INSTALL, COPY, DOWNLOAD OR USE THE SOFTWARE. BY INSTALLING, COPYING, DOWNLOADING OR USING THE SOFTWARE, YOU, ON BEHALF OF YOURSELF AND/OR THE BUSINESS YOU REPRESENT, AGREE TO BE BOUND BY ALL TERMS AND CONDITIONS OF THIS END USER LICENSE AGREEMENT INCLUDING ALL TERMS AND CONDITIONS INCORPORATED HEREIN BY REFERENCE.
+
+IF YOU DO NOT AGREE WITH THE FOLLOWING TERMS, IMMEDIATELY STOP USING THE SOFTWARE.
+
+Section 1 - Definitions
+1.1 "Licensee" means you, or the organization on whose behalf you are accepting the EULA.
+1.2 "Computer" shall mean the computer, server, workstation, device, or virtual machine on which the Software Program is installed.
+1.3 "Documentation" means the manuals and software documentation provided by JAVLIN accompanying the Software Program.
+1.4 "License Key" shall mean the license file provided by JAVLIN to the LICENSEE containing information associating the Software Program with the named individual or company registrant, and a set of software keys used to activate the Software Program.
+1.5 "Software Program" shall mean the computer software and license file provided by JAVLIN under this Agreement, including all new releases, corrections, enhancements and updates to such computer software, which JAVLIN makes generally available and which the LICENSEE receives pursuant to the terms of this agreement. Some features of the Software Program may not be enabled if they do not fall under the feature set(s) covered by the specific license fees paid.
+1.6 "Software Maintenance" shall mean the Software Program updates provided by JAVLIN to improve the workings of the software, remove bugs or maintain current software interfaces. JAVLIN publishes these updates to this Software Program under terms of the JAVLIN Support Policy, available at http://www.cloveretl.com in the client section.
+
+Section 2 - Grant of License
+Effective upon the payment of the license fees, JAVLIN grants the LICENSEE a non-exclusive, non-transferable, non-sub-licensable right and perpetual license to use, one or more instances of the Software Program and Documentation, in executable code form only, on a Computer. The LICENSEE may not distribute or resell the Software Program in any form, nor use the Software Program to construct any product to directly compete with the Software Program, unless specifically agreed in a signed document with JAVLIN. The software may include functionality that will render it non-operational upon expiration of the license. Software licensing is also subject to additional commercial terms provided by JAVLIN or its subsidiaries and commercial partners.
+
+Section 3 - Scope of Use
+3.1 The Software Program can only be installed on a Computer controlled by a named individual or company registrant mentioned in the License Key provided by JAVLIN, as defined under the following conditions: (i) Designer License - each Designer License purchased must be associated with a named individual. LICENSEE is allowed to install and use one copy of the Software Program on a single computer, as well as a second copy for LICENSEE's exclusive use on either a home or portable computer; (ii) Server License - each Server license purchased allows for installation on one Computer only: (iii) Cluster License - each Cluster license purchased allows for installation on a specific number of Computers as defined by the purchased license; and (iv) Evaluation License - subject to the terms of this agreement, LICENSEE is hereby granted the right to use this software program for evaluation purposes without charge for a period of forty-five (45) days. Upon expiration of the forty-five (45) days, the Software Program must be removed from the Computer. JAVLIN may extend the evaluation period on request and at its discretion. Evaluation versions of Software Program are not free software. Unless Evaluation version is converted to full commercial license, transformation graphs and descriptions developed by the LICENSEE during the Evaluation period are explicitly not to be used for LICENSEE'S own commercial purposes.
+3.2 You are granted a license to use versions and updates of the Software Program released during or prior to, a period of valid Software Maintenance. The duration of the Software Maintenance period will be specified separately by JAVLIN in a commercial terms agreement, and remain valid unless this license Agreement is terminated in accordance with Section 8. Customer shall not use the new version of the Software Program and the previous version of the Software Program concurrently; except for the following conditions: LICENSEE is hereby granted the right to use this Software Program for purposes of transition between Software Program versions without charge for a period of sixty (60) days. Upon expiration of the sixty (60) days, the previous version of the Software Program must be removed from the Computer. JAVLIN may extend the license transition period on request and at its discretion. Under no circumstances shall Customer transfer the previous version of the Software Program to any other person without also transferring the new version.
+3.3 LICENSEE owns the transformation graph descriptions that LICENSEE creates using the Software Program.
+
+Section 4 - Restrictions
+4.1 The Software Program is made available solely in accordance with the license agreement. Without limiting the foregoing, any copying or redistribution of the Software Program is prohibited, including any copying or reproduction of the Software Program to any other server or location for further reproduction, or redistribution. Any unauthorized use, copying or distribution of the Software Program is expressly prohibited by law, and may result in civil and criminal penalties.
+4.2 JAVLIN owns and retains title to the Software Program and all related materials, including all intellectual property rights therein. The Software Program and the materials are licensed, not sold. During any term of this Agreement, LICENSEE shall not, directly or indirectly, UNLESS EXPRESSLY PERMITTED BY JAVLIN: (i) sublicense, resell, rent, lease, distribute, market, commercialize or otherwise transfer rights or usage to the Software Program or any modified version or derivative work of the Software Program; (ii) remove or alter any copyright, trademark or proprietary notice in the Software Program; (iii) use the Software Program for third-party training, commercial time-sharing, service bureau or application services; (iv) attempt, or permit anyone else to, reverse engineer, decompile or modify any encrypted or encoded portion of the Software Program; (v) modify or create any derivative works based on the Software Program; and (vi) will not publish or make available to any third party any analysis of the results of operation of the Software Program, including but not limited to performance benchmarking results.
+
+Section 5 - Intellectual Property
+LICENSEE acknowledges that all intellectual property rights in the Software Program and the goodwill associated therewith are vested in and belong to JAVLIN. JAVLIN reserves any and all rights which are not expressly granted to the LICENSEE hereunder. Under no circumstances may LICENSEE modify, decompile, reverse engineer or disassemble any executable code contained within the Software Program nor create or prepare derivative works of, or attempt to discover or modify in any way the underlying source code of the Software Program or any part thereof. LICENSEE further agrees that LICENSEE will not publish, present or document the application programming interface (API) of the Software Program. During any term of this Agreement, LICENSEE grants to JAVLIN a non-transferable, non-exclusive license to reproduce and display LICENSEE's logos, trademarks, trade names and similar identifying material so JAVLIN may refer to LICENSEE as a user of the Software Program should JAVLIN so desire, (e.g. website, press release, marketing materials).
+
+Section 6 - Warranty and Limited Liability
+6.1 Software Warranty: JAVLIN warrants that, for a period of sixty (60) days, from the initial delivery of the Software Program to LICENSEE, the Software Program, if used by LICENSEE in accordance with the Documentation, shall operate in material conformity with the Documentation for such Software Program. Pursuant to the warranty and limited liability limitations set forth in this agreement, JAVLIN warrants that the use or distribution of unaltered Software Program, or the exercise of the licenses granted hereunder, will not infringe any copyright rights of any third party, and JAVLIN has all rights necessary for the grant of the rights. In the case of a non-conformity claim, LICENSEE shall provide JAVLIN a reproducible test case demonstrating the breach of warranty.
+6.2 JAVLIN does not warrant that the Software Program will meet all of LICENSEE requirements or that the use of the Software Program will be uninterrupted or error free. JAVLIN's entire liability and LICENSEE exclusive remedy, under this limited software warranty shall be for JAVLIN: (i) to attempt to correct through reasonable efforts, any reproducible material nonconformity discovered within the sixty (60) day warranty period; or (ii) to replace the nonconforming Software Program with Software Program which conforms to the foregoing warranty.
+6.3 In the event JAVLIN is unable to cure the breach of warranty described in this Section 6, after attempting the remedies described in 6.2(i) and 6.2(ii) above, LICENSEE may return the Software Program and JAVLIN shall refund a portion of the license and maintenance fees paid by LICENSEE to JAVLIN for the Software Program. The refund of maintenance fees shall be limited to the amount representing the period during which the Software Program showed nonconformity. The above remedies are available only if JAVLIN is promptly notified in writing, within the warranty period, upon discovery of the nonconformity by LICENSEE and JAVLIN's examination of the Software Program discloses that such nonconformity exists, and that the Software Program has not been (i) altered or modified other than by JAVLIN; (ii) subjected to negligence, or computer or electrical malfunctions; or (iii) used, adjusted, or installed other than in accordance with the Documentation.
+6.4 Disclaimer: THE EXPRESS LIMITED WARRANTIES SET FORTH ABOVE ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, EXPRESS, IMPLIED OR STATUTORY WITH RESPECT TO THE SOFTWARE PROGRAM, AND JAVLIN EXPRESSLY DISCLAIMS ANY IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+6.5 This Software Program is developed for general use in a variety of information and data management applications. It is not developed or intended for use in any inherently dangerous applications, including applications that may create a risk of personal injury. If you use this Software Program in dangerous applications, then you shall be responsible to take all appropriate fail-safe, backup, redundancy, and other measures to ensure its safe use. JAVLIN and its affiliates disclaim any liability for any damages caused by use of this Software Program in dangerous or high risk applications.
+
+Section 7 - Software Indemnification
+JAVLIN agrees to indemnify, defend and hold LICENSEE harmless, up to the amount of license fees paid by licensee, from any and all actions, causes of action, claims, demands, reasonable costs, liabilities, reasonable expenses (including reasonable attorney's fees) and damages arising from any claim that the Software Program infringes any copyright right of a third party, and finally awarded by a court of competent jurisdiction, provided, however:
+(1) LICENSEE shall promptly deliver to JAVLIN notice in writing of any copyright infringement claim made by a third party, but in no event not more than ten (10) business days after the LICENSEE becomes aware of such claim; and, if known, specify in reasonable detail the nature of the claim and the amount, or an estimate of the amount, of the liability arising therefrom. LICENSEE shall, at JAVLIN's expense, provide to JAVLIN as promptly as practicable thereafter information and documentation reasonably requested by JAVLIN to support and verify the claim asserted, provided that, in so doing, JAVLIN may restrict or condition any disclosure in the interest of preserving privileges of importance in any foreseeable litigation.
+(2) JAVLIN may assume and retain sole control of the investigation, the defense or the settlement of any third party infringement claim made against LICENSEE or JAVLIN with respect to the Software Program, including the employment of counsel or accountants, at its cost and expense. LICENSEE shall have the right to employ counsel separate from counsel employed by JAVLIN in any such action and to participate therein, but the fees and expenses of such counsel employed by LICENSEE shall be at LICENSEE's expense. JAVLIN shall have the right to determine and adopt (or, in the case of a proposal by LICENSEE, to approve) a settlement of such matter in its reasonable discretion. JAVLIN shall not be liable for any settlement of any claim without its prior written consent, which shall not be unreasonably withheld. Whether or not JAVLIN chooses to so investigate or defend such claim, LICENSEE shall cooperate with JAVLIN in the defense thereof and shall furnish such records, information and testimony, and attend such conferences, discovery proceedings, hearings, trials and appeals, as may be reasonably requested by JAVLIN in connection therewith.
+(3) If such a claim arises, or in either party's judgment is likely to arise, LICENSEE agrees to allow JAVLIN, at JAVLIN's option, to either: (i) procure the right to permit the continued exercise of the rights and licenses in the Software Program granted under this agreement; (ii) replace or modify the Software Program so it becomes non-infringing, while affording equivalent performance; or (iii) terminate the license for the infringing Software Program and upon return thereof by LICENSEE, refund license fees outlined in Warranty paragraph 6.2,, but in no event more than the total license fees paid.
+(4) JAVLIN shall have no indemnity obligation for claims of any intellectual property infringement resulting from any combination, operation or use of the Software Program, or any components thereof, with any software programs or data not supplied by JAVLIN if such infringement would have been avoided by use of the Software Program alone.
+
+Section 8 - Termination and Disposition of Software
+Should either party commit a material breach of its obligations hereunder, the other party may, at its option, terminate this agreement by written notice to the party in default. Such notice shall identify and describe the default upon which termination is based. The defaulting party shall have thirty (30) days from the effective delivery of the notice to cure such default, which, if affected, shall prevent termination by virtue of such default. Should an insolvency proceeding be filed by or against either party; the other party may terminate this agreement forthwith by giving a written notice to the first party. Upon termination of this agreement, LICENSEE will either return to JAVLIN or destroy all copies of the Software Program, License Key and documentation then in LICENSEE's possession. LICENSEE shall, within thirty (30) days after the date of such termination furnish JAVLIN with a certification of compliance.
+
+Section 9 - Software Export Controls
+The Software Program is subject to the U.S. Export Administration Regulations and the regulations of other jurisdictions (e.g. the European Union). Diversion contrary to applicable law is prohibited. Without limiting the foregoing, you agree that: (i) you are not acting on behalf of any person who is a citizen, national, or resident of, or who is controlled by the government of any country to which the United States, the European Union or other applicable government body has prohibited export transactions (e.g. Iran, North Korea, Sudan.); (ii) you are not acting on behalf of, any person or entity listed on a relevant list of persons to whom export is prohibited (e.g. the U.S. Treasury Department list of Specially Designated Nationals and Blocked Persons, the U.S. Commerce Department Denied Persons List or Entity List); and (iii) you will not use the Software Program for any purpose prohibited by applicable law.
+
+Section 10 - Entire Agreement
+This agreement constitutes the entire agreement of the parties with respect to the subject matter hereof and supersedes all prior agreements, both oral and written, representations, statements, negotiations and undertakings, with respect to the subject matter hereof, which such agreements, representations, statements, negotiations and undertakings are merged herein. No amendment or modification of this agreement or any provision or attachment of this agreement shall be effective unless it is in writing and signed by both parties.
+
+Section 11 - Governing Law
+The validity, construction and performance of this agreement shall be governed by the substantive laws of Czech Republic (excluding conflicts of law principles). LICENSEE and JAVLIN agree that any dispute arising out of this agreement shall be subject to the exclusive jurisdiction of the Czech Republic. If any legal action is undertaken to enforce the terms of this agreement, the prevailing party shall be entitled to reasonable attorney's fees and costs in addition to any other relief to which that party may be entitled.
+
+Section 12 - Assignment and Benefit
+Without the consent of the other party in writing, neither party may assign this agreement; provided, however, JAVLIN or LICENSEE may assign this agreement to a wholly-owned subsidiary of the respective corporation or a corporation in which the shareholders of the respective corporation own a majority interest of the voting control provided that the assigning party remains obligated hereunder; further provided, however, JAVLIN or LICENSEE may assign this agreement to another corporation which acquires or has acquired substantially all of the stock or assets of the assignor. This agreement shall be binding upon and shall inure to the benefit of LICENSEE and JAVLIN and each party's successors, subject to the other provisions of this Section. This license is granted to you only and as such does not permit you to sell, lend, assign, lease or transfer in any other way any copy of the Software Program. Any transfer in violation of this provision is not permitted and may cause your license to be terminated with no refund of the licensing fee paid.
+
+*** END OF EULA ***
+
+Copyright © 2002-2013 Javlin - E-mail: sales@cloveretl.com - www.cloveretl.com
+   </license>
+
+   <url>
+      <update label="http://designer.cloveretl.com/update" url="http://designer.cloveretl.com/update"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.jface.text"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.ui.workbench.texteditor"/>
+      <import plugin="org.eclipse.help"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.gef"/>
+      <import plugin="org.eclipse.ui.views"/>
+      <import plugin="org.eclipse.debug.core"/>
+      <import plugin="org.eclipse.debug.ui"/>
+      <import plugin="org.eclipse.jdt.launching"/>
+      <import plugin="org.eclipse.jdt.debug"/>
+      <import plugin="org.eclipse.jdt.debug.ui"/>
+      <import plugin="org.eclipse.jdt.ui"/>
+      <import plugin="org.eclipse.jdt.core"/>
+      <import plugin="org.eclipse.ui.console"/>
+      <import plugin="org.eclipse.core.filesystem"/>
+   </requires>
+
+   <plugin
+         id="com.cloveretl.gui"
+         download-size="0"
+         install-size="0"
+         version="3.4.4.215P"/>
+
+
+   <plugin
+         id="com.cloveretl.gui.ddl2clover"
+         download-size="0"
+         install-size="0"
+         version="3.4.4.215P"
+         unpack="false"/>
+   <plugin
+         id="com.cloveretl.gui.jmx"
+         download-size="0"
+         install-size="0"
+         version="3.4.4.215P"
+         unpack="false"/>
+
+</feature>

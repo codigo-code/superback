@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/tx
+    	   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+   	 	   http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/jee 
+           http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+           
+	<context:annotation-config />
+				
+	<import resource="classpath:/dbConfiguration-service-config.xml" />
+	
+	<bean id="dataSource" class="oracle.jdbc.pool.OracleDataSource">
+		<property name="dataSourceName" value="EU_SADE"/>
+		<property name="URL" value="jdbc:oracle:thin:@7.217.8.215:1521/TRACKTESTBD.gcaba.everis.int"/>
+		<property name="user" value="EU_SADE"/>
+		<property name="password" value="eu_sade"/>
+	</bean>
+	
+	<import resource="classpath:/dbConfiguration-service-config.xml" />
+
+	<bean id="passwordBasedEncriptionService"
+		class="ar.gob.gcaba.databaseConfiguration.encription.impl.PasswordBasedEncriptionImpl"
+		init-method="initCiphers">
+		<property name="masterKey" value="1234567890" />
+	</bean>
+	
+	<bean name="dBProperty"
+		class="ar.gob.gcaba.databaseConfiguration.propiedades.impl.DBAppPropertyImpl"
+		init-method="showAllProperties">
+		<constructor-arg type="javax.sql.DataSource" ref="dataSource" />
+		<constructor-arg type="java.lang.String" value="property_configuration" />
+		<constructor-arg type="java.lang.String" value="MULE,SISTEMA.CARO" />
+		<constructor-arg ref="passwordBasedEncriptionService" />
+	</bean>
+
+	<bean name="PropertyPlaceholderConfigurerDB"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="properties">
+			<bean factory-bean="dBProperty" factory-method="getProperties" />
+		</property>
+		
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+	</bean>
+	
+</beans>

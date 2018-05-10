@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.mule.tooling.soapkit.extension"
+      label="Anypoint APIkit SOAP Extension"
+      version="1.1.4"
+      provider-name="MuleSoft Inc."
+      plugin="org.mule.tooling.soapkit.extension"
+      exclusive="true">
+
+   <description url="http://www.mulesoft.org/">
+      Anypoint APIkit SOAP Plugin.
+   </description>
+
+   <copyright url="http://www.mulesoft.org">
+      Copyright 2015 Mulesoft Inc.
+   </copyright>
+
+   <plugin
+         id="org.mule.tooling.soapkit"
+         download-size="590"
+         install-size="717"
+         version="1.1.4"/>
+
+   <plugin
+         id="org.mule.tooling.soapkit.contribution"
+         download-size="123"
+         install-size="135"
+         version="1.1.4"/>
+
+</feature>

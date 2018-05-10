@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: 1.6.0_26 (Sun Microsystems Inc.)
+
+Name: license.html
+SHA1-Digest: dxgYHHRn134zXAbm1b4TgA/lOSQ=
+
+Name: feature.xml
+SHA1-Digest: aYA3wtQR8mKi1o9I5yzEtG1Dwd0=
+
+Name: cloveretl.gif
+SHA1-Digest: 0mQ+nRFRCGBdODRDjSpx4Ef8/F4=
+

@@ -1,0 +1,124 @@
+Manifest-Version: 1.0
+Implementation-Title: ASM
+Bundle-SymbolicName: org.objectweb.asm
+Implementation-Version: 6.0
+Archiver-Version: Plexus Archiver
+Built-By: genie.orbit
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: J2SE-1.3
+Bundle-DocURL: http://asm.objectweb.org
+Bundle-Vendor: %bundleVendor
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
+Implementation-Vendor: France Telecom R&D
+Originally-Created-By: 1.8.0_131 (Oracle Corporation)
+Export-Package: org.objectweb.asm;version="6.0.0",org.objectweb.asm.si
+ gnature;version="6.0.0"
+Bundle-Name: %bundleName
+Bundle-Version: 6.0.0.v20180116-1719
+Created-By: Eclipse Bundle Recipe Maven Plug-in
+Build-Jdk: 1.8.0_131
+
+Name: org/objectweb/asm/CurrentFrame.class
+SHA-256-Digest: zgD70+A5bBQrOhNLs5rHAcyU4tzC3RgoUO/06P7ilOU=
+
+Name: org/objectweb/asm/Type.class
+SHA-256-Digest: 6m8vhx/w2jtqwyU0GE2uLA3QOwdbr7h9mrBa7wo8WsM=
+
+Name: org/objectweb/asm/AnnotationVisitor.class
+SHA-256-Digest: +LCfqgYa64iT86/X6+aBueQUAL+E14P1V/Au/ivXTu4=
+
+Name: org/objectweb/asm/MethodVisitor.class
+SHA-256-Digest: zvX5ttUVFuII35gjcY7lTsYdgyRSqUlC0h+DeqQI1No=
+
+Name: org/objectweb/asm/Attribute.class
+SHA-256-Digest: 3tuu3dsUJ0cIYAfkYiUpodwv4eN4Jeon0N0uhbstd+E=
+
+Name: org/objectweb/asm/MethodWriter.class
+SHA-256-Digest: MGP79ZSEG6TOt9VeiUszkOW1aehkrjaQm/Fqxb/EGwk=
+
+Name: org/objectweb/asm/Handler.class
+SHA-256-Digest: Xkmff6allEU0qsZ/c4/G4pSV/67b92OukhwF/yTzVS8=
+
+Name: org/objectweb/asm/ByteVector.class
+SHA-256-Digest: 8slKRNF4eXo57EMMYdE2pyFUOJy4WbMHEmkRT8AA8q8=
+
+Name: org/objectweb/asm/signature/SignatureReader.class
+SHA-256-Digest: q0kYolOQHmyGG1KxKJLcpNzpva3hNYuBv5BNuIuBRrw=
+
+Name: org/objectweb/asm/ModuleVisitor.class
+SHA-256-Digest: aOz75uh9A/huns7VAhVpOap+7CbkEK9qJ2Gm2Xi0nrE=
+
+Name: org/objectweb/asm/Opcodes.class
+SHA-256-Digest: SYobcyx5L2yTUoRYvXEO1YvtjwY/zgli/QA5NcLpGmA=
+
+Name: org/objectweb/asm/FieldVisitor.class
+SHA-256-Digest: zpEwT9optGXlFBVUoMXZ8IQpE1vyVQSw3zDVzaAamyo=
+
+Name: org/objectweb/asm/Item.class
+SHA-256-Digest: vVkfKJSSPLa9UBf3yzT8x+ckrU905iVAvirydA+YmoE=
+
+Name: org/objectweb/asm/ModuleWriter.class
+SHA-256-Digest: jPRGjIeZDMdJMZ+tuPiCR3Q6dpwx9uACRI6CiOC/uVs=
+
+Name: module-info.class
+SHA-256-Digest: y9qsyJ5zKriwyyhg+h/OKcSh7zgAdXIZz6G8h0SICvc=
+
+Name: org/objectweb/asm/TypePath.class
+SHA-256-Digest: Wyb5ZOtnLqI4Ebd1i5Jw9V3O3iCjUwRPBNm3eJYxEMI=
+
+Name: org/objectweb/asm/Label.class
+SHA-256-Digest: WB/XkSzsCkbM/ji/dTP07lrRODLWHsZ0joK559Jfhkg=
+
+Name: org/objectweb/asm/TypeReference.class
+SHA-256-Digest: xWlYUPVixU7u6SsHZGOVbNh4s3RqHBPulp739uLnCj8=
+
+Name: META-INF/maven/org.eclipse.orbit.bundles/org.objectweb.asm/pom.x
+ ml
+SHA-256-Digest: Z9m10OaUX9/+P68RPzzwSDhhmH5rLKC5tRNJxclls7s=
+
+Name: org/objectweb/asm/Handle.class
+SHA-256-Digest: JkRWF1sLDOQyFONNPxjrnhAvOkrV2LKS/n6oDjXWA5E=
+
+Name: org/objectweb/asm/AnnotationWriter.class
+SHA-256-Digest: dmA2QkfXpB8Z8hXAMrkJekg2TMxWypvU7dnhAHBmN2w=
+
+Name: org/objectweb/asm/ClassVisitor.class
+SHA-256-Digest: 2nfBLSUhTOX6FbS1P3WHdKA8vS7Ls1zJTS70M/w1aKk=
+
+Name: org/objectweb/asm/ClassWriter.class
+SHA-256-Digest: CtGTUWD+xgkjkTyNZ5UxFc/iHp6Lnrqx83PB2nv1cAE=
+
+Name: META-INF/maven/org.eclipse.orbit.bundles/org.objectweb.asm/pom.p
+ roperties
+SHA-256-Digest: Clgsa7U9glGw9kBTkf7B9aeqgoQmZCujBuaqFtwVGUE=
+
+Name: about.html
+SHA-256-Digest: UxbGv2T/AsS6MdLf6K0Mwmwj/Yuvgp2AVpjipawwG7Y=
+
+Name: org/objectweb/asm/FieldWriter.class
+SHA-256-Digest: UaKjY0T6W1e1pocoO1UH6PC7d0CfoWMYFCtjr8PwscE=
+
+Name: org/objectweb/asm/signature/SignatureWriter.class
+SHA-256-Digest: xBOnCqBlIPawgXyxrMIuKgmpbp5QqN+YcZamjhgPi18=
+
+Name: org/objectweb/asm/Edge.class
+SHA-256-Digest: hg5OKnNf3qjdjPvng1eGF445JstapoLQo9NNZJ3MQWY=
+
+Name: org/objectweb/asm/Frame.class
+SHA-256-Digest: nnucV8Zs6oomvS3DleL89dgCglQVzsv7WqnA4XzE/OY=
+
+Name: org/objectweb/asm/Context.class
+SHA-256-Digest: HEnD8qKm6j9SyVtgTc4xUMmGlcpB5DjGXHcY9JMPwug=
+
+Name: org/objectweb/asm/ClassReader.class
+SHA-256-Digest: /19yZxMmS8AtHGe9+IHdIrKTkz1NVl/7t1F3fiFkGS0=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: RNVryLulj9W8LNPsB0ZLRKHDwjAglXnx3f/dMHQlkkY=
+
+Name: about_files/NEW_BSD_LICENSE.html
+SHA-256-Digest: mBhgPgD/m+33Wpd99LqViK5vkNmEVCg3ScNRCGzQkDQ=
+
+Name: org/objectweb/asm/signature/SignatureVisitor.class
+SHA-256-Digest: uf7FijvkmKT76aNNbgKvPuikiRbf1DNWZj44T+mO6Oo=
+

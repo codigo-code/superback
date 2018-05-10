@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='ODATA Update Site' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1514317336733'/>
+    <property name='publishPackFilesAsSiblings' value='true'/>
+  </properties>
+  <mappings size='5'>
+    <rule filter='(&amp; (classifier=osgi.bundle) (format=packed))' output='${repoUrl}/plugins/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='2'>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.apikit.odata' version='1.0.2.201712261937'>
+      <properties size='5'>
+        <property name='artifact.size' value='17738586'/>
+        <property name='download.size' value='17744741'/>
+        <property name='maven-groupId' value='org.mule.tooling.odata'/>
+        <property name='maven-artifactId' value='org.mule.tooling.apikit.odata'/>
+        <property name='maven-version' value='1.0.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.extension.odata' version='1.0.2.201712261937'>
+      <properties size='6'>
+        <property name='artifact.size' value='5153'/>
+        <property name='download.size' value='10145'/>
+        <property name='maven-groupId' value='org.mule.tooling'/>
+        <property name='maven-artifactId' value='org.mule.tooling.extension.odata'/>
+        <property name='maven-version' value='1.0.2-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

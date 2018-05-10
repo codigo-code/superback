@@ -1,0 +1,128 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: 9DMFfO5/ZoyKVcMES5hKsK0/jmMhl
+ Tl5Xhb7IKbDMF4=
+SHA-256-Digest-Manifest: eGYcu1yg+wCtfpJeTbx4buyKCKdTf5FdMbftKVZlYe8=
+Created-By: 1.8.0_151 (Oracle Corporation)
+
+Name: plugin.xml
+SHA-256-Digest: d3Ra4QpC44ABjOqQakFCS8hStF4JM+owLyBt6m6jRFc=
+
+Name: icons/Refresh-16x16.gif
+SHA-256-Digest: T//NX0unq766Hxje4YAD6IW9hlkxqDixMyRXRe5GXJg=
+
+Name: org/mule/tooling/amc/preference/AMCPreferenceManager.class
+SHA-256-Digest: LdGmi6tlANthnAt0UO9zSAYB6DAjovdLwRX/qWrzSAo=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$4.class
+SHA-256-Digest: ALUUcLDJK/unKUkcpAao4WQY3u7MXXXSLjePdiJ2lfM=
+
+Name: org/mule/tooling/amc/uploading/FileUploadInfoParser.class
+SHA-256-Digest: jALfWpoprQSyGDNVMUflGY/o9Vx/D467PBnwNs/1kpo=
+
+Name: org/mule/tooling/amc/InstanceListMenuProvider.class
+SHA-256-Digest: M2BEHxsFm0VZoo1npK1mc7jb3ehgFi8QEX4hLmzyB+Q=
+
+Name: org/mule/tooling/amc/AMCActivator.class
+SHA-256-Digest: hO5M88727/q9W6RQNQdv0/0xYaxNihDFQfOOCzGHcwQ=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$Applicat
+ ionDeploymentComplete.class
+SHA-256-Digest: abbMI9dwJn3uPt5L0Ic3Np3fU5a/52TXLuBBMQIIXT8=
+
+Name: icons/Add-16x16.png
+SHA-256-Digest: pbHkjF7TUEKmgxpE3MmGvAC+KRBRvxV3jvs5C5Gp9pY=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$OnCancel
+ ledEvent.class
+SHA-256-Digest: mbTjrkfXbudgDV7G5cT99pZWU+yKicFT+5k31+gT7Xs=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$2.class
+SHA-256-Digest: zhSxhgY012ztaE7ub9YWran9PcxmFWKTiRkiH4QFMCg=
+
+Name: org/mule/tooling/amc/jersey/upload/JerseyUploader$2.class
+SHA-256-Digest: V0ioHjRHYpXnkGCeUtMkap+XwdOspZpBnEgUF+IlT+E=
+
+Name: icons/ExportToMuleiON-16x16.png
+SHA-256-Digest: HY0Cmll+QIgcrsF4pCLZSK+JD9Ui9t8zoA5sSUMAKdw=
+
+Name: icons/exportToARM.png
+SHA-256-Digest: R69awyh1TtUxxTMNWOBCEqCzWuzwYQMiuQ+sxWk2KiI=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser.class
+SHA-256-Digest: 5AuPk9+ykCzqLPdHH46me6ElCN3VFIx+Csn4AIECzY0=
+
+Name: icons/warning.png
+SHA-256-Digest: 5M/lzIPvIiozZMZ7Vb5h6I4ZKxn+ZiKa8fsXjDkDJPE=
+
+Name: org/mule/tooling/amc/AmcContext.class
+SHA-256-Digest: EZrNDJNsFIyAJyeKVG80Z0a/pFriEWyvAAjaLaMzwyI=
+
+Name: org/mule/tooling/amc/command/OpenDeployToAMC.class
+SHA-256-Digest: CmUX1CCLuu63sSOSD8NwePr1gamtXjMS/mLx/ef0doM=
+
+Name: icons/Delete-16x16.png
+SHA-256-Digest: EoHcNB26HtdxUq2LXEIAIfierFuY3EDxgWRjG7bnZ7A=
+
+Name: org/mule/tooling/amc/jersey/upload/JerseyUploadInfoParser.class
+SHA-256-Digest: fvfG+EHrrkYb6sPAQzkqyPZaTHkDz+MxF+4+soc0MB0=
+
+Name: icons/mule16.png
+SHA-256-Digest: o0qVOtcW2ijrJSLGKLmvh8JZttSAq8diZ6CdZ8bPXYU=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$5.class
+SHA-256-Digest: rU6RwlGiq/+G1OuTwcO57WvUlIICDlCHW2m54x/ox98=
+
+Name: org/mule/tooling/amc/jersey/upload/JerseyUploader$1.class
+SHA-256-Digest: rJFvw3V9QGh5e5B4KguTUP9EOoBi5QurYuTLjjYVQz4=
+
+Name: org/mule/tooling/amc/jersey/upload/JerseyUploader.class
+SHA-256-Digest: wjXLtQYYA0MVxmKxi0ar39uX6rkh/DJ1OcSewKTIV9A=
+
+Name: org/mule/tooling/amc/DeployToAmc.class
+SHA-256-Digest: EP9K1bxIfKfrhh4qZYz/qXvAURR5bD6Kc7b18TveEjA=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$Applicat
+ ionDeployedEvent.class
+SHA-256-Digest: Sj5kkUurJZRqY30ynkqP4yOQWDBpgbU8EAcSf1KA4Hc=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$OpenOnEx
+ ternalBrowser.class
+SHA-256-Digest: EP5qJC7fw7bK/aOGY/hMD+yh8k1Adl4cUxcGqOuwcGo=
+
+Name: org/mule/tooling/amc/jersey/upload/IFileUploader.class
+SHA-256-Digest: kRqKCCudAUUE9vw9gXRBRkEJimbBwFHOBNlPPtYdcbk=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$1.class
+SHA-256-Digest: aJbGH6mjqPgcwFueqpJQq4FfCy2y0ujZjrT7EPdANOE=
+
+Name: icons/Transparent.png
+SHA-256-Digest: ncKdpqUhYkduFkl6ORbeXuZDft++FZjtPl7Ipflpag0=
+
+Name: org/mule/tooling/amc/AMCDeploymentWindow.class
+SHA-256-Digest: hYjextOpwi4G3iYc/Zs6B/P6uu3AO9YlN2Y6TAoBpbc=
+
+Name: org/mule/tooling/amc/uploading/FileUploadInfo.class
+SHA-256-Digest: eca/BHhFYVzHURxq+wVfNaWkRzFF2r88RhsNRccE1Nk=
+
+Name: icons/green-check.gif
+SHA-256-Digest: dqNWVE1YFVa6zx0soH2RYTu1b2ghwa4NWlAQUq4/zBs=
+
+Name: icons/red-cross.gif
+SHA-256-Digest: PPwEwMjjiu9DcVS3P5EdHrAM7+NOqJ89eH2CRF/05Rw=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.amc/pom.propert
+ ies
+SHA-256-Digest: XyI/wjez4IriaNH6UvPRJ+XzSLHqKj/eDhc7GPXlMIw=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$3.class
+SHA-256-Digest: TCDyZPe44ezis9AE7uFclhywjVEcyPFCiDo2NpZex44=
+
+Name: icons/clock.gif
+SHA-256-Digest: W1NgBlwFhb5cBbD75Sj1Z45tdmvPdbfwAks7EWd/8+I=
+
+Name: org/mule/tooling/amc/preference/AmcContextCache.class
+SHA-256-Digest: FGXH1O+FdQ3kxcxMgTStkDp91Ar5VRD8asGUFIfpobA=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.amc/pom.xml
+SHA-256-Digest: ApaUWl0svclYz9nhoeAMPB1m8cCPb3k99lJDWrf0FqI=
+

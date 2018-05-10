@@ -1,0 +1,194 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: SJiIkC2lXNSZ67aJMhra2FsJzFG3I
+ qZ6BBKeTA/U+Nw=
+SHA-256-Digest-Manifest: 8oWElelB7B9/AsHUR4X8yoQxnWHYkkxGodQdCm+XXNI=
+Created-By: 1.7.0_80 (Oracle Corporation)
+
+Name: org/mule/tooling/analytics/services/client/ClientHelper.class
+SHA-256-Digest: vGFfyoeIvJNKPr1RIOm2yBeeTkhmYT2pm1ZWk4ZN49M=
+
+Name: org/mule/tooling/analytics/handlers/StudioStartupHandler.class
+SHA-256-Digest: QRvguQbTP7litLOnNoaTpq9Z2TvJ5XyY9TVEH58OvCs=
+
+Name: org/mule/tooling/analytics/errorsense/model/ErrorDescriptionFact
+ ory$1.class
+SHA-256-Digest: TunMYaMj7QWD5kNdT2tvv45FyJ/GzyBqqHvOh/4KvO8=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/DisplayErrorDialog
+ $1.class
+SHA-256-Digest: qS8Z3L//Jr8V6C/LkGD+j4Lt5JkhWBi/QyrxlqFy5Zg=
+
+Name: org/mule/tooling/analytics/model/TrackingDescription.class
+SHA-256-Digest: KhemzpDwH1+xf804gV4VLFrEonLXb8A8Do5goITj7k8=
+
+Name: org/mule/tooling/analytics/handlers/StudioStartupHandler$1.class
+SHA-256-Digest: WvzbyMQTIfgGKxkGXSgnJ9ANtPHDO0mwYW1WTq4WD70=
+
+Name: org/mule/tooling/analytics/errorsense/handlers/ErrorNotification
+ Dealer$1.class
+SHA-256-Digest: MC+4y1Wb+rnZfLt7Exm31p5ewkQBGnEi+4Po+fgaNhs=
+
+Name: org/mule/tooling/analytics/services/client/ClientHelper$1.class
+SHA-256-Digest: j9y9sczl0AiJ5tSg/L6vjk7IWDQdipxUWAfLpxWOimI=
+
+Name: org/mule/tooling/analytics/AnalyticsPlugin$1.class
+SHA-256-Digest: pgOhsZak9nVzfZUBCBNU1XLxH86ANeY73KRyt5o9xCs=
+
+Name: org/mule/tooling/analytics/model/StartupTrackingDescription.clas
+ s
+SHA-256-Digest: 4dNaLu+KVUqau5lIHeQ35L3847QzVenRBkt/SnHXTDo=
+
+Name: org/mule/tooling/analytics/AnalyticsStartup.class
+SHA-256-Digest: XAUHulN9QxIhBQ/oyqidqVq37zyFpEgRwPFsV8sv9R4=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/DisplayAnalyticsIn
+ fo$2.class
+SHA-256-Digest: YihFJPPpnozBNKZXbkrDNlugOEHqcbLlpMZ2zB2sY80=
+
+Name: org/mule/tooling/analytics/core/IAnalyticsServiceFullListener.cl
+ ass
+SHA-256-Digest: bUSQox4F6feXCtVtsUbpJhFRJsniNjqz+ovHsDmqzFI=
+
+Name: org/mule/tooling/analytics/errorsense/handlers/ErrorLogReportHan
+ dler.class
+SHA-256-Digest: 6Z61Y4Z0srsudHqAphzZb8cLxyRrKNE5VtmY6lXNcT4=
+
+Name: org/mule/tooling/analytics/errorsense/handlers/ErrorLoggedListen
+ er.class
+SHA-256-Digest: 8j2Bj8ypS57Kh2nPX/J+wSZkzYOz9Lic5neSIT1dGRg=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/DisplayAnalyticsIn
+ fo$1.class
+SHA-256-Digest: Qxh7crAebZAGWmGDALHs6H+iP3pvUfnSPkmcaoYGksE=
+
+Name: org/mule/tooling/analytics/core/RecordsConsumer.class
+SHA-256-Digest: PfFbAdAh5Tuf5MkUeeKIvQuEQK4b4boaTTHWlxrvf78=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/DisplayAnalyticsIn
+ fo$3.class
+SHA-256-Digest: pRC36bYOfeUQwtgSEBgzLypdVDBxMzF2OSb+4iVTbX0=
+
+Name: org/mule/tooling/analytics/core/AnalyticsService$1.class
+SHA-256-Digest: YDrEikRuJA3fsJUyody5ZOtyUrLz8ZDfs2joulPyVGo=
+
+Name: org/mule/tooling/analytics/errorsense/handlers/ErrorNotification
+ Handler.class
+SHA-256-Digest: /OHru2BcuHrAnT9NhghdNzNgtgEW7fLa+oAeZXVmL64=
+
+Name: org/mule/tooling/analytics/errorsense/handlers/ErrorNotification
+ Dealer.class
+SHA-256-Digest: mL4vqIUfEYV4GlqJfKgSKApyLXlitmtL/luCt48j36U=
+
+Name: org/mule/tooling/analytics/services/client/StudioNewStatisticsCl
+ ient.class
+SHA-256-Digest: H5CXumWShy9SEzOb+FK4Qtc3GGs3nk9YcE/p9GMDSaI=
+
+Name: org/mule/tooling/analytics/AnalyticsConstants.class
+SHA-256-Digest: 2tl8BESoJeCdFjyyn/J90+oLKzqOsBkrf060ULJuFy4=
+
+Name: org/mule/tooling/analytics/utils/AnalyticsImages.class
+SHA-256-Digest: DeERJaor6Kdt94LIJ8BMcWiiCnPk/m/KNvPiKSjDKY0=
+
+Name: org/mule/tooling/analytics/core/Digester.class
+SHA-256-Digest: J1oG0VVb9YqSealwXTBVqWlNLNbKGlwYDk1ztkRE3KE=
+
+Name: org/mule/tooling/analytics/handlers/AnalyticsEventHandler.class
+SHA-256-Digest: JZuPb2yvg249X5ObYbVvH/KCUJr9cCfIfLDR/rNM9Dc=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.analytics/pom.x
+ ml
+SHA-256-Digest: F5dcI/yN84qYcS20cRiRegMLFtt8r2at5o/+qHyfttI=
+
+Name: org/mule/tooling/analytics/core/AnalyticsService.class
+SHA-256-Digest: B5XiflLyOV/oRfhynhj/j9yGR93OAc6zIGI5phCyfms=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/AnalyticsPopUp$1.c
+ lass
+SHA-256-Digest: 6rdd+PPnjKOpSe6mF/upAvaqux1j/DBYg6Bf14jX3l4=
+
+Name: org/mule/tooling/analytics/AnalyticsPlugin.class
+SHA-256-Digest: sfR2SoMXzSfBjxqt53cHDLrZyI1JYLRph6o0nhApQPM=
+
+Name: org/mule/tooling/analytics/model/AnalyticsMessage.class
+SHA-256-Digest: lbCeXJFt7Db+bflibpdqDOQY852SiK9X5+/d9SOrX5s=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/AnalyticsPopUp$3.c
+ lass
+SHA-256-Digest: 6F+6gMILHmCMWWOLA/hk0xOqMMug2zbS2Y92O3v+nho=
+
+Name: org/mule/tooling/analytics/errorsense/model/ErrorDescription.cla
+ ss
+SHA-256-Digest: PEZbBnhvu7wIKSlVRosVgDr3F+YYEcctWBHDLOgS4IQ=
+
+Name: org/mule/tooling/analytics/utils/StudioInformation.class
+SHA-256-Digest: nhA9faZM1bvFhVaZRFTNtDyO+J5c1eYMebY6jgQkhaU=
+
+Name: org/mule/tooling/analytics/core/RecordsConsumer$1.class
+SHA-256-Digest: h+NYCjk31tEGKwJ4br9L4fw1ou+x3zJQPAQGOMSMGPs=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.analytics/pom.p
+ roperties
+SHA-256-Digest: R3rTnUG+jsbmIl7LJ7iC47x6/5SYDAWJRcJ7F3pbr9I=
+
+Name: org/mule/tooling/analytics/services/client/StudioStatisticsClien
+ t.class
+SHA-256-Digest: cYfHnL5zDJXnR7rLm9UofNAPww0CaDn7nQQ3FZd/w7c=
+
+Name: build.properties
+SHA-256-Digest: GBxnYehyYX9SpA3IhGAmYFiHEKfCDBMYlYJ0qGcgY7E=
+
+Name: org/mule/tooling/analytics/model/TrackingDescriptionFactory.clas
+ s
+SHA-256-Digest: lUeI3iG6X5D8Dy2gYrWdBZAXZ8yYVh4XdILmygMKtDw=
+
+Name: org/mule/tooling/analytics/handlers/IAnalyticHandler.class
+SHA-256-Digest: oLuYOtDwRZuzsgE4FI8fvasLuweMx9rp3oAy4KNg0WY=
+
+Name: org/mule/tooling/analytics/services/client/ClientHelper$2.class
+SHA-256-Digest: 6+Bzu1kE5VbG/7Il6mMdIjUulIWHzJLS+afUYsqpaQs=
+
+Name: icons/studio128x128.png
+SHA-256-Digest: yvU95sxhdTfVsBMPeHj/ttwPtIyq7pJE63lNulSdaqE=
+
+Name: org/mule/tooling/analytics/preferences/AnalyticsPreferencesIniti
+ alizer$1.class
+SHA-256-Digest: n0gTQl26mSuqrE0a0f64MKSRHpAkye/9vg1KVVebuMM=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/DisplayAnalyticsIn
+ fo.class
+SHA-256-Digest: sVjPRKt13YLfvmqKfWBzcnhZOH02nMMNkw+R4Ic7UUw=
+
+Name: icons/send_error.png
+SHA-256-Digest: WEAzVSiYJhpOIl7M9NnHJBdkU2dZyQUsv/fa2bDLXMc=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/DisplayErrorDialog
+ $2.class
+SHA-256-Digest: QKhe1kx/g4OVvNIJ7LBRoPyk0kQMbY/pP/6ABp/WJ9o=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/DisplayErrorDialog
+ .class
+SHA-256-Digest: EJmLjI43a+TlWS6MeHXc9iGVRHEfDWGYyC6fwGNGHyA=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/AnalyticsPopUp$2.c
+ lass
+SHA-256-Digest: yzg1ibR2IwdwHk5L8VCU3ar/ONv9hvvBVX8mtG9p8Nk=
+
+Name: plugin.xml
+SHA-256-Digest: Yl3AUNuhzGDM1z9RS3V5/8/NKozhLZYvz4w9oBgTK5s=
+
+Name: org/mule/tooling/analytics/errorsense/widgets/AnalyticsPopUp.cla
+ ss
+SHA-256-Digest: EqsDvb0JJEFRl2zWNemRyMyH8tu1frRe2k4r/bociTg=
+
+Name: org/mule/tooling/analytics/preferences/AnalyticsPreferencesIniti
+ alizer.class
+SHA-256-Digest: sg+CDhCOY+7FfShkzTsy9T2wWBm1jSY+plioKRJQLrE=
+
+Name: org/mule/tooling/analytics/preferences/AnalyticsPreferencePage.c
+ lass
+SHA-256-Digest: bonCeFxfimPkOYuLVoTUc/uLe+EC1jNARvf/HL+pepE=
+
+Name: org/mule/tooling/analytics/errorsense/model/ErrorDescriptionFact
+ ory.class
+SHA-256-Digest: vitxnxvv5YIfq4+mh5YCjnOqJQrrhMQPF4NBQBiVwYM=
+

@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_80
+Built-By: ubuntu
+Created-By: Apache Maven
+Archiver-Version: Plexus Archiver
+
+Name: build.properties
+SHA-256-Digest: 9TWoUmKzXAAX94q2BZSSUjVcdycsxrCzNZ0yYwGpgqc=
+
+Name: target/maven-archiver/pom.properties
+SHA-256-Digest: HW3sCMvK3oQ+rXiII6U8kaHb4TnRkLtNdIifIz+Y5RI=
+
+Name: .project
+SHA-256-Digest: Uo5zb9yLTJBgQiZm4orHJvkdpW/W/AEGenj1Tw/ZGOg=
+
+Name: pom.xml
+SHA-256-Digest: gyo0FJkDwA1elDNiJyn3mhDQ+IwJag/N+SiJ4Izj2hs=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.extension.serve
+ r.3.8.5.ee/pom.properties
+SHA-256-Digest: HW3sCMvK3oQ+rXiII6U8kaHb4TnRkLtNdIifIz+Y5RI=
+
+Name: feature.xml
+SHA-256-Digest: KNWFRKgGKAoi/YIGM8ycM6SNuaZWaO0+ECqCxwj1f7w=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.extension.serve
+ r.3.8.5.ee/pom.xml
+SHA-256-Digest: gyo0FJkDwA1elDNiJyn3mhDQ+IwJag/N+SiJ4Izj2hs=
+
+Name: target/feature.xml
+SHA-256-Digest: KNWFRKgGKAoi/YIGM8ycM6SNuaZWaO0+ECqCxwj1f7w=
+

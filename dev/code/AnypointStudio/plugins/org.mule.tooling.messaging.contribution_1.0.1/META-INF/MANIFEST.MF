@@ -1,0 +1,88 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,mule-module-anypoint-mq-ee.jar
+Built-By: marianoquintela
+Eclipse-BundleShape: dir
+Bundle-Name: Anypoint MQ
+Created-By: Apache Maven 3.3.9
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.mule.tooli
+ ng.core,org.mule.tooling.ui.modules.core,org.apache.commons.lang
+Bundle-Vendor: MuleSoft Inc.
+Build-Jdk: 1.7.0_79
+Bundle-Version: 1.0.1
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.mule.tooling.ui.contribution.messaging.Activator
+Bundle-SymbolicName: org.mule.tooling.messaging.contribution;singleton
+ :=true
+Archiver-Version: Plexus Archiver
+
+Name: org/mule/tooling/messaging/editor/global/ProxyValuePersistence.c
+ lass
+SHA-256-Digest: tmj7q9hJ3tlVdI31LjW6POgT0DTT4nEiH5PagWUcKSw=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/Abstract
+ 3WayLoadedValueModifierTemplate.class
+SHA-256-Digest: 3J/0dviUn2rt1B+ndNokd3290TRe6b1vKRvEPP+/slw=
+
+Name: org/mule/tooling/ui/contribution/messaging/Activator.class
+SHA-256-Digest: ajGX/xcDrWeEybnafK92KpEmJ6VM1tUpdwfS51faChU=
+
+Name: messaging.xml
+SHA-256-Digest: CFZYZM8M9yMlvYWre0k3U8+bsJpk4S5dnppuyUX5Zbc=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/SourcePr
+ efetchLoadedValueModifier.class
+SHA-256-Digest: SGLS7ZN5N3f19eqUwMy5lAsP8i7ndvZUeLvMHbSc87w=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/Prefetch
+ LoadedValueModifier.class
+SHA-256-Digest: Fte4hU5v/ZNQUgEFagmTYFrVdYR/d54LYDx23Su8vSE=
+
+Name: icons/large/messaging-48x32.png
+SHA-256-Digest: dArxpbQq5HEX8AqdelbH1+OdMRlfbS2GMQ9l1GxQWZ4=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/Provider
+ LoadedValueModifier.class
+SHA-256-Digest: 5k80176O+T93GzsugRJqLBOdUQuYCi24V7Hc3Yjwg1g=
+
+Name: build.properties
+SHA-256-Digest: EVNuNE3JYpUjtiyEMizTqQ75JSkvZdp8ZMcNw9+lKTo=
+
+Name: plugin.xml
+SHA-256-Digest: ZEQxznmv2Y5BfzmodROMcB2uGP73xCdc2NwOgdeNYqg=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/TlsLoade
+ dValueModifier.class
+SHA-256-Digest: 0LJ5iHx9MXYk611zrKVPZbwfEyc2seytw6cXGu4Ljgg=
+
+Name: META-INF/maven/org.mule.tooling.messaging/org.mule.tooling.messa
+ ging.contribution/pom.xml
+SHA-256-Digest: vqHVSGG37N6sSjxhQ8z1xzqBpVSrNBthi5JkG4etJqM=
+
+Name: mule-module-anypoint-mq-ee.jar
+SHA-256-Digest: OpTwPrGybMea5aNEhhtoDAzzMHnEJDEzgq2kqtFULWI=
+
+Name: org/mule/tooling/messaging/editor/global/TlsValuePersistence.cla
+ ss
+SHA-256-Digest: NnqRKda2s3madpgdJAcohHHKDvN6P/oRK3E2HdB6vg0=
+
+Name: org/mule/tooling/messaging/editor/global/PrefetchValuePersistenc
+ e.class
+SHA-256-Digest: 5YDbGBjYqaenHxjIJOGE2NNk+3SG9J/cjrmdy9Vo+Hk=
+
+Name: META-INF/maven/org.mule.tooling.messaging/org.mule.tooling.messa
+ ging.contribution/pom.properties
+SHA-256-Digest: 0ecVFrzLbDhKugQ4IjExmvk4xFS0iNziW7HK8ua6jh4=
+
+Name: org/mule/tooling/messaging/editor/global/booleanloaders/ProxyLoa
+ dedValueModifier.class
+SHA-256-Digest: 64B6XRufHpEI09hd9Vm5kxOJXw0gvi6Hida4RQpV0ag=
+
+Name: org/mule/tooling/messaging/editor/global/ProviderValuePersistenc
+ e.class
+SHA-256-Digest: Xn9b2QIZ5htRDSShHgIlPQ7WNxgGUbbff7ebRFae498=
+
+Name: icons/small/messaging-24x16.png
+SHA-256-Digest: LzSJ34CJqSouHSmt6dHUb8vS1dV4wi4JTXu5ZMWTavQ=
+

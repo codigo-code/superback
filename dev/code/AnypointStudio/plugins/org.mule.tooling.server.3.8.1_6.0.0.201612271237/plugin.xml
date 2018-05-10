@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<!--
+	to change this see plugin.xml.template
+ -->
+   <extension
+         point="org.mule.tooling.server">
+      <server
+            enterpriseRuntime="false"
+            id="org.mule.tooling.server.3.8.1"
+            label="Mule Server 3.8.1 CE"
+            schemaLocationLookup="org.mule.tooling.server.SchemaLocationLookup"
+            sourcePath="mule/src/mule-sources-3.8.1.zip"
+            version="3.8.1"
+            versionSuffix=""
+            cloudhubEnabled="true"
+            onpremiseEnabled="true">
+         <libraryFolder
+               includeInContainer="false"
+               label="Tooling Support"
+               path="mule/tooling/"
+               populateContentsInMavenRepo="false"
+               runtimeLauncherClasspathOrder="1">
+         </libraryFolder>
+         <libraryFolder
+               includeInContainer="true"
+               label="Boot Libraries"
+               path="mule/lib/boot/"
+               populateContentsInMavenRepo="true"
+               runtimeLauncherClasspathOrder="2">
+               <inclusion
+                     regex=".*\.jar">
+               </inclusion>
+               <exclusion
+                     regex=".*licm-studio.*\.jar">
+               </exclusion>
+         </libraryFolder>
+         <libraryFolder
+               includeInContainer="true"
+               label="User"
+               path="mule/lib/user/"
+               populateContentsInMavenRepo="true"
+               runtimeLauncherClasspathOrder="3">
+               <inclusion
+                     regex=".*mule-tests-functional.*\.jar">
+               </inclusion>
+         </libraryFolder>
+         <libraryFolder
+               includeInContainer="true"
+               label="Mule Core Libraries"
+               path="mule/lib/mule/"
+               populateContentsInMavenRepo="true"
+               runtimeLauncherClasspathOrder="4">
+		        <exclusion
+		              regex=".*mule-ee-parent-poms.*">
+		        </exclusion>
+		        <exclusion
+		              regex=".*mule-local-install\.jar">
+		        </exclusion>
+		        <inclusion
+		              regex=".*mule.*\.jar">
+		        </inclusion>
+         </libraryFolder>
+         <libraryFolder
+               includeInContainer="true"
+               label="Optional Libraries"
+               path="mule/lib/opt/"
+               populateContentsInMavenRepo="true"
+               runtimeLauncherClasspathOrder="5">
+               <exclusion regex="groovy-all-1.8.6.jar"/>
+               <inclusion
+                     regex=".*\.jar">
+               </inclusion>
+         </libraryFolder>
+         <libraryFolder
+               includeInContainer="true"
+               label="Endorsed Libraries"
+               path="mule/lib/endorsed/"
+               populateContentsInMavenRepo="false"
+               runtimeLauncherClasspathOrder="-1">
+         </libraryFolder>
+         <configFolder
+           includeInContainer="true"
+           label="Config Folder"
+           path="mule/conf">
+         </configFolder>
+         <!-- Plugins -->
+         <modules>
+           <module reference-id="default" />
+           <module reference-id="apikit" />
+         </modules>
+      </server>
+   </extension>
+   <extension
+         point="org.mule.tooling.server.artifacts">
+       <artifactCollection
+               serverId="org.mule.tooling.server.3.8.1">
+            <artifact
+                  groupId="de.schlichtherle.io"
+                  artifactId="truezip"
+                  version="6.6"
+                  fileName="truezip-6.6.jar">
+            </artifact>
+            <artifact
+                  groupId="de.schlichtherle"
+                  artifactId="truelicense"
+                  version="1.29"
+                  fileName="truelicense-1.29.jar">
+            </artifact>
+            <artifact
+                  groupId="de.schlichtherle"
+                  artifactId="truexml"
+                  version="1.29"
+                  fileName="truexml-1.29.jar">
+            </artifact>
+            <artifact
+                  groupId="commons-jxpath"
+                  artifactId="commons-jxpath"
+                  version="1.3-osgi"
+                  fileName="commons-jxpath-1.3-osgi.jar">
+            </artifact>
+            <artifact
+                  groupId="commons-codec"
+                  artifactId="commons-codec"
+                  version="1.3-osgi"
+                  fileName="commons-codec-1.3-osgi.jar">
+            </artifact>
+            <artifact
+                  groupId="xpp3"
+                  artifactId="xpp3_min"
+                  version="1.1.3.4.O-osgi"
+                  fileName="xpp3_min-1.1.3.4.O-osgi.jar">
+            </artifact>
+            <artifact
+                  groupId="jaxen"
+                  artifactId="jaxen"
+                  version="1.1.1-osgi"
+                  fileName="jaxen-1.1.1-osgi.jar">
+            </artifact>
+            <artifact
+                  groupId="net.java.dev.stax-utils"
+                  artifactId="stax-utils"
+                  version="20080702-osgi"
+                  fileName="stax-utils-20080702-osgi.jar">
+            </artifact>
+            <artifact
+                  groupId="commons-httpclient"
+                  artifactId="commons-httpclient"
+                  version="3.1-osgi"
+                  fileName="commons-httpclient-3.1-osgi.jar">
+            </artifact>
+            <artifact
+                  groupId="org.springmodules"
+                  artifactId="spring-modules-cache"
+                  version="0.9"
+                  fileName="spring-modules-cache-0.9.jar">
+            </artifact>
+            <artifact
+                  groupId="com.ibm.icu"
+                  artifactId="icu4j-normalizer_transliterator"
+                  version="4.8.1.1"
+                  fileName="icu4j-normalizer_transliterator-4.8.1.1.jar">
+            </artifact>
+            <artifact
+                  groupId="com.googlecode.sardine"
+                  artifactId="sardine"
+                  version="248"
+                  fileName="sardine-248.jar">
+            </artifact>
+         </artifactCollection>
+   </extension>
+   <extension
+         point="org.mule.tooling.servers.commons.schemaLocationLookup">
+      <schemaLocationLookup serverId="org.mule.tooling.server.3.8.1">
+        <schemaLocation prefix="tracking" namespace="http://www.mulesoft.org/schema/mule/ee/tracking" location="http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd" />
+        <schemaLocation prefix="" namespace="http://www.mulesoft.org/schema/mule/core" location="http://www.mulesoft.org/schema/mule/core/current/mule.xsd" />
+        <schemaLocation prefix="vm" namespace="http://www.mulesoft.org/schema/mule/vm" location="http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd" />
+        <schemaLocation prefix="cxf" namespace="http://www.mulesoft.org/schema/mule/cxf" location="http://www.mulesoft.org/schema/mule/cxf/current/mule-cxf.xsd" />
+        <schemaLocation prefix="jersey" namespace="http://www.mulesoft.org/schema/mule/jersey" location="http://www.mulesoft.org/schema/mule/jersey/current/mule-jersey.xsd" />
+        <schemaLocation prefix="file" namespace="http://www.mulesoft.org/schema/mule/file" location="http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd" />
+        <schemaLocation prefix="ftp" namespace="http://www.mulesoft.org/schema/mule/ftp" location="http://www.mulesoft.org/schema/mule/ftp/current/mule-ftp.xsd" />
+        <schemaLocation prefix="http" namespace="http://www.mulesoft.org/schema/mule/http" location="http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd" />
+        <schemaLocation prefix="jdbc" namespace="http://www.mulesoft.org/schema/mule/jdbc" location="http://www.mulesoft.org/schema/mule/jdbc/current/mule-jdbc.xsd" />
+        <schemaLocation prefix="batch" namespace="http://www.mulesoft.org/schema/mule/batch" location="http://www.mulesoft.org/schema/mule/batch/current/mule-batch.xsd" />
+        <schemaLocation prefix="jms" namespace="http://www.mulesoft.org/schema/mule/jms" location="http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd" />
+        <schemaLocation prefix="mulexml" namespace="http://www.mulesoft.org/schema/mule/xml" location="http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd" />
+        <schemaLocation prefix="scripting" namespace="http://www.mulesoft.org/schema/mule/scripting" location="http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd" />
+        <schemaLocation prefix="jdbc" namespace="http://www.mulesoft.org/schema/mule/jdbc" location="http://www.mulesoft.org/schema/mule/jdbc/current/mule-jdbc.xsd" />
+        <schemaLocation prefix="ajax" namespace="http://www.mulesoft.org/schema/mule/ajax" location="http://www.mulesoft.org/schema/mule/ajax/current/mule-ajax.xsd" />
+        <schemaLocation prefix="wmq" namespace="http://www.mulesoft.org/schema/mule/wmq" location="http://www.mulesoft.org/schema/mule/wmq/current/mule-wmq.xsd" />
+        <schemaLocation prefix="https" namespace="http://www.mulesoft.org/schema/mule/https" location="http://www.mulesoft.org/schema/mule/https/current/mule-https.xsd" />
+        <schemaLocation prefix="imap" namespace="http://www.mulesoft.org/schema/mule/imap" location="http://www.mulesoft.org/schema/mule/imap/current/mule-imap.xsd" />
+        <schemaLocation prefix="imaps" namespace="http://www.mulesoft.org/schema/mule/imaps" location="http://www.mulesoft.org/schema/mule/imaps/current/mule-imaps.xsd" />
+        <schemaLocation prefix="jetty" namespace="http://www.mulesoft.org/schema/mule/jetty" location="http://www.mulesoft.org/schema/mule/jetty/current/mule-jetty.xsd" />
+        <schemaLocation prefix="jetty" namespace="http://www.mulesoft.org/schema/mule/jetty" location="http://www.mulesoft.org/schema/mule/jetty/current/mule-jetty.xsd" />
+        <schemaLocation prefix="jetty-ssl" namespace="http://www.mulesoft.org/schema/mule/jetty-ssl" location="http://www.mulesoft.org/schema/mule/jetty-ssl/current/mule-jetty-ssl.xsd" />
+        <schemaLocation prefix="sftp" namespace="http://www.mulesoft.org/schema/mule/sftp" location="http://www.mulesoft.org/schema/mule/sftp/current/mule-sftp.xsd" />
+        <schemaLocation prefix="smtp" namespace="http://www.mulesoft.org/schema/mule/smtp" location="http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd" />
+        <schemaLocation prefix="smtps" namespace="http://www.mulesoft.org/schema/mule/smtps" location="http://www.mulesoft.org/schema/mule/smtps/current/mule-smtps.xsd" />
+        <schemaLocation prefix="ssl" namespace="http://www.mulesoft.org/schema/mule/ssl" location="http://www.mulesoft.org/schema/mule/ssl/current/mule-ssl.xsd" />
+        <schemaLocation prefix="tls" namespace="http://www.mulesoft.org/schema/mule/tls" location="http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd" />
+        <schemaLocation prefix="tcp" namespace="http://www.mulesoft.org/schema/mule/tcp" location="http://www.mulesoft.org/schema/mule/tcp/current/mule-tcp.xsd" />
+        <schemaLocation prefix="multicast" namespace="http://www.mulesoft.org/schema/mule/multicast" location="http://www.mulesoft.org/schema/mule/multicast/current/mule-multicast.xsd" />
+        <schemaLocation prefix="pop3" namespace="http://www.mulesoft.org/schema/mule/pop3" location="http://www.mulesoft.org/schema/mule/pop3/current/mule-pop3.xsd" />
+        <schemaLocation prefix="pop3s" namespace="http://www.mulesoft.org/schema/mule/pop3s" location="http://www.mulesoft.org/schema/mule/pop3s/current/mule-pop3s.xsd" />
+        <schemaLocation prefix="quartz" namespace="http://www.mulesoft.org/schema/mule/quartz" location="http://www.mulesoft.org/schema/mule/quartz/current/mule-quartz.xsd" />
+        <schemaLocation prefix="servlet" namespace="http://www.mulesoft.org/schema/mule/servlet" location="http://www.mulesoft.org/schema/mule/servlet/current/mule-servlet.xsd" />
+        <schemaLocation prefix="udp" namespace="http://www.mulesoft.org/schema/mule/udp" location="http://www.mulesoft.org/schema/mule/udp/current/mule-udp.xsd" />
+        <schemaLocation prefix="xmpp" namespace="http://www.mulesoft.org/schema/mule/xmpp" location="http://www.mulesoft.org/schema/mule/xmpp/current/mule-xmpp.xsd" />
+        <schemaLocation prefix="ejb" namespace="http://www.mulesoft.org/schema/mule/ejb" location="http://www.mulesoft.org/schema/mule/ejb/current/mule-ejb.xsd" />
+        <schemaLocation prefix="jnp" namespace="http://www.mulesoft.org/schema/mule/jnp" location="http://www.mulesoft.org/schema/mule/jnp/current/mule-jnp.xsd" />
+        <schemaLocation prefix="rmi" namespace="http://www.mulesoft.org/schema/mule/rmi" location="http://www.mulesoft.org/schema/mule/rmi/current/mule-rmi.xsd" />
+        <schemaLocation prefix="stdio" namespace="http://www.mulesoft.org/schema/mule/stdio" location="http://www.mulesoft.org/schema/mule/stdio/current/mule-stdio.xsd" />
+        <schemaLocation prefix="axis" namespace="http://www.mulesoft.org/schema/mule/axis" location="http://www.mulesoft.org/schema/mule/axis/current/mule-axis.xsd" />
+        <schemaLocation prefix="pattern" namespace="http://www.mulesoft.org/schema/mule/pattern" location="http://www.mulesoft.org/schema/mule/pattern/current/mule-pattern.xsd" />
+        <schemaLocation prefix="core" namespace="http://www.mulesoft.org/schema/mule/core" location="http://www.mulesoft.org/schema/mule/core/current/mule.xsd" />
+        <schemaLocation prefix="ee" namespace="http://www.mulesoft.org/schema/mule/ee/core" location="http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd" />
+        <schemaLocation prefix="email" namespace="http://www.mulesoft.org/schema/mule/email" location="http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd" />
+        <schemaLocation prefix="jdbc-ee" namespace="http://www.mulesoft.org/schema/mule/ee/jdbc" location="http://www.mulesoft.org/schema/mule/ee/jdbc/current/mule-jdbc-ee.xsd" />
+        <schemaLocation prefix="ftp" namespace="http://www.mulesoft.org/schema/mule/ee/ftp" location="http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd" />
+        <schemaLocation prefix="json" namespace="http://www.mulesoft.org/schema/mule/json" location="http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd" />
+        <schemaLocation prefix="wmq" namespace="http://www.mulesoft.org/schema/mule/ee/wmq" location="http://www.mulesoft.org/schema/mule/ee/wmq/current/mule-wmq-ee.xsd" />
+        <schemaLocation prefix="jbossts" namespace="http://www.mulesoft.org/schema/mule/jbossts" location="http://www.mulesoft.org/schema/mule/jbossts/current/mule-jbossts.xsd" />
+        <schemaLocation prefix="sr" namespace="http://www.mulesoft.org/schema/mule/service-registry" location="http://www.mulesoft.org/schema/mule/service-registry/current/mule-service-registry.xsd" />
+        <schemaLocation prefix="context" namespace="http://www.springframework.org/schema/context" location="http://www.springframework.org/schema/context/spring-context-current.xsd" />
+        <schemaLocation prefix="spring" namespace="http://www.springframework.org/schema/beans" location="http://www.springframework.org/schema/beans/spring-beans-current.xsd" />
+        <schemaLocation prefix="db" namespace="http://www.mulesoft.org/schema/mule/db" location="http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd" />
+        <schemaLocation prefix="ws" namespace="http://www.mulesoft.org/schema/mule/ws" location="http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd" />
+        <schemaLocation prefix="oauth2-provider" namespace="http://www.mulesoft.org/schema/mule/oauth2-provider" location="http://www.mulesoft.org/schema/mule/oauth2-provider/current/mule-oauth2-provider.xsd" />
+        <schemaLocation prefix="schedulers" namespace="http://www.mulesoft.org/schema/mule/schedulers" location="http://www.mulesoft.org/schema/mule/schedulers/current/mule-schedulers.xsd" />
+        <schemaLocation prefix="bti" namespace="http://www.mulesoft.org/schema/mule/ee/bti" location="http://www.mulesoft.org/schema/mule/ee/bti/current/mule-bti-ee.xsd" />
+        <schemaLocation prefix="oauth2" namespace="http://www.mulesoft.org/schema/mule/oauth2" location="http://www.mulesoft.org/schema/mule/oauth2/current/mule-oauth2.xsd" />
+      </schemaLocationLookup>
+   </extension>
+</plugin>

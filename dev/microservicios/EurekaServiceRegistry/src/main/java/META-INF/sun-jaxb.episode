@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
+Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2018.05.07 a las 05:32:21 PM ART 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="ar.gov.afip.dia.serviciosweb.wgesTabRef">
+    <schemaBindings map="false">
+      <package name="com.everis.webservice.afip"/>
+    </schemaBindings>
+    <bindings scd="tns:ListaDescripcion">
+      <class ref="com.everis.webservice.afip.ListaDescripcion"/>
+    </bindings>
+    <bindings scd="~tns:Autenticacion">
+      <class ref="com.everis.webservice.afip.Autenticacion"/>
+    </bindings>
+    <bindings scd="tns:ListaDescripcionResponse">
+      <class ref="com.everis.webservice.afip.ListaDescripcionResponse"/>
+    </bindings>
+    <bindings scd="~tns:Descripciones">
+      <class ref="com.everis.webservice.afip.Descripciones"/>
+    </bindings>
+    <bindings scd="tns:ListaVigencias">
+      <class ref="com.everis.webservice.afip.ListaVigencias"/>
+    </bindings>
+    <bindings scd="tns:ListaVigenciasResponse">
+      <class ref="com.everis.webservice.afip.ListaVigenciasResponse"/>
+    </bindings>
+    <bindings scd="~tns:Vigencias">
+      <class ref="com.everis.webservice.afip.Vigencias"/>
+    </bindings>
+    <bindings scd="tns:ListaPaisesAduanas">
+      <class ref="com.everis.webservice.afip.ListaPaisesAduanas"/>
+    </bindings>
+    <bindings scd="tns:ListaPaisesAduanasResponse">
+      <class ref="com.everis.webservice.afip.ListaPaisesAduanasResponse"/>
+    </bindings>
+    <bindings scd="~tns:PaisesAduanas">
+      <class ref="com.everis.webservice.afip.PaisesAduanas"/>
+    </bindings>
+    <bindings scd="tns:ListaEmpresas">
+      <class ref="com.everis.webservice.afip.ListaEmpresas"/>
+    </bindings>
+    <bindings scd="tns:ListaEmpresasResponse">
+      <class ref="com.everis.webservice.afip.ListaEmpresasResponse"/>
+    </bindings>
+    <bindings scd="~tns:Empresas">
+      <class ref="com.everis.webservice.afip.Empresas"/>
+    </bindings>
+    <bindings scd="tns:ListaArancel">
+      <class ref="com.everis.webservice.afip.ListaArancel"/>
+    </bindings>
+    <bindings scd="tns:ListaArancelResponse">
+      <class ref="com.everis.webservice.afip.ListaArancelResponse"/>
+    </bindings>
+    <bindings scd="~tns:Opciones">
+      <class ref="com.everis.webservice.afip.Opciones"/>
+    </bindings>
+    <bindings scd="tns:ListaLugaresOperativos">
+      <class ref="com.everis.webservice.afip.ListaLugaresOperativos"/>
+    </bindings>
+    <bindings scd="tns:ListaLugaresOperativosResponse">
+      <class ref="com.everis.webservice.afip.ListaLugaresOperativosResponse"/>
+    </bindings>
+    <bindings scd="~tns:LugaresOperativos">
+      <class ref="com.everis.webservice.afip.LugaresOperativos"/>
+    </bindings>
+    <bindings scd="tns:ListaTablasReferencia">
+      <class ref="com.everis.webservice.afip.ListaTablasReferencia"/>
+    </bindings>
+    <bindings scd="tns:ListaTablasReferenciaResponse">
+      <class ref="com.everis.webservice.afip.ListaTablasReferenciaResponse"/>
+    </bindings>
+    <bindings scd="~tns:TablasReferencia">
+      <class ref="com.everis.webservice.afip.TablasReferencia"/>
+    </bindings>
+    <bindings scd="tns:ListaTablasReferenciaServicio">
+      <class ref="com.everis.webservice.afip.ListaTablasReferenciaServicio"/>
+    </bindings>
+    <bindings scd="tns:ListaTablasReferenciaServicioResponse">
+      <class ref="com.everis.webservice.afip.ListaTablasReferenciaServicioResponse"/>
+    </bindings>
+    <bindings scd="tns:ListaDescripcionDecodificacion">
+      <class ref="com.everis.webservice.afip.ListaDescripcionDecodificacion"/>
+    </bindings>
+    <bindings scd="tns:ListaDescripcionDecodificacionResponse">
+      <class ref="com.everis.webservice.afip.ListaDescripcionDecodificacionResponse"/>
+    </bindings>
+    <bindings scd="~tns:DescripcionesCodificaciones">
+      <class ref="com.everis.webservice.afip.DescripcionesCodificaciones"/>
+    </bindings>
+    <bindings scd="tns:ConsultarFechaUltAct">
+      <class ref="com.everis.webservice.afip.ConsultarFechaUltAct"/>
+    </bindings>
+    <bindings scd="tns:ConsultarFechaUltActResponse">
+      <class ref="com.everis.webservice.afip.ConsultarFechaUltActResponse"/>
+    </bindings>
+    <bindings scd="~tns:FechaUltAct">
+      <class ref="com.everis.webservice.afip.FechaUltAct"/>
+    </bindings>
+    <bindings scd="tns:Dummy">
+      <class ref="com.everis.webservice.afip.Dummy"/>
+    </bindings>
+    <bindings scd="tns:DummyResponse">
+      <class ref="com.everis.webservice.afip.DummyResponse"/>
+    </bindings>
+    <bindings scd="~tns:WsDummyResponse">
+      <class ref="com.everis.webservice.afip.WsDummyResponse"/>
+    </bindings>
+    <bindings scd="~tns:Contenedor">
+      <class ref="com.everis.webservice.afip.Contenedor"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfDescripcion">
+      <class ref="com.everis.webservice.afip.ArrayOfDescripcion"/>
+    </bindings>
+    <bindings scd="~tns:Descripcion">
+      <class ref="com.everis.webservice.afip.Descripcion"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfVigencia">
+      <class ref="com.everis.webservice.afip.ArrayOfVigencia"/>
+    </bindings>
+    <bindings scd="~tns:Vigencia">
+      <class ref="com.everis.webservice.afip.Vigencia"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfPaisAduana">
+      <class ref="com.everis.webservice.afip.ArrayOfPaisAduana"/>
+    </bindings>
+    <bindings scd="~tns:PaisAduana">
+      <class ref="com.everis.webservice.afip.PaisAduana"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfEmpresa">
+      <class ref="com.everis.webservice.afip.ArrayOfEmpresa"/>
+    </bindings>
+    <bindings scd="~tns:Empresa">
+      <class ref="com.everis.webservice.afip.Empresa"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfOpcion">
+      <class ref="com.everis.webservice.afip.ArrayOfOpcion"/>
+    </bindings>
+    <bindings scd="~tns:Opcion">
+      <class ref="com.everis.webservice.afip.Opcion"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfLugarOperativo">
+      <class ref="com.everis.webservice.afip.ArrayOfLugarOperativo"/>
+    </bindings>
+    <bindings scd="~tns:LugarOperativo">
+      <class ref="com.everis.webservice.afip.LugarOperativo"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfTablaReferencia">
+      <class ref="com.everis.webservice.afip.ArrayOfTablaReferencia"/>
+    </bindings>
+    <bindings scd="~tns:TablaReferencia">
+      <class ref="com.everis.webservice.afip.TablaReferencia"/>
+    </bindings>
+    <bindings scd="~tns:ArrayOfDescripcionCodificacion">
+      <class ref="com.everis.webservice.afip.ArrayOfDescripcionCodificacion"/>
+    </bindings>
+    <bindings scd="~tns:DescripcionCodificacion">
+      <class ref="com.everis.webservice.afip.DescripcionCodificacion"/>
+    </bindings>
+  </bindings>
+</bindings>
+

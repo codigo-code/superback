@@ -1,0 +1,4 @@
+com\utn\model\interfaces\IUserMethod.class
+com\utn\model\User.class
+com\utn\App.class
+com\utn\controller\services\LoginServices.class

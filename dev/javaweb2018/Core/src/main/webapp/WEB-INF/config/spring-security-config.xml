@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<security:http auto-config="true">
+		<security:http-basic />
+<!-- 		<security:intercept-url pattern="/**" access="ROLE_USER" /> -->
+
+<!-- 		<security:intercept-url pattern="/login.jsp" -->
+<!-- 			access="IS_AUTHENTICATED_ANONYMOUSLY" /> -->
+<!-- 		<security:intercept-url pattern="/loginFail.jsp" -->
+<!-- 			access="IS_AUTHENTICATED_ANONYMOUSLY" /> -->
+		
+<!-- 		<security:intercept-url pattern="/sarasa.html" access="ROLE_COSME_FULANITO,ROLE_ADMIN" /> -->
+		
+		<security:intercept-url pattern="/entro.do" access="ROLE_USER" />
+		<security:intercept-url pattern="/entro.do" access="ROLE_ADMIN" />
+				
+<!-- 		<security:intercept-url pattern="/**" access="ROLE_USER" /> -->
+
+<!-- 		<security:form-login login-page="/login.jsp" -->
+<!-- 			default-target-url="/registrar.html"  -->
+<!-- 			authentication-failure-url="/loginFail.jsp" /> -->
+
+		<security:logout logout-success-url="/logout.html" />
+	</security:http>
+
+	<security:authentication-manager>
+
+		<security:authentication-provider
+			user-service-ref="myUserDetailServer">
+<!-- 			<security:password-encoder hash="md5"></security:password-encoder> -->
+		</security:authentication-provider>
+
+
+<!-- 		<security:authentication-provider> -->
+<!-- 			<security:user-service> -->
+<!-- 				<security:user name="pepe" password="123456" -->
+<!-- 					authorities="ROLE_USER" /> -->
+<!-- 			</security:user-service> -->
+<!-- 		</security:authentication-provider> -->
+		
+		
+	</security:authentication-manager>
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost/utnprogrammer"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value=""></property>
+	</bean>
+
+	<bean id="myUserDetailServer"
+		class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+</beans>

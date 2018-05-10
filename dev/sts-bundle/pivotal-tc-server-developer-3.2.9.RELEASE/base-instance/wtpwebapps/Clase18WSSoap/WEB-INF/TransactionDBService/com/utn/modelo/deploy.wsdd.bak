@@ -1,0 +1,36 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from TransactionDBService WSDL service -->
+
+  <service name="TransactionDB" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://modelo.utn.com"/>
+      <parameter name="wsdlServiceElement" value="TransactionDBService"/>
+      <parameter name="schemaQualified" value="http://modelo.utn.com"/>
+      <parameter name="wsdlServicePort" value="TransactionDB"/>
+      <parameter name="className" value="com.utn.modelo.TransactionDBSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="TransactionDB"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="update" qname="operNS:update" xmlns:operNS="http://modelo.utn.com" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://modelo.utn.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="deleteById" qname="operNS:deleteById" xmlns:operNS="http://modelo.utn.com" returnQName="retNS:deleteByIdReturn" xmlns:retNS="http://modelo.utn.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://modelo.utn.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getTransaction" qname="operNS:getTransaction" xmlns:operNS="http://modelo.utn.com" soapAction="" >
+      </operation>
+      <operation name="delelteAll" qname="operNS:delelteAll" xmlns:operNS="http://modelo.utn.com" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="deleteById update getTransaction delelteAll"/>
+
+  </service>
+</deployment>

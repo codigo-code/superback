@@ -1,0 +1,89 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: lV2bFfnD3DTZuyUmO1w5rW+Kv/kx6
+ FgCZFCYoym/Ozk=
+SHA-256-Digest-Manifest: iOqB7X6tndfFojYdV1HT/ggChQ4wakuqQLL5byiD8Qk=
+Created-By: 1.7.0_80 (Oracle Corporation)
+
+Name: icons/large/sub-flow-48x32.png
+SHA-256-Digest: WIheixB1sn/9AGDZCrfSxZtB//6/q+HRqi8O2K8pFZs=
+
+Name: apikit.xml
+SHA-256-Digest: kpBEZK8y5Et1AMIG9PIGnzFPUh1jWnOAybzhAZ8lYTE=
+
+Name: icons/large/api_console.png
+SHA-256-Digest: wzp33aGIihF2y7viz7IYg/zQOZZxYGuPmYyX2D+nlRc=
+
+Name: icons/small/apikit16x16.png
+SHA-256-Digest: +zuVamDYRfM11s7Jk02cFn9JP8cyK5icTUfqB1KCdhw=
+
+Name: icons/small/exception-strategy.png
+SHA-256-Digest: /thKeU6yYnxxXnjkGr+gQGeQhTApERJdXYLVJIo6cNo=
+
+Name: api.raml
+SHA-256-Digest: snyedCjdPc84JFsTY1o3fEQ3u+m40WrBZzu8eYEFnNo=
+
+Name: icons/large/apikit.png
+SHA-256-Digest: WoG9n24pEWAqA9t1rQtqpv6x/RCl1Yx4iDQXLvscIEA=
+
+Name: icons/small/scaffolder.png
+SHA-256-Digest: hu3xZccf2QdmAIBnSV9CHD435+kb7Kn0cDMaxqSlco4=
+
+Name: icons/small/CatchExceptionStrategy-24x16-1.png
+SHA-256-Digest: QflOJa9j08NDmVok63cPjQXlPZeoGNUXMfUSNiaM8HM=
+
+Name: icons/small/api_console_endpoint.png
+SHA-256-Digest: PZxV1JyQS6ld1PnoevS5ZQlw3gh21/WbaltlHf4/qVI=
+
+Name: mule-apikit.xsd
+SHA-256-Digest: Vxo+Sv9Qyz16Ei9o+dv50mHF6IoLrv3xKHj/lCGTyD0=
+
+Name: META-INF/maven/org.mule.tools/org.mule.tooling.apikit.3.6.0/pom.
+ xml
+SHA-256-Digest: QhNx+vw+asBSS0bjS+0I6SoEOjBZnoHmYisJhJQ8+ms=
+
+Name: resources/api.raml
+SHA-256-Digest: zdkP7ot1T3Y12u8h/8DX3aNSkjvwhRST0+PK+Ftv2C0=
+
+Name: muleConfiguration.xml
+SHA-256-Digest: JKsOVepmPeIcEKKrj8rfvFN+pvplX+TjHv2JTDhRYbU=
+
+Name: mule-module-apikit-plugin-1.6.2.zip
+SHA-256-Digest: 5ygDMlA8rj0wS/P8Fuf8OckVQ82KQgZOO8t18p27f/E=
+
+Name: api.properties
+SHA-256-Digest: eAaW0DV6Jew2DLzicEQuFFRsBkOQASnsOb5pzWM+ijg=
+
+Name: icons/small/newAPIKitProject-16x16.png
+SHA-256-Digest: gHGWwZlh3418ymYUkl8BenhWCsAWiE8BmCnt6/wTYQg=
+
+Name: META-INF/maven/org.mule.tools/org.mule.tooling.apikit.3.6.0/pom.
+ properties
+SHA-256-Digest: PWloGEQBa33HWH+aVu9K/GhjumXSnokW/yOvwZlYaDE=
+
+Name: resources/api.properties
+SHA-256-Digest: ih6+mVkViGAij/dtLvLFi/2xkq9gztdUiSERSQSw0Ac=
+
+Name: icons/small/apikit-menu-16x16.jpg
+SHA-256-Digest: NnuTlPdvZw7QIzJ+alUI5uC1U0ZnJcwZaoTq2Q1q7Ls=
+
+Name: icons/small/api_console_view.png
+SHA-256-Digest: LNNC/3UmcIN3HWKso+Rt2ZzOoixyTalw6JENfXSoORo=
+
+Name: resources/muleConfiguration.xml
+SHA-256-Digest: qjQD2v1we5s4TpzXcpKKo1s9NOvKvNcPBvitEZXQuIk=
+
+Name: icons/small/flow-24x16.png
+SHA-256-Digest: Jgk+fJuomoN1jBlIqiMo6Kt3oC23Xx5Nc0YBY24paBU=
+
+Name: icons/small/exception-mapping.png
+SHA-256-Digest: jUOSCc8/E3l1NyIhgD4ionetRyBVICLKFmuh60JOgd8=
+
+Name: plugin.xml
+SHA-256-Digest: engStQH9N2c+02yJd8m8FaYQZmlCf05qPZwKuV1rp6E=
+
+Name: mule-module-apikit-1.6.2.jar
+SHA-256-Digest: IRWIVBGmAMC/9/5/aiuJLF1CKMzokPrVr/cHnHOkhiU=
+
+Name: org/mule/tooling/apikit/Activator.class
+SHA-256-Digest: M/eXLjTXfHtwjD6bH6pyfU1etgvh7Zx0KRPV1E8akL8=
+

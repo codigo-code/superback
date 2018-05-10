@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: jenkins
+Created-By: Apache Maven
+Build-Jdk: 1.8.0_102
+
+Name: META-INF/maven/org.mule.tooling.munit/org.mule.tooling.munit.ext
+ ension/pom.xml
+SHA-256-Digest: ljqYK9zO46G6X6MaChR2q2lVqkipCEXvO2W81LWrUcs=
+
+Name: feature.xml
+SHA-256-Digest: /WiAfcFO50B/9WMFS4UiEUtXqzwIQGVzlUq4c6LUfxU=
+
+Name: META-INF/maven/org.mule.tooling.munit/org.mule.tooling.munit.ext
+ ension/pom.properties
+SHA-256-Digest: eEvPbdo5eT/33tqfCb7pIFTju5EypeBd9VhxkWAC0Hc=
+

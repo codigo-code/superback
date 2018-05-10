@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='APIkit Studio Update Site' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1490708050432'/>
+    <property name='publishPackFilesAsSiblings' value='true'/>
+  </properties>
+  <mappings size='5'>
+    <rule filter='(&amp; (classifier=osgi.bundle) (format=packed))' output='${repoUrl}/plugins/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='10'>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.apikit.feature.3.6.0' version='1.6.3.201703281333'>
+      <properties size='6'>
+        <property name='artifact.size' value='8743'/>
+        <property name='download.size' value='14076'/>
+        <property name='maven-groupId' value='org.mule.tools'/>
+        <property name='maven-artifactId' value='org.mule.tooling.apikit.feature.3.6.0'/>
+        <property name='maven-version' value='1.6.3-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.raml.editor' version='0.11.2.201703211853'>
+      <properties size='5'>
+        <property name='artifact.size' value='4554816'/>
+        <property name='download.size' value='4581745'/>
+        <property name='maven-groupId' value='org.raml'/>
+        <property name='maven-artifactId' value='org.raml.editor'/>
+        <property name='maven-version' value='0.11.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.apikit.3.6.0' version='1.6.3.201703281333'>
+      <properties size='5'>
+        <property name='artifact.size' value='8759239'/>
+        <property name='download.size' value='8767074'/>
+        <property name='maven-groupId' value='org.mule.tools'/>
+        <property name='maven-artifactId' value='org.mule.tooling.apikit.3.6.0'/>
+        <property name='maven-version' value='1.6.3-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.raml.editor.eclipsecolortheme' version='0.11.2.201703211853'>
+      <properties size='5'>
+        <property name='artifact.size' value='90728'/>
+        <property name='download.size' value='102707'/>
+        <property name='maven-groupId' value='org.raml'/>
+        <property name='maven-artifactId' value='org.raml.editor.eclipsecolortheme'/>
+        <property name='maven-version' value='0.11.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.apikit.3.7.0' version='1.7.5.201703281333'>
+      <properties size='5'>
+        <property name='artifact.size' value='8980009'/>
+        <property name='download.size' value='8987996'/>
+        <property name='maven-groupId' value='org.mule.tools'/>
+        <property name='maven-artifactId' value='org.mule.tooling.apikit.3.7.0'/>
+        <property name='maven-version' value='1.7.5-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.raml.editor.feature' version='0.11.2.201703211853'>
+      <properties size='6'>
+        <property name='artifact.size' value='4934'/>
+        <property name='download.size' value='9928'/>
+        <property name='maven-groupId' value='org.raml'/>
+        <property name='maven-artifactId' value='org.raml.editor.feature'/>
+        <property name='maven-version' value='0.11.2-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.apikit.feature.3.7.0' version='1.7.5.201703281333'>
+      <properties size='6'>
+        <property name='artifact.size' value='8660'/>
+        <property name='download.size' value='13993'/>
+        <property name='maven-groupId' value='org.mule.tools'/>
+        <property name='maven-artifactId' value='org.mule.tooling.apikit.feature.3.7.0'/>
+        <property name='maven-version' value='1.7.5-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.raml.editor.deps' version='0.11.2.201703211853'>
+      <properties size='5'>
+        <property name='artifact.size' value='8909441'/>
+        <property name='download.size' value='8917762'/>
+        <property name='maven-groupId' value='org.raml'/>
+        <property name='maven-artifactId' value='org.raml.editor.deps'/>
+        <property name='maven-version' value='0.11.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.apikit.feature' version='1.5.4.201703281333'>
+      <properties size='6'>
+        <property name='artifact.size' value='8679'/>
+        <property name='download.size' value='14000'/>
+        <property name='maven-groupId' value='org.mule.tools'/>
+        <property name='maven-artifactId' value='org.mule.tooling.apikit.feature'/>
+        <property name='maven-version' value='1.5.4-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.apikit' version='1.5.4.201703281333'>
+      <properties size='5'>
+        <property name='artifact.size' value='8413725'/>
+        <property name='download.size' value='8421548'/>
+        <property name='maven-groupId' value='org.mule.tools'/>
+        <property name='maven-artifactId' value='org.mule.tooling.apikit'/>
+        <property name='maven-version' value='1.5.4-SNAPSHOT'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

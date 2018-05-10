@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='org.mule.tooling.incubator.updatesite' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1514298374751'/>
+    <property name='publishPackFilesAsSiblings' value='true'/>
+  </properties>
+  <mappings size='5'>
+    <rule filter='(&amp; (classifier=osgi.bundle) (format=packed))' output='${repoUrl}/plugins/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature) (format=packed))' output='${repoUrl}/features/${id}_${version}.jar.pack.gz'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='13'>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.munit.extension' version='1.6.2.201712261425'>
+      <properties size='6'>
+        <property name='artifact.size' value='6673'/>
+        <property name='download.size' value='11794'/>
+        <property name='maven-groupId' value='org.mule.tooling.munit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.munit.extension'/>
+        <property name='maven-version' value='1.6.2-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.munit-mclient-module.3.5.0' version='1.1.0.201610211012'>
+      <properties size='1'>
+        <property name='download.size' value='4970'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.synchronize.extension' version='1.6.2.201712261425'>
+      <properties size='6'>
+        <property name='artifact.size' value='6718'/>
+        <property name='download.size' value='11864'/>
+        <property name='maven-groupId' value='org.mule.tooling.munit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.ui.synchronize.extension'/>
+        <property name='maven-version' value='1.6.2-SNAPSHOT'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.contribution.dbserver.3.4.0' version='1.1.0.201610211012'>
+      <properties size='1'>
+        <property name='download.size' value='1667487'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.contribution.ftpserver.3.4.0' version='1.1.0.201610211012'>
+      <properties size='1'>
+        <property name='download.size' value='4611658'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.munit-ftpserver-module.3.4.0' version='1.1.0.201610211012'>
+      <properties size='1'>
+        <property name='download.size' value='4975'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.munit.runtime.3.8' version='1.6.2.201712261425'>
+      <properties size='5'>
+        <property name='artifact.size' value='9701055'/>
+        <property name='download.size' value='9711921'/>
+        <property name='maven-groupId' value='org.mule.tooling.munit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.munit.runtime.3.8'/>
+        <property name='maven-version' value='1.6.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.contribution.munit' version='1.6.2.201712261425'>
+      <properties size='5'>
+        <property name='artifact.size' value='820273'/>
+        <property name='download.size' value='860329'/>
+        <property name='maven-groupId' value='org.mule.tooling.munit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.ui.contribution.munit'/>
+        <property name='maven-version' value='1.6.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.contribution.mclient.3.5.0' version='1.1.0.201610211012'>
+      <properties size='1'>
+        <property name='download.size' value='202785'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.munit.runtime.3.9' version='1.6.2.201712261425'>
+      <properties size='5'>
+        <property name='artifact.size' value='10914086'/>
+        <property name='download.size' value='10925059'/>
+        <property name='maven-groupId' value='org.mule.tooling.munit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.munit.runtime.3.9'/>
+        <property name='maven-version' value='1.6.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.munit-dbserver-module.3.4.0' version='1.1.0.201610211012'>
+      <properties size='1'>
+        <property name='download.size' value='4974'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.contribution.mule-synchronize' version='1.6.2.201712261425'>
+      <properties size='5'>
+        <property name='artifact.size' value='22545'/>
+        <property name='download.size' value='28404'/>
+        <property name='maven-groupId' value='org.mule.tooling.munit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.ui.contribution.mule-synchronize'/>
+        <property name='maven-version' value='1.6.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.munit.runtime.3.7' version='1.6.2.201712261425'>
+      <properties size='5'>
+        <property name='artifact.size' value='10904411'/>
+        <property name='download.size' value='10915377'/>
+        <property name='maven-groupId' value='org.mule.tooling.munit'/>
+        <property name='maven-artifactId' value='org.mule.tooling.munit.runtime.3.7'/>
+        <property name='maven-version' value='1.6.2-SNAPSHOT'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

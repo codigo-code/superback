@@ -1,0 +1,7 @@
+com\everis\WebSecurityConfig.class
+com\everis\JWTAuthenticationFilter.class
+com\everis\AccountCredentials.class
+com\everis\JWTLoginFilter.class
+com\everis\TokenAuthenticationService.class
+com\everis\App.class
+com\everis\UserToken.class

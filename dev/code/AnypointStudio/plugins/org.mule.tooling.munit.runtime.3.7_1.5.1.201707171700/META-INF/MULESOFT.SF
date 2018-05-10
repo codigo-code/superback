@@ -1,0 +1,179 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: JQVbvnOTTvYjeWE4wgstRRqLJUmfp
+ xN09DNBZ2ilFTw=
+SHA-256-Digest-Manifest: ZYW20RUcAVI+D6VX0ZGGFuBTnl2ExIeKfZ/9LLOhXPQ=
+Created-By: 1.8.0_102 (Oracle Corporation)
+
+Name: plugin.xml
+SHA-256-Digest: l4ISzFrTpwLmKPyIVERVB/jHtARNEZ6QX+rYlHRAbNA=
+
+Name: schemas/META-INF/mule-munit.xsd
+SHA-256-Digest: VKSp3KMc9af/6XfAc/U/FDIBuRRmff1VixJmtq9UUPw=
+
+Name: META-INF/maven/org.mule.tooling.munit/org.mule.tooling.munit.run
+ time.3.7/pom.properties
+SHA-256-Digest: r0r1M7/17BJxPBhB+96knjU7gVCZmBM2MdiQvXPOKIM=
+
+Name: libapikit/joda-time.jar
+SHA-256-Digest: +i1Xqgm9Gj9lDglB0KFbxxGIUa6w42cbMVPUbmzReWI=
+
+Name: libapikit/jsr305.jar
+SHA-256-Digest: oC+Hb1SU+thxCUMhgON3TPv3xsDCTmbk9JR0BRXwK1Y=
+
+Name: libapikit/libphonenumber.jar
+SHA-256-Digest: 7+RHEpkloUXVRQNzj352yBuw9HFNUVJUNHIhqgk4Yfk=
+
+Name: libapikit/yagi.jar
+SHA-256-Digest: 0KID4M8eGClo6HMDiby/oI5JjYV2Z31FHq7TX6UF9N4=
+
+Name: lib/munit-mule-extension-loader.jar
+SHA-256-Digest: 7Xbg2XnLD4oMISY6OLAtxMJgT3gNPKAsdC33b5KF+LU=
+
+Name: schemas/META-INF/mule-mock.xsd
+SHA-256-Digest: TSUf70zMMW6MfUKTHHPEK9zNAGq8DUkfeNTSmHPxpuk=
+
+Name: libapikit/jaxen.jar
+SHA-256-Digest: GGkK7LAM93i5q+H5Ub5tB8WZ0kGlpMA80mMMIW9ICk4=
+
+Name: about.ini.template
+SHA-256-Digest: 3XzKQJ9L8f0TmLAySXlWGFXNKW5JGUDZxCLB8VcMzIo=
+
+Name: lib/mule-munit-support.jar
+SHA-256-Digest: KtQ4zc/i5c8nzbM2W1lnSqPdomsjlVk9/cbkM3fg9gs=
+
+Name: libapikit/jackson-annotations.jar
+SHA-256-Digest: inr++RE6iTVoyW2x6SuidaFe/SSz1EnVEUqyhe5QfjA=
+
+Name: org/mule/tooling/munit/Activator.class
+SHA-256-Digest: quGTABQjfZAdGhazccB8rkac8WsDV1yW2A1L62YU+u4=
+
+Name: libapikit/json-schema-validator.jar
+SHA-256-Digest: i3PEb7xqLddffEg7ljsgZ9ZmTQfn/nWyCXXNPpizrOk=
+
+Name: plugin.xml.template
+SHA-256-Digest: 6t7eHmFKpzHrOYE8SSvAWTcMk9zBV3emPyn8cCHfm9Y=
+
+Name: libapikit/munit-apikit-test-generator.jar
+SHA-256-Digest: TPhGShqBY1FqW66Udhe2jkLldkrOi3zYG9GZZZrw1yU=
+
+Name: libapikit/jackson-core.jar
+SHA-256-Digest: 6AZbxprdAhkIaUR7r4OpkSzRRXWtsHFFGkhP0yZO/G8=
+
+Name: lib/munit-runner.jar
+SHA-256-Digest: 3L5T5OdcW7s8JqhknWSGyKjaAzXV7RRVPCmOzSFc1CQ=
+
+Name: libapikit/slf4j-api.jar
+SHA-256-Digest: SNDztNPoiNkeImcwMCPsaQFLUMP43GSextA0aSw3RKs=
+
+Name: libapikit/juniversalchardet.jar
+SHA-256-Digest: O0lolH+PtVutJ/71u+9BJ2yroly/3PHqYRReAdE0ASg=
+
+Name: pomTooling.xml.template
+SHA-256-Digest: KE0GpvJUXq2JPtqirY8COu/JeEMwaiQUfazBK57PDno=
+
+Name: libapikit/jopt-simple.jar
+SHA-256-Digest: C2wKiSUAKHEzn626B9dEiTb9PfPnBGi0RsBuVOFADHg=
+
+Name: libapikit/parser-interface.jar
+SHA-256-Digest: k6KQ4fUj+g1xvUC/6tzUIhPYvahqpb/5qMmRIYzp6kc=
+
+Name: libapikit/btf.jar
+SHA-256-Digest: cJAKVBBrhCJEB0j5Viz9mi/EcGDSbh5M0O48WzRJgEk=
+
+Name: libapikit/raml-parser-2.jar
+SHA-256-Digest: Zd/NhXHgY+CfHw6eVmacBvks7SGIF+M3Vnte222/6Mk=
+
+Name: lib/gson.jar
+SHA-256-Digest: cjVnCjHGBjiJ0/2lPRrn7znPPAepgdyLzUP9KLr9Sy8=
+
+Name: libapikit/jackson-coreutils.jar
+SHA-256-Digest: 9mVU918PouWgdgDMSO5lXKxKlym2/mL1VbB4L+M07vk=
+
+Name: lib/munit-remote.jar
+SHA-256-Digest: xbOX7jiWLaHqsL3Ckkimeq7Gby0TxvM8qPmXj3Hpx88=
+
+Name: libapikit/annotations.jar
+SHA-256-Digest: fxoG1L0POs0MZau0MLPXdCi6huB5WSQJdNv/sv1DD60=
+
+Name: pom.xml
+SHA-256-Digest: OHj1mOV2dKT9b6iOMzs3lLSIBaquI+/S4L+boIBQYSs=
+
+Name: META-INF/maven/org.mule.tooling.munit/org.mule.tooling.munit.run
+ time.3.7/pom.xml
+SHA-256-Digest: kMa73NdI8jBxla0mJfr9IQjwsqcw7tBBmP0TDQo/SZc=
+
+Name: libapikit/jackson-databind.jar
+SHA-256-Digest: BosY2+Vr6oSXWSuxWQAHHWiQUjc+TkHLpb5Z6MxNulg=
+
+Name: libapikit/commons-io.jar
+SHA-256-Digest: rlfpT0/9x71yVMNhYyvRkvJl1cilcpjxLBhwl3fgXic=
+
+Name: lib/munit-coverage-plugin.jar
+SHA-256-Digest: X3efz+8dwhqnAeeUmvRexqDVTHmu591eJsCj2ca95ys=
+
+Name: libapikit/rhino.jar
+SHA-256-Digest: 0kGoNf1ZYyExdDdKeP14rpp7nAOXybcwUdcSV2FFXzg=
+
+Name: libapikit/guava.jar
+SHA-256-Digest: 8n9xiFMbnB+opQpbC1L5yjbRJjyVWyIjm24xV9XyWWM=
+
+Name: libapikit/jdom2.jar
+SHA-256-Digest: QYRPvNseAxYWvbtP2J+VgLjVnqSgNHcFBdC6XRexKao=
+
+Name: libapikit/msg-simple.jar
+SHA-256-Digest: F6TONCDTADn7aju4EdnwpXSPWCjjqkMeBkryrvzaGhU=
+
+Name: libapikit/mailapi.jar
+SHA-256-Digest: DtoYRYqySPi1meMy9LtYSvNKu1XzEPocX2C1I8SUGdg=
+
+Name: libapikit/commons-lang.jar
+SHA-256-Digest: 3OzcfQb41a6caAUSLJDFS1tTkzJgFEWpeWHxi2c63wY=
+
+Name: org/mule/tooling/munit/extension/MunitApiKitScaffolder.class
+SHA-256-Digest: MXOBB3mwSeEuBw+37XGzXxmcRmeb5sC/UDCc1UTCBaI=
+
+Name: libapikit/parser-interface-impl-v2.jar
+SHA-256-Digest: Nj8GAcToan1W/eUNGnrgxnX3uFkAlwMnxi1XUT+augc=
+
+Name: log4j.properties
+SHA-256-Digest: oKqXz/ThfmjZ6toqdSJeYwLFYJpOQzQLnyCm+ikEcGQ=
+
+Name: org/mule/tooling/munit/classpath/SchemaResolver.class
+SHA-256-Digest: mJNxI+mpq91f0lTjVIgA/ySqmkz+HuDEFJ8a314YMRY=
+
+Name: lib/xercesImpl.jar
+SHA-256-Digest: /gjnxCywgC+7njAm7Ij8M/siJ+NvAXdVb+0dnVaOCY4=
+
+Name: libapikit/xmlschema-core.jar
+SHA-256-Digest: fgM2DguLP1QQ54AChodXw3fog6vK9ApKkDLGYUVxokA=
+
+Name: libapikit/uri-template.jar
+SHA-256-Digest: ZDtY41OY+ygtixu6R+HsenICcIyi7eGQjrPjjwFldcs=
+
+Name: lib/munit-common.jar
+SHA-256-Digest: TU8KwFJTrrOVH8Mnx+Lh4HThvfZZSColVFXYJUXJKbY=
+
+Name: lib/munit-mock.jar
+SHA-256-Digest: 5wJtMpo86EUbRfFGZx4Gf3Bkdxpzzbx80AkVWWJzd/Y=
+
+Name: lib/mule-interceptor-module.jar
+SHA-256-Digest: yJ8oYX73bC6RpMttbG6d+WseSd3wNLyLlFXHelGRpzc=
+
+Name: libapikit/json-schema-core.jar
+SHA-256-Digest: b7Mu/evyl6nRGUbRoA7BIf8TZnM61sQdGdrQcM8Zgls=
+
+Name: libapikit/gson.jar
+SHA-256-Digest: dSwhCpAPRcUi4yVP9C841mNROUoE98mJDpzHo8oAx8k=
+
+Name: lib/munit-assert.jar
+SHA-256-Digest: Kdv2YbVe0ThwEbc83Rwwgs2xf27Xa13ehKUxzXQ/VOM=
+
+Name: libapikit/jackson-module-jsonSchema.jar
+SHA-256-Digest: GCPar9yfy3G/OjsCCYSp85rbsdX7H7/NI/XsFgih5ew=
+
+Name: libapikit/snakeyaml.jar
+SHA-256-Digest: L7FEw+7tiFpln95Od0aCm04XhfidfgQgCCk60sYzvnc=
+
+Name: libapikit/activation.jar
+SHA-256-Digest: uRYgKtLXrAxmLAEXrQZ3p/Ncu4dZM7bYzmjmc7roOqA=
+

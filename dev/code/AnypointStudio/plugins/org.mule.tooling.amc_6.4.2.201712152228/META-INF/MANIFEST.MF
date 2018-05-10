@@ -1,0 +1,155 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Built-By: ubuntu
+Eclipse-BundleShape: dir
+Bundle-Name: Mule AMC Tooling Plugin
+Created-By: Apache Maven 3.2.3
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.eclipse.ui,org.eclipse.core.runtime,org.eclipse.co
+ re.resources,org.mule.tooling.core;bundle-version="[6.4.2,6.4.3)",org
+ .mule.tooling.ui;bundle-version="[6.4.2,6.4.3)",org.apache.commons.la
+ ng,org.apache.commons.httpclient,org.eclipse.jdt.core,org.eclipse.equ
+ inox.security,com.google.guava;bundle-version="[14.0.0,16.0.0)",org.m
+ ule.tooling.ui.widgets;bundle-version="[6.4.2,6.4.3)",com.google.gson
+ ,org.mule.tooling.utils;bundle-version="[6.4.2,6.4.3)",org.mule.tooli
+ ng.ui.authentication;bundle-version="[6.4.2,6.4.3)",jackson-mapper-as
+ l,jackson-core-asl,jackson-jaxrs,org.mule.tooling.osgi.services;bundl
+ e-version="[6.4.2,6.4.3)",org.apache.commons.io,com.sun.jersey.contri
+ bs.jersey-multipart,com.sun.jersey.jersey-core,com.sun.jersey,javax.w
+ s.rs,com.sun.jersey.jersey-client,org.apache.commons.collections,org.
+ mule.tooling.ui.contribution.apigateway;bundle-version="6.0.0"
+Bundle-Vendor: MuleSoft Inc.
+Bundle-Version: 6.4.2.201712152228
+Build-Jdk: 1.7.0_80
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.mule.tooling.amc.AMCActivator
+Bundle-SymbolicName: org.mule.tooling.amc;singleton:=true
+Import-Package: org.mule.tooling.model.project,org.mule.tooling.ui.mod
+ ules.core,org.mule.tooling.ui.widgets.action,org.mule.tooling.ui.widg
+ ets.listener,org.mule.tooling.ui.widgets.table,org.mule.tooling.ui.wi
+ dgets.util
+Archiver-Version: Plexus Archiver
+
+Name: org/mule/tooling/amc/uploading/FileUploadInfo.class
+SHA-256-Digest: ObecYNdvpdy/2dCC69LYkWhGR0DU5CrGttCP0V2SaCw=
+
+Name: org/mule/tooling/amc/jersey/upload/JerseyUploader.class
+SHA-256-Digest: ZF++4g5w7w52LW9aK3WishOtoxoOyhVhME1JfcPKNYE=
+
+Name: icons/Add-16x16.png
+SHA-256-Digest: ZhOW17wozEzKYfbPGnMZ5N8aPb2hCfy3cRCB22YOWIE=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$1.class
+SHA-256-Digest: EP9jfHkVxMTtQDdio8zL6aJal/sVYMnFYgCGv1FpLac=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$2.class
+SHA-256-Digest: gX/wXoVGF6OdlKDpQBn3ShmFrWG6nMnb5LFGIaMzd0k=
+
+Name: org/mule/tooling/amc/uploading/FileUploadInfoParser.class
+SHA-256-Digest: 0WE5q60i0YhwT6Dhvj7O3QvJl4KtHGsE0J9dnCRmAfw=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser.class
+SHA-256-Digest: mclHEqpG/BCrem0YWQ4mAJ9fzYbxP8P+Z5VlYl0VloE=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$OnCancel
+ ledEvent.class
+SHA-256-Digest: /VPnOjIVvIusBTSuvEYs+3tjclZ8z4lmYhC4x0KePq0=
+
+Name: org/mule/tooling/amc/preference/AmcContextCache.class
+SHA-256-Digest: MAvUzhIH5TG+BTrtBJRlV+2RtqhyA04I3GN9Mb2FIMQ=
+
+Name: icons/clock.gif
+SHA-256-Digest: oaomssRf4X5TelpgJUdrjBJnYu9gGJx6PG/Gou5mu34=
+
+Name: icons/Refresh-16x16.gif
+SHA-256-Digest: 7vg8GeR5WBszgLVrkL2+dj9ZDQ/3kcf8T3e7ow6o91k=
+
+Name: org/mule/tooling/amc/AMCActivator.class
+SHA-256-Digest: Re/s8Yd+kNnAL3A5wNmhVgZ8kbJL22gpru/HSGXG+pk=
+
+Name: org/mule/tooling/amc/jersey/upload/JerseyUploadInfoParser.class
+SHA-256-Digest: 6zYVSsEFVXKjfNbwWoUlIdunj/MfhEGdMLu5CxElM2k=
+
+Name: icons/green-check.gif
+SHA-256-Digest: T/z28NHU+Cz8KtZb7XjiCSHIaFiP9WAydYX8+gk3Cao=
+
+Name: org/mule/tooling/amc/InstanceListMenuProvider.class
+SHA-256-Digest: xYRzKqdo2Iqj9hVV4UiZ05Sg13cQusZFUpEh1KxUJT8=
+
+Name: org/mule/tooling/amc/DeployToAmc.class
+SHA-256-Digest: UVQK8gjpVjM9JmJKXtfeEWG3VVJK1v7g7+19t2HlrYc=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.amc/pom.xml
+SHA-256-Digest: tJJzrP3J8ak4xiNEYD6b1OGjpjPE2vac+hlkZfyVu4E=
+
+Name: org/mule/tooling/amc/jersey/upload/JerseyUploader$1.class
+SHA-256-Digest: ZUYHyocTtTkXv6ASXk1+WJJTsyEln+05TN4fWQNGG5k=
+
+Name: icons/mule16.png
+SHA-256-Digest: 5cgxfhnzc9ohEduFE1tTUsM8A4XJM6Xo09yJZHKh2V8=
+
+Name: org/mule/tooling/amc/preference/AMCPreferenceManager.class
+SHA-256-Digest: h6jKW155yEuiU5v+mKzSyX7FCGpP7jLuLgim4KU9dkc=
+
+Name: org/mule/tooling/amc/command/OpenDeployToAMC.class
+SHA-256-Digest: OpclG3yGg2MB3sddjrHg7d4MrvXIv0IW1oWINgPmXdk=
+
+Name: org/mule/tooling/amc/jersey/upload/JerseyUploader$2.class
+SHA-256-Digest: ghomeRZWFUpaGRsu9sGIT5ySAyX3rAZA27XdZhnVY3U=
+
+Name: icons/warning.png
+SHA-256-Digest: bCuzzxXpckG7HMyed1CPFyF/SVr2Vr0Z4iztBvpQ2Zo=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$OpenOnEx
+ ternalBrowser.class
+SHA-256-Digest: pj7ZIC4U5Mh1EeoECxK2PoxFsQ0LEd0jLPLMnu9a010=
+
+Name: icons/ExportToMuleiON-16x16.png
+SHA-256-Digest: y33l3xaLd1wp2gPleFxP7NDt5hnnurW4zNs0e87Tcj8=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$5.class
+SHA-256-Digest: 6kNznW+eBT4/A8Xe+RYLaO7l2G9wPdnl7uZSbSDGKOg=
+
+Name: icons/exportToARM.png
+SHA-256-Digest: wT1U3Sai1y/rTW/9ZQn8aeBDw8Nc8vGKKGnFcm7B8F0=
+
+Name: icons/red-cross.gif
+SHA-256-Digest: 6JUA9ZgqIQ1DofLpGZIbkitcDaAlzP2P3sps89B5D+U=
+
+Name: org/mule/tooling/amc/AMCDeploymentWindow.class
+SHA-256-Digest: 7yhsJp6BrLxw9gERH7hwD5VaDKiB+qZXXS0L3T8J3uI=
+
+Name: org/mule/tooling/amc/AmcContext.class
+SHA-256-Digest: tgneJc7NiEl5O0j6a4z+McqwD1LIZKkKBkgGfv31Zt4=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$3.class
+SHA-256-Digest: 4hzjxSar2Ftkg4eDrbbvbm/plSPdmj3k2b1fHFiO+Wo=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.amc/pom.propert
+ ies
+SHA-256-Digest: yvlxbkk+/0AQmW3vbe5S47Rdw4+NWEv+EQpjmu+dszs=
+
+Name: plugin.xml
+SHA-256-Digest: vEb9apFE4DqTMeGgd34wMvZcoMluoJP2bJP61PQ0Uqw=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$Applicat
+ ionDeploymentComplete.class
+SHA-256-Digest: z/7kXH8t9GkCbcmTgE5C1vKGVzn/QEN0yA9uAp7d1F4=
+
+Name: icons/Transparent.png
+SHA-256-Digest: I7EOWQ/uvm2LA2ACf68KBTihwIjWp4+EB1CUAOqkmQ0=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$4.class
+SHA-256-Digest: rrOgAIDoaF+n02DFQJPChvc0bldTLz1MNe2u3zLS11A=
+
+Name: org/mule/tooling/amc/jersey/upload/AmcDeploymentBrowser$Applicat
+ ionDeployedEvent.class
+SHA-256-Digest: ZslCUvueArmk9whQXd9CM+uBRczEBUNcttV2JE7ZHCk=
+
+Name: icons/Delete-16x16.png
+SHA-256-Digest: Ryp8Sam1GtX6ZgPlVZxNNnlDCrW4u//zn+MkXJviU6Y=
+
+Name: org/mule/tooling/amc/jersey/upload/IFileUploader.class
+SHA-256-Digest: IK9ehCzEd9543EwyhGfdsiShJjHO/FGmMHtJtY35Kr0=
+

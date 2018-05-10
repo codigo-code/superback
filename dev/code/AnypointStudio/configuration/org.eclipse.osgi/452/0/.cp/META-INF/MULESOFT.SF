@@ -1,0 +1,67 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: eXmYVI02y4hY52uxUUuAIlvcV54E2
+ oWV3T2dkbNOus8=
+SHA-256-Digest-Manifest: qLKWEDVz/DNo47YJWI4kyLLK08slqAccrWtSDeF1QC0=
+Created-By: 1.7.0_80 (Oracle Corporation)
+
+Name: intro/content/studio-splash-screen.xhtml
+SHA-256-Digest: SoLPOk3ljTl5ukhzO7eiuxjVHQC6cfi/N6YzWN5ix/Q=
+
+Name: intro/content/css/images/welcomeIcon-16x16.png
+SHA-256-Digest: Auh8EZmFqT0j6ajlbZn/t9A6El3PmchePn7X3WnjDNw=
+
+Name: intro/content/css/images/header-bg.png
+SHA-256-Digest: N5ltYzqTyw0/wArw3J0Wg/iCSnVrORdX0CbG8H+WEls=
+
+Name: intro/content/css/images/anypoint-studio-logo.png
+SHA-256-Digest: Okn820hxiWH/IkcbGjt7oL9Cwe6l/JDbWJFUHFJ2bG4=
+
+Name: intro/content/css/images/icon-get-started.png
+SHA-256-Digest: To5AnNUdKXBuTUmRIl3msZ9sbcDqkyupDyxnB48WnFQ=
+
+Name: intro/content/muleWelcome.xml
+SHA-256-Digest: JGFxSVjJLu8SebB9c53vqUQkXxBlMbqN/smPtpMfDSo=
+
+Name: intro/content/css/images/screenshot.png
+SHA-256-Digest: xDANgTDNcqtfMfLa6s3BkYNLR78dNwS/wL6FRc/5v20=
+
+Name: intro/content/css/images/icon-documentation.png
+SHA-256-Digest: T3GCNaBmFKA7zvewkrvahjXQr5GdOpP/PnJfM93JeFE=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.welcome/pom.pro
+ perties
+SHA-256-Digest: f9LfRGzKk9ipHI93qEIjcU/ydySEx+ycz3+qAbL2xBk=
+
+Name: META-INF/maven/org.mule.tooling/org.mule.tooling.welcome/pom.xml
+SHA-256-Digest: fEDZAKbiSLfK7YVIkxASLnKbYeoANmq5fUE+Fke2PNY=
+
+Name: intro/content/css/images/background-arrow.png
+SHA-256-Digest: 1bVfNw5icFW/wsouxBdGu1SrDaIlNgUidXAedEfTv8M=
+
+Name: intro/content/css/ubuntu-400.woff
+SHA-256-Digest: OMKbf6kkzRQbXMO8JXSHdLlxXwk4Pal16DJVq4CpaIs=
+
+Name: intro/content/css/images/community-runtime-bg.png
+SHA-256-Digest: N+ZJyo0epR9BqmKfBdqL3YwmzHJqH+iAOngkWob/fGo=
+
+Name: org/mule/tooling/welcome/Activator.class
+SHA-256-Digest: QR9/fLlOR0lO/xbd/wGVQmYM8BDheFBGrMPmqSJusHg=
+
+Name: plugin.xml
+SHA-256-Digest: juuZEE1v7B6dzVHnBPC3MfODi+hlZpC2O8ozXl0LIeo=
+
+Name: intro/content/css/images/icon-open-a-project.png
+SHA-256-Digest: OBb+2u2mcgvnGbz8f34Pe0Zp51kcIaO+SngSEQIqmwk=
+
+Name: intro/content/css/images/mulesoft-logo.png
+SHA-256-Digest: 4wAe7AaQB01QvYVgP7ky2IlNXRhD0jdfRjrUnAoGrSI=
+
+Name: intro/content/css/images/icon-create-new-project.png
+SHA-256-Digest: p8MD4Os3nJZbc7d6wZ66SM5w9jHx/QfevSt9E68L5gA=
+
+Name: intro/content/css/images/icon-community-runtime.png
+SHA-256-Digest: dhICYRrFBizYAujazttu6ramNopYexmd4coLyohtui0=
+
+Name: intro/content/css/welcome.css
+SHA-256-Digest: ikvc0EW458vvq5Z+/6VgzG54z/1xC9ycYJORt8zlcKQ=
+

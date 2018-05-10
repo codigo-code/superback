@@ -1,0 +1,17 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: mCpn4dEqCCCHZyWEx4gTkcVAdjBk1
+ wMYlSvuswWP7wQ=
+SHA-256-Digest-Manifest: 8wo1+PFtM4J33ukC0DiMMife5zqOKVqT2J2SMOTx/ts=
+Created-By: 1.7.0_80 (Oracle Corporation)
+
+Name: META-INF/maven/org.mule.tools/org.mule.tooling.apikit.feature/po
+ m.xml
+SHA-256-Digest: ApSsHR12E5oCA45KXaq+uygSyKpVjC3KAsLUQf1XU0c=
+
+Name: META-INF/maven/org.mule.tools/org.mule.tooling.apikit.feature/po
+ m.properties
+SHA-256-Digest: 3oUdCCPQlYjq+BxpPfAUKtOyXsoBQb60sN0Cxp/XkjY=
+
+Name: feature.xml
+SHA-256-Digest: M3Phaw4RKdgu3cy7ddu7pKMlabBfZuJRxCbod0r57NY=
+

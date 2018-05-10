@@ -1,0 +1,6 @@
+ar\gob\vuce\api\TestApi.class
+ar\gob\vuce\App.class
+ar\gob\vuce\config\WebSecurityConfig.class
+ar\gob\vuce\config\MvcConfig.class
+ar\gob\vuce\config\BeanFactory.class
+ar\gob\vuce\controllers\FormController.class
